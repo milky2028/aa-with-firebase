@@ -1,0 +1,63 @@
+{
+  "database": {
+    "rules": "database.rules.json"
+  },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "hosting": {
+    "public": "public",
+    "headers": [ {
+      "source" : "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
+      "headers" : [ {
+        "key" : "Access-Control-Allow-Origin",
+        "value" : "*"
+      } ]
+    }, {
+      "source" : "**/*.@(jpg|jpeg|gif|png|svg|js|css)",
+      "headers" : [ {
+        "key" : "Cache-Control",
+        "value" : "max-age=604800"
+      } ]
+    } ],
+    "cleanUrls": "true",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "redirects": [ {
+      "source" : "/registration",
+      "destination" : "/our-center",
+      "type" : 301
+    }, {
+      "source" : "/aboutus",
+      "destination" : "/",
+      "type" : 301
+    }, {
+      "source" : "/gallery",
+      "destination" : "/our-center",
+      "type" : 301
+    }, {
+      "source" : "/tuition",
+      "destination" : "/prices",
+      "type" : 301
+    }, {
+      "source" : "/blog",
+      "destination" : "/news/overview",
+      "type" : 301
+    }, {
+      "source" : "/staff",
+      "destination" : "/careers",
+      "type" : 301
+    }, {
+      "source" : "/news/overview/category/Announcements",
+      "destination" : "/news/overview",
+      "type" : 301
+    } ]
+  },
+  "storage": {
+    "rules": "storage.rules"
+  }
+}
