@@ -1,0 +1,246 @@
+[debug] [2018-05-22T06:01:09.934Z] ----------------------------------------------------------------------
+[debug] [2018-05-22T06:01:09.936Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\tyler\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-05-22T06:01:09.937Z] CLI Version:   3.18.5
+[debug] [2018-05-22T06:01:09.937Z] Platform:      win32
+[debug] [2018-05-22T06:01:09.937Z] Node Version:  v6.11.5
+[debug] [2018-05-22T06:01:09.937Z] Time:          Tue May 22 2018 01:01:09 GMT-0500 (Central Daylight Time)
+[debug] [2018-05-22T06:01:09.937Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-05-22T06:01:09.951Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-22T06:01:09.954Z] > authorizing via signed-in user
+[debug] [2018-05-22T06:01:09.958Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/adventure-academ-1501025774496  
+  
+ Tue May 22 2018 01:01:09 GMT-0500 (Central Daylight Time)
+[debug] [2018-05-22T06:01:10.281Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-22T06:01:10.282Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/adventure-academ-1501025774496/tokens  
+  
+ Tue May 22 2018 01:01:10 GMT-0500 (Central Daylight Time)
+[debug] [2018-05-22T06:01:10.608Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-22T06:01:10.610Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/adventure-academ-1501025774496  
+  
+ Tue May 22 2018 01:01:10 GMT-0500 (Central Daylight Time)
+[debug] [2018-05-22T06:01:10.871Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\tyler\Documents\GitHub\aa-with-firebase'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-05-22T06:01:11.914Z] Fetching environment
+[debug] [2018-05-22T06:01:11.917Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/784182344237:getServerAppConfig  
+  
+ Tue May 22 2018 01:01:11 GMT-0500 (Central Daylight Time)
+[debug] [2018-05-22T06:01:11.918Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/784182344237/clients/_:getWebAppConfig  
+  
+ Tue May 22 2018 01:01:11 GMT-0500 (Central Daylight Time)
+[debug] [2018-05-22T06:01:12.149Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-22T06:01:12.149Z] Starting @google-cloud/functions-emulator
+[debug] [2018-05-22T06:01:12.173Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[debug] [2018-05-22T06:01:14.178Z] Parsing function triggers
+[info] +  functions: helloWorld: http://localhost:5001/adventure-academ-1501025774496/us-central1/helloWorld
+[debug] [2018-05-22T06:04:48.317Z] ----------------------------------------------------------------------
+[debug] [2018-05-22T06:04:48.319Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\tyler\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-05-22T06:04:48.320Z] CLI Version:   3.18.5
+[debug] [2018-05-22T06:04:48.320Z] Platform:      win32
+[debug] [2018-05-22T06:04:48.320Z] Node Version:  v6.11.5
+[debug] [2018-05-22T06:04:48.320Z] Time:          Tue May 22 2018 01:04:48 GMT-0500 (Central Daylight Time)
+[debug] [2018-05-22T06:04:48.320Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-05-22T06:04:48.332Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-22T06:04:48.333Z] > authorizing via signed-in user
+[debug] [2018-05-22T06:04:48.335Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/adventure-academ-1501025774496  
+  
+ Tue May 22 2018 01:04:48 GMT-0500 (Central Daylight Time)
+[debug] [2018-05-22T06:04:48.756Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-22T06:04:48.758Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/adventure-academ-1501025774496/tokens  
+  
+ Tue May 22 2018 01:04:48 GMT-0500 (Central Daylight Time)
+[debug] [2018-05-22T06:04:49.099Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-22T06:04:49.101Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/adventure-academ-1501025774496  
+  
+ Tue May 22 2018 01:04:49 GMT-0500 (Central Daylight Time)
+[debug] [2018-05-22T06:04:49.361Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\tyler\Documents\GitHub\aa-with-firebase'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-05-22T06:04:50.372Z] Fetching environment
+[debug] [2018-05-22T06:04:50.377Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/784182344237:getServerAppConfig  
+  
+ Tue May 22 2018 01:04:50 GMT-0500 (Central Daylight Time)
+[debug] [2018-05-22T06:04:50.378Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/784182344237/clients/_:getWebAppConfig  
+  
+ Tue May 22 2018 01:04:50 GMT-0500 (Central Daylight Time)
+[debug] [2018-05-22T06:04:50.645Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-22T06:04:50.646Z] Starting @google-cloud/functions-emulator
+[debug] [2018-05-22T06:04:50.667Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[debug] [2018-05-22T06:04:52.675Z] Parsing function triggers
+[info] +  functions: helloWorld: http://localhost:5001/adventure-academ-1501025774496/us-central1/helloWorld
+[debug] [2018-05-22T06:07:42.934Z] ----------------------------------------------------------------------
+[debug] [2018-05-22T06:07:42.936Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\tyler\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-05-22T06:07:42.936Z] CLI Version:   3.18.5
+[debug] [2018-05-22T06:07:42.936Z] Platform:      win32
+[debug] [2018-05-22T06:07:42.936Z] Node Version:  v6.11.5
+[debug] [2018-05-22T06:07:42.937Z] Time:          Tue May 22 2018 01:07:42 GMT-0500 (Central Daylight Time)
+[debug] [2018-05-22T06:07:42.937Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-05-22T06:07:42.949Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-22T06:07:42.950Z] > authorizing via signed-in user
+[debug] [2018-05-22T06:07:42.953Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/adventure-academ-1501025774496  
+  
+ Tue May 22 2018 01:07:42 GMT-0500 (Central Daylight Time)
+[debug] [2018-05-22T06:07:43.268Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-22T06:07:43.270Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/adventure-academ-1501025774496/tokens  
+  
+ Tue May 22 2018 01:07:43 GMT-0500 (Central Daylight Time)
+[debug] [2018-05-22T06:07:43.832Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-22T06:07:43.837Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/adventure-academ-1501025774496  
+  
+ Tue May 22 2018 01:07:43 GMT-0500 (Central Daylight Time)
+[debug] [2018-05-22T06:07:44.031Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\tyler\Documents\GitHub\aa-with-firebase'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-05-22T06:07:44.964Z] Fetching environment
+[debug] [2018-05-22T06:07:44.966Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/784182344237:getServerAppConfig  
+  
+ Tue May 22 2018 01:07:44 GMT-0500 (Central Daylight Time)
+[debug] [2018-05-22T06:07:44.967Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/784182344237/clients/_:getWebAppConfig  
+  
+ Tue May 22 2018 01:07:44 GMT-0500 (Central Daylight Time)
+[debug] [2018-05-22T06:07:45.232Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[debug] [2018-05-22T06:07:45.271Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-22T06:07:45.271Z] Starting @google-cloud/functions-emulator
+[debug] [2018-05-22T06:07:47.303Z] Parsing function triggers
+[info] +  functions: helloWorld: http://localhost:5001/adventure-academ-1501025774496/us-central1/helloWorld
+[debug] [2018-05-22T06:08:30.015Z] ----------------------------------------------------------------------
+[debug] [2018-05-22T06:08:30.025Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\tyler\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-05-22T06:08:30.026Z] CLI Version:   3.18.5
+[debug] [2018-05-22T06:08:30.027Z] Platform:      win32
+[debug] [2018-05-22T06:08:30.027Z] Node Version:  v6.11.5
+[debug] [2018-05-22T06:08:30.031Z] Time:          Tue May 22 2018 01:08:30 GMT-0500 (Central Daylight Time)
+[debug] [2018-05-22T06:08:30.031Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-05-22T06:08:30.080Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-22T06:08:30.088Z] > authorizing via signed-in user
+[debug] [2018-05-22T06:08:30.098Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/adventure-academ-1501025774496  
+  
+ Tue May 22 2018 01:08:30 GMT-0500 (Central Daylight Time)
+[debug] [2018-05-22T06:08:30.476Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-22T06:08:30.477Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/adventure-academ-1501025774496/tokens  
+  
+ Tue May 22 2018 01:08:30 GMT-0500 (Central Daylight Time)
+[debug] [2018-05-22T06:08:30.751Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-22T06:08:30.752Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/adventure-academ-1501025774496  
+  
+ Tue May 22 2018 01:08:30 GMT-0500 (Central Daylight Time)
+[debug] [2018-05-22T06:08:30.941Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\tyler\Documents\GitHub\aa-with-firebase'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-05-22T06:08:31.792Z] Fetching environment
+[debug] [2018-05-22T06:08:31.794Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/784182344237:getServerAppConfig  
+  
+ Tue May 22 2018 01:08:31 GMT-0500 (Central Daylight Time)
+[debug] [2018-05-22T06:08:31.795Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/784182344237/clients/_:getWebAppConfig  
+  
+ Tue May 22 2018 01:08:31 GMT-0500 (Central Daylight Time)
+[debug] [2018-05-22T06:08:31.997Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-22T06:08:31.998Z] Starting @google-cloud/functions-emulator
+[debug] [2018-05-22T06:08:32.095Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[debug] [2018-05-22T06:08:36.552Z] Parsing function triggers
+[info] +  functions: helloWorld: http://localhost:5001/adventure-academ-1501025774496/us-central1/helloWorld
+[debug] [2018-05-22T06:12:29.989Z] ----------------------------------------------------------------------
+[debug] [2018-05-22T06:12:29.991Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\tyler\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-05-22T06:12:29.992Z] CLI Version:   3.18.5
+[debug] [2018-05-22T06:12:29.992Z] Platform:      win32
+[debug] [2018-05-22T06:12:29.992Z] Node Version:  v6.11.5
+[debug] [2018-05-22T06:12:29.992Z] Time:          Tue May 22 2018 01:12:29 GMT-0500 (Central Daylight Time)
+[debug] [2018-05-22T06:12:29.992Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-05-22T06:12:30.004Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-22T06:12:30.005Z] > authorizing via signed-in user
+[debug] [2018-05-22T06:12:30.007Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/adventure-academ-1501025774496  
+  
+ Tue May 22 2018 01:12:30 GMT-0500 (Central Daylight Time)
+[debug] [2018-05-22T06:12:30.398Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-22T06:12:30.399Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/adventure-academ-1501025774496/tokens  
+  
+ Tue May 22 2018 01:12:30 GMT-0500 (Central Daylight Time)
+[debug] [2018-05-22T06:12:30.864Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-22T06:12:30.865Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/adventure-academ-1501025774496  
+  
+ Tue May 22 2018 01:12:30 GMT-0500 (Central Daylight Time)
+[debug] [2018-05-22T06:12:31.089Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\tyler\Documents\GitHub\aa-with-firebase'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-05-22T06:12:31.882Z] Fetching environment
+[debug] [2018-05-22T06:12:31.884Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/784182344237:getServerAppConfig  
+  
+ Tue May 22 2018 01:12:31 GMT-0500 (Central Daylight Time)
+[debug] [2018-05-22T06:12:31.885Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/784182344237/clients/_:getWebAppConfig  
+  
+ Tue May 22 2018 01:12:31 GMT-0500 (Central Daylight Time)
+[debug] [2018-05-22T06:12:32.179Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-22T06:12:32.180Z] Starting @google-cloud/functions-emulator
+[debug] [2018-05-22T06:12:32.209Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[debug] [2018-05-22T06:12:34.241Z] Parsing function triggers
+[info] +  functions: helloWorld: http://localhost:5001/adventure-academ-1501025774496/us-central1/helloWorld
+[debug] [2018-05-22T06:13:03.456Z] ----------------------------------------------------------------------
+[debug] [2018-05-22T06:13:03.458Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\tyler\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-05-22T06:13:03.459Z] CLI Version:   3.18.5
+[debug] [2018-05-22T06:13:03.459Z] Platform:      win32
+[debug] [2018-05-22T06:13:03.459Z] Node Version:  v6.11.5
+[debug] [2018-05-22T06:13:03.459Z] Time:          Tue May 22 2018 01:13:03 GMT-0500 (Central Daylight Time)
+[debug] [2018-05-22T06:13:03.459Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-05-22T06:13:03.472Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-22T06:13:03.473Z] > authorizing via signed-in user
+[debug] [2018-05-22T06:13:03.475Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/adventure-academ-1501025774496  
+  
+ Tue May 22 2018 01:13:03 GMT-0500 (Central Daylight Time)
+[debug] [2018-05-22T06:13:03.757Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-22T06:13:03.758Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/adventure-academ-1501025774496/tokens  
+  
+ Tue May 22 2018 01:13:03 GMT-0500 (Central Daylight Time)
+[debug] [2018-05-22T06:13:04.191Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-22T06:13:04.192Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/adventure-academ-1501025774496  
+  
+ Tue May 22 2018 01:13:04 GMT-0500 (Central Daylight Time)
+[debug] [2018-05-22T06:13:04.343Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\tyler\Documents\GitHub\aa-with-firebase'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-05-22T06:13:05.133Z] Fetching environment
+[debug] [2018-05-22T06:13:05.136Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/784182344237:getServerAppConfig  
+  
+ Tue May 22 2018 01:13:05 GMT-0500 (Central Daylight Time)
+[debug] [2018-05-22T06:13:05.137Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/784182344237/clients/_:getWebAppConfig  
+  
+ Tue May 22 2018 01:13:05 GMT-0500 (Central Daylight Time)
+[debug] [2018-05-22T06:13:05.359Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-22T06:13:05.360Z] Starting @google-cloud/functions-emulator
+[debug] [2018-05-22T06:13:05.378Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[debug] [2018-05-22T06:13:07.394Z] Parsing function triggers
+[info] +  functions: helloWorld: http://localhost:5001/adventure-academ-1501025774496/us-central1/helloWorld
