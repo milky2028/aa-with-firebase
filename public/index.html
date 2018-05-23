@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html data-wf-page="5977f3e14752750001131ab7" data-wf-site="59417ef1f83e8a48c44db0c0" lang="en">
+<!-- <html data-wf-page="5977f3e14752750001131ab7" data-wf-site="59417ef1f83e8a48c44db0c0" lang="en"> -->
+<html lang="en">
   <head>
     <meta charset="utf-8">
 
@@ -17,13 +18,14 @@
     <link href="css/webflow.css" rel="stylesheet" type="text/css">
     <link href="css/adventure-academy-new-site.webflow.css" rel="stylesheet" type="text/css">
 
-<!-- update the version number as needed -->
-<script defer src="/__/firebase/5.0.3/firebase-app.js"></script>
-<!-- include only the Firebase features as you need -->
-<script defer src="/__/firebase/5.0.3/firebase-firestore.js"></script>
-<script defer src="/__/firebase/5.0.3/firebase-functions.js"></script>
-<!-- initialize the SDK after all desired features are loaded -->
-<script defer src="/__/firebase/init.js"></script>
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/5.0.3/firebase-app.js"></script>
+    <script defer src="/__/firebase/5.0.3/firebase.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/5.0.3/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/5.0.3/firebase-functions.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
 
       <script>
         if(navigator.serviceWorker) {
@@ -77,15 +79,23 @@
           <div class="new-form-container"><a href="#" data-ix="popup-close-overlay" class="popup-close-icon w-inline-block"></a><img src="images/sun.svg" width="70" alt="Smiling Sun cartoon drawing" class="image-2" alt="Child's smiling Sun cartoon drawing">
             <h3 class="register-headline">Schedule a Tour Today</h3>
             <div class="w-form">
-              <form id="wf-form-Tour-Form" name="wf-form-Tour-Form" data-name="Tour Form" data-redirect="/thank-you" redirect="/thank-you"><input type="text" id="name" name="name" data-name="Name" maxlength="256" placeholder="Name" class="input w-input"><input type="email" id="Email-3" name="Email" data-name="Email" placeholder="Email Address" maxlength="256" required="" class="input w-input">
-                <div class="text-block-4">Age of Child</div><select id="Child-Age" name="Child-Age" required="" data-name="Child Age" class="select-field w-select"><option value="Infant">Infant</option><option value="Two">Twos</option><option value="Three">Threes</option><option value="Four">Four</option><option value="Five">Five</option></select>
+              <form id="wf-form-Tour-Form" name="wf-form-Tour-Form" data-name="Tour Form" data-redirect="/thank-you" redirect="/thank-you">
+                <input type="text" id="name" name="name" data-name="Name" maxlength="256" placeholder="Name" class="input w-input">
+                <input type="email" id="email3" name="Email" data-name="Email" placeholder="Email Address" maxlength="256" required="" class="input w-input">
+                <div class="text-block-4">Age of Child</div>
+                <select id="child-age" name="Child-Age" required="" data-name="Child Age" class="select-field w-select">
+                  <option value="Infant">Infant</option>
+                  <option value="Two">Two</option>
+                  <option value="Three">Three</option>
+                  <option value="Four">Four</option>
+                  <option value="Five">Five</option></select>
                 <div class="html-embed w-embed">
                   <fieldset>
                     <label class="text-block-4" font-weight="normal" for="date">Date</label>
-                    <input class="w-input" type="date" name="date">
+                    <input id="date" class="w-input" type="date" name="date">
                   </fieldset>
                 </div>
-                <div class="text-block-4">Time</div><select id="Time-3" name="Time" required="" data-name="Time" class="select-field w-select"><option value="10:00AM">10:00AM</option><option value="10:30AM">10:30AM</option><option value="11:00AM">11:00AM</option><option value="11:30AM">11:30AM</option><option value="12:00PM">12:00PM</option><option value="12:30PM">12:30PM</option><option value="1:00PM">1:00PM</option><option value="1:30PM">1:30PM</option><option value="2:00PM">2:00PM</option><option value="2:30PM">2:30PM</option><option value="3:00PM">3:00PM</option><option value="3:30PM">3:30PM</option><option value="4:00PM">4:00PM</option><option value="4:30PM">4:30PM</option></select>
+                <div class="text-block-4">Time</div><select id="time3" name="Time" required="" data-name="Time" class="select-field w-select"><option value="10:00AM">10:00AM</option><option value="10:30AM">10:30AM</option><option value="11:00AM">11:00AM</option><option value="11:30AM">11:30AM</option><option value="12:00PM">12:00PM</option><option value="12:30PM">12:30PM</option><option value="1:00PM">1:00PM</option><option value="1:30PM">1:30PM</option><option value="2:00PM">2:00PM</option><option value="2:30PM">2:30PM</option><option value="3:00PM">3:00PM</option><option value="3:30PM">3:30PM</option><option value="4:00PM">4:00PM</option><option value="4:30PM">4:30PM</option></select>
                 <div class="text-block-on-modal"><a href="contact">Contact us</a> to schedule a tour outside normal business hours.</div>
                 <input id="scheduleTour" type="submit" value="Submit" data-wait="Please wait..." class="button register-button w-button"></form>
               <div class="register-success w-form-done">
