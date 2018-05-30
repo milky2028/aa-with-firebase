@@ -1,8 +1,5 @@
-const firebase = require("firebase");
-require("firebase/firestore");
-
 const db = firebase.firestore();
-const $ = (id) => document.getElementById(id)
+console.log(db)
 
 const onSave = () => {
     const name = $('name')
