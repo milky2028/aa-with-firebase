@@ -1,5 +1,11 @@
+const settings = { timestampsInSnapshots: true };
 const db = firebase.firestore();
-console.log(db)
+db.settings(settings);
+db.collection('tours').get().then(query => {
+    query.forEach(doc => {
+        console.log(doc.data())
+    })
+})
 
 const onSave = () => {
     const name = $('name')
@@ -24,5 +30,5 @@ const onSave = () => {
     
   }
 
-const submit = $('scheduleTour')
-submit.addEventListener('click', onSave)
+// const submit = $('scheduleTour')
+// submit.addEventListener('click', onSave)
