@@ -1239,7 +1239,7 @@
           p = i.env(),
           v = /list-manage[1-9]?.com/i,
           m = e.debounce(function() {
-              h("Oops! This page has improperly configured forms. Please contact your website administrator to fix this issue.")
+              // h("Oops! This page has improperly configured forms. Please contact your website administrator to fix this issue.")
           }, 100);
 
       function g(e, n) {
