@@ -1,11 +1,11 @@
 const settings = { timestampsInSnapshots: true };
 const db = firebase.firestore();
 db.settings(settings);
-db.collection('tours').get().then(query => {
-    query.forEach(doc => {
-        console.log(doc.data())
-    })
-})
+// db.collection('tours').get().then(query => {
+//     query.forEach(doc => {
+//         console.log(doc.data())
+//     })
+// })
 
 const onSave = () => {
     const name = $('name')
