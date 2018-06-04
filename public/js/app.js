@@ -27,17 +27,11 @@ const onSave = () => {
         submitTime: Date.now()
     };
     
-    // db.collection('tours').get().then(snapshot => {
-    //     snapshot.forEach(doc => {
-    //         console.log(doc)
-    //         console.log(doc.data())
-    //     })
-    // })
-    // db.collection('tours').add(formData).then(docRef => {
-    //     console.log('Database write complete:', docRef.id);
-    // }).catch(error => {
-    //     console.error('Error adding document: ', error);
-    // })
+    db.collection('tours').add(formData).then(docRef => {
+        console.log('Database write complete:', docRef.id);
+    }).catch(error => {
+        console.error('Error adding document: ', error);
+    })
   }
 
 const submit = document.querySelector('#scheduleTour');
