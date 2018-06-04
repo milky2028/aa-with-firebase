@@ -356,3 +356,142 @@ Try running "npm install" in your functions directory before deploying.
 
 Try running "npm install" in your functions directory before deploying.
 [debug] [2018-05-30T06:53:00.399Z] 
+[debug] [2018-06-04T05:42:28.615Z] ----------------------------------------------------------------------
+[debug] [2018-06-04T05:42:28.617Z] Command:       /home/tgross/.nvm/versions/node/v10.3.0/bin/node /mnt/c/Users/tyler/AppData/Roaming/npm/node_modules/firebase-tools/bin/firebase serve
+[debug] [2018-06-04T05:42:28.618Z] CLI Version:   3.18.5
+[debug] [2018-06-04T05:42:28.618Z] Platform:      linux
+[debug] [2018-06-04T05:42:28.618Z] Node Version:  v10.3.0
+[debug] [2018-06-04T05:42:28.618Z] Time:          Mon Jun 04 2018 00:42:28 GMT-0500 (DST)
+[debug] [2018-06-04T05:42:28.618Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-06-04T05:42:28.656Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-06-04T05:42:28.657Z] > authorizing via signed-in user
+[debug] [2018-06-04T05:42:28.659Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-06-04T05:42:28.659Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/pZy3MRwyePcLKzjyKizdeEj5jMFi8DMS4G3adGijDho',
+  client_id:
+   '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope:
+   'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Mon Jun 04 2018 00:42:28 GMT-0500 (DST)
+[debug] [2018-06-04T05:42:28.850Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-04T05:42:28.873Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/adventure-academ-1501025774496  
+  
+ Mon Jun 04 2018 00:42:28 GMT-0500 (DST)
+[debug] [2018-06-04T05:42:34.191Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-04T05:42:34.195Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/adventure-academ-1501025774496/tokens  
+  
+ Mon Jun 04 2018 00:42:34 GMT-0500 (DST)
+[debug] [2018-06-04T05:42:35.123Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-04T05:42:35.127Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/adventure-academ-1501025774496  
+  
+ Mon Jun 04 2018 00:42:35 GMT-0500 (DST)
+[debug] [2018-06-04T05:42:35.437Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/home/tgross/projects/aa-with-firebase'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-06-04T05:42:53.766Z] Fetching environment
+[debug] [2018-06-04T05:42:53.776Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/784182344237:getServerAppConfig  
+  
+ Mon Jun 04 2018 00:42:53 GMT-0500 (DST)
+[debug] [2018-06-04T05:42:53.776Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/784182344237/clients/_:getWebAppConfig  
+  
+ Mon Jun 04 2018 00:42:53 GMT-0500 (DST)
+[debug] [2018-06-04T05:42:54.310Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+
+[debug] [2018-06-04T05:42:54.458Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-04T05:42:54.458Z] Starting @google-cloud/functions-emulator
+[debug] [2018-06-04T05:43:00.066Z] Parsing function triggers
+[warn] ⚠  functions: Failed to load functions source code. Ensure that you have the latest SDK by running npm i --save firebase-functions inside the functions directory.
+[debug] [2018-06-04T05:43:00.265Z] Error during trigger parsing:  Error parsing triggers: Cannot find module '/home/tgross/projects/aa-with-firebase/functions'
+
+Try running "npm install" in your functions directory before deploying.
+[warn] ⚠  functions: Error from emulator. Error parsing triggers: Cannot find module '/home/tgross/projects/aa-with-firebase/functions'
+
+Try running "npm install" in your functions directory before deploying.
+[debug] [2018-06-04T05:43:00.267Z] 
+[debug] [2018-06-04T05:44:31.176Z] ----------------------------------------------------------------------
+[debug] [2018-06-04T05:44:31.180Z] Command:       /home/tgross/.nvm/versions/node/v10.3.0/bin/node /mnt/c/Users/tyler/AppData/Roaming/npm/node_modules/firebase-tools/bin/firebase serve
+[debug] [2018-06-04T05:44:31.180Z] CLI Version:   3.18.5
+[debug] [2018-06-04T05:44:31.180Z] Platform:      linux
+[debug] [2018-06-04T05:44:31.180Z] Node Version:  v10.3.0
+[debug] [2018-06-04T05:44:31.181Z] Time:          Mon Jun 04 2018 00:44:31 GMT-0500 (DST)
+[debug] [2018-06-04T05:44:31.181Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-06-04T05:44:31.202Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-06-04T05:44:31.203Z] > authorizing via signed-in user
+[debug] [2018-06-04T05:44:31.207Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/adventure-academ-1501025774496  
+  
+ Mon Jun 04 2018 00:44:31 GMT-0500 (DST)
+[debug] [2018-06-04T05:44:31.531Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-04T05:44:31.534Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/adventure-academ-1501025774496/tokens  
+  
+ Mon Jun 04 2018 00:44:31 GMT-0500 (DST)
+[debug] [2018-06-04T05:44:31.889Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-04T05:44:31.892Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/adventure-academ-1501025774496  
+  
+ Mon Jun 04 2018 00:44:31 GMT-0500 (DST)
+[debug] [2018-06-04T05:44:32.138Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/home/tgross/projects/aa-with-firebase'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-06-04T05:44:33.980Z] Fetching environment
+[debug] [2018-06-04T05:44:33.989Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/784182344237:getServerAppConfig  
+  
+ Mon Jun 04 2018 00:44:33 GMT-0500 (DST)
+[debug] [2018-06-04T05:44:33.989Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/784182344237/clients/_:getWebAppConfig  
+  
+ Mon Jun 04 2018 00:44:33 GMT-0500 (DST)
+[debug] [2018-06-04T05:44:34.277Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+
+[debug] [2018-06-04T05:44:34.356Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-04T05:44:34.356Z] Starting @google-cloud/functions-emulator
+[debug] [2018-06-04T05:44:37.998Z] Parsing function triggers
+[warn] ⚠  functions: Failed to load functions source code. Ensure that you have the latest SDK by running npm i --save firebase-functions inside the functions directory.
+[debug] [2018-06-04T05:44:38.173Z] Error during trigger parsing:  Error parsing triggers: Cannot find module '/home/tgross/projects/aa-with-firebase/functions'
+
+Try running "npm install" in your functions directory before deploying.
+[warn] ⚠  functions: Error from emulator. Error parsing triggers: Cannot find module '/home/tgross/projects/aa-with-firebase/functions'
+
+Try running "npm install" in your functions directory before deploying.
+[debug] [2018-06-04T05:44:38.175Z] 
+[debug] [2018-06-04T05:45:15.800Z] ----------------------------------------------------------------------
+[debug] [2018-06-04T05:45:15.805Z] Command:       /home/tgross/.nvm/versions/node/v10.3.0/bin/node /mnt/c/Users/tyler/AppData/Roaming/npm/node_modules/firebase-tools/bin/firebase serve --only hosting
+[debug] [2018-06-04T05:45:15.806Z] CLI Version:   3.18.5
+[debug] [2018-06-04T05:45:15.806Z] Platform:      linux
+[debug] [2018-06-04T05:45:15.806Z] Node Version:  v10.3.0
+[debug] [2018-06-04T05:45:15.806Z] Time:          Mon Jun 04 2018 00:45:15 GMT-0500 (DST)
+[debug] [2018-06-04T05:45:15.806Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-06-04T05:45:15.825Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-06-04T05:45:15.826Z] > authorizing via signed-in user
+[debug] [2018-06-04T05:45:15.830Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/adventure-academ-1501025774496  
+  
+ Mon Jun 04 2018 00:45:15 GMT-0500 (DST)
+[debug] [2018-06-04T05:45:16.279Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-04T05:45:16.281Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/adventure-academ-1501025774496/tokens  
+  
+ Mon Jun 04 2018 00:45:16 GMT-0500 (DST)
+[debug] [2018-06-04T05:45:16.766Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-04T05:45:16.769Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/adventure-academ-1501025774496  
+  
+ Mon Jun 04 2018 00:45:16 GMT-0500 (DST)
+[debug] [2018-06-04T05:45:17.285Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/home/tgross/projects/aa-with-firebase'...
+[info] 
+[debug] [2018-06-04T05:45:17.291Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/784182344237/clients/_:getWebAppConfig  
+  
+ Mon Jun 04 2018 00:45:17 GMT-0500 (DST)
+[debug] [2018-06-04T05:45:17.542Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+
