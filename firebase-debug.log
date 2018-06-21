@@ -1,59 +1,41 @@
-[debug] [2018-06-04T05:53:37.223Z] ----------------------------------------------------------------------
-[debug] [2018-06-04T05:53:37.225Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\tyler\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
-[debug] [2018-06-04T05:53:37.226Z] CLI Version:   3.18.5
-[debug] [2018-06-04T05:53:37.226Z] Platform:      win32
-[debug] [2018-06-04T05:53:37.226Z] Node Version:  v10.2.1
-[debug] [2018-06-04T05:53:37.226Z] Time:          Mon Jun 04 2018 00:53:37 GMT-0500 (Central Daylight Time)
-[debug] [2018-06-04T05:53:37.226Z] ----------------------------------------------------------------------
+[debug] [2018-06-21T00:25:50.232Z] ----------------------------------------------------------------------
+[debug] [2018-06-21T00:25:50.236Z] Command:       /home/tgross/.nvm/versions/node/v8.11.3/bin/node /home/tgross/.nvm/versions/node/v8.11.3/bin/firebase serve --only=hosting
+[debug] [2018-06-21T00:25:50.236Z] CLI Version:   3.18.6
+[debug] [2018-06-21T00:25:50.236Z] Platform:      linux
+[debug] [2018-06-21T00:25:50.236Z] Node Version:  v8.11.3
+[debug] [2018-06-21T00:25:50.237Z] Time:          Wed Jun 20 2018 19:25:50 GMT-0500 (DST)
+[debug] [2018-06-21T00:25:50.237Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2018-06-04T05:53:37.252Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-06-04T05:53:37.255Z] > authorizing via signed-in user
-[debug] [2018-06-04T05:53:37.258Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2018-06-04T05:53:37.258Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
- { refresh_token: '1/cPgHZYgY4u9pmnxBh6okSfnlUBHXfQ0jAfM5JW8rqBM',
-  client_id:
-   '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+[debug] [2018-06-21T00:25:50.252Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-06-21T00:25:50.252Z] > authorizing via signed-in user
+[debug] [2018-06-21T00:25:50.255Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-06-21T00:25:50.255Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/nZMooc2wW4b8yMwNT65XQUjq7IBPI0mxsSQgeb1sDgU',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
   client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
   grant_type: 'refresh_token',
-  scope:
-   'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
- Mon Jun 04 2018 00:53:37 GMT-0500 (Central Daylight Time)
-[debug] [2018-06-04T05:53:37.561Z] <<< HTTP RESPONSE 200
-[debug] [2018-06-04T05:53:37.581Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/adventure-academ-1501025774496  
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Wed Jun 20 2018 19:25:50 GMT-0500 (DST)
+[debug] [2018-06-21T00:25:50.481Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-21T00:25:50.509Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/adventure-academ-1501025774496  
   
- Mon Jun 04 2018 00:53:37 GMT-0500 (Central Daylight Time)
-[debug] [2018-06-04T05:53:37.834Z] <<< HTTP RESPONSE 200
-[debug] [2018-06-04T05:53:37.839Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/adventure-academ-1501025774496/tokens  
+ Wed Jun 20 2018 19:25:50 GMT-0500 (DST)
+[debug] [2018-06-21T00:25:50.989Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-21T00:25:50.991Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/adventure-academ-1501025774496/tokens  
   
- Mon Jun 04 2018 00:53:37 GMT-0500 (Central Daylight Time)
-[debug] [2018-06-04T05:53:38.196Z] <<< HTTP RESPONSE 200
-[debug] [2018-06-04T05:53:38.199Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/adventure-academ-1501025774496  
+ Wed Jun 20 2018 19:25:50 GMT-0500 (DST)
+[debug] [2018-06-21T00:25:51.476Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-21T00:25:51.478Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/adventure-academ-1501025774496  
   
- Mon Jun 04 2018 00:53:38 GMT-0500 (Central Daylight Time)
-[debug] [2018-06-04T05:53:38.423Z] <<< HTTP RESPONSE 200
+ Wed Jun 20 2018 19:25:51 GMT-0500 (DST)
+[debug] [2018-06-21T00:25:51.712Z] <<< HTTP RESPONSE 200
 [info] 
-[info] === Serving from 'C:\Users\tyler\Documents\GitHub\aa-with-firebase'...
+[info] === Serving from '/mnt/c/Users/tyler/Documents/GitHub/aa-with-firebase'...
 [info] 
-[info] i  functions: Preparing to emulate functions.
-[debug] [2018-06-04T05:53:39.310Z] Fetching environment
-[debug] [2018-06-04T05:53:39.317Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/784182344237:getServerAppConfig  
+[debug] [2018-06-21T00:25:51.719Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/784182344237/clients/_:getWebAppConfig  
   
- Mon Jun 04 2018 00:53:39 GMT-0500 (Central Daylight Time)
-[debug] [2018-06-04T05:53:39.317Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/784182344237/clients/_:getWebAppConfig  
-  
- Mon Jun 04 2018 00:53:39 GMT-0500 (Central Daylight Time)
-[debug] [2018-06-04T05:53:39.594Z] <<< HTTP RESPONSE 200
+ Wed Jun 20 2018 19:25:51 GMT-0500 (DST)
+[debug] [2018-06-21T00:25:52.038Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: public
-[info] +  hosting: Local server: http://localhost:5000
+[info] ✔  hosting: Local server: http://localhost:5000
 
-[debug] [2018-06-04T05:53:39.646Z] <<< HTTP RESPONSE 200
-[debug] [2018-06-04T05:53:39.646Z] Starting @google-cloud/functions-emulator
-[debug] [2018-06-04T05:53:41.701Z] Parsing function triggers
-[warn] !  functions: Failed to load functions source code. Ensure that you have the latest SDK by running npm i --save firebase-functions inside the functions directory.
-[debug] [2018-06-04T05:53:41.897Z] Error during trigger parsing:  Error parsing triggers: Cannot find module 'C:\Users\tyler\Documents\GitHub\aa-with-firebase\functions'
-
-Try running "npm install" in your functions directory before deploying.
-[warn] !  functions: Error from emulator. Error parsing triggers: Cannot find module 'C:\Users\tyler\Documents\GitHub\aa-with-firebase\functions'
-
-Try running "npm install" in your functions directory before deploying.
-[debug] [2018-06-04T05:53:41.898Z] 
