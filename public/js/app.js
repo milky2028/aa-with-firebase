@@ -34,5 +34,7 @@ const onSave = () => {
     })
   }
 
-const submit = document.querySelector('#scheduleTour');
-submit.addEventListener('click', onSave);
+const submit = document.querySelectorAll('.scheduleTour');
+submit.forEach(tourButton => {
+  tourButton.addEventListener('click', onSave)
+})
