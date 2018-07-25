@@ -7,24 +7,34 @@ const config = {
     messagingSenderId: "784182344237"
 };
 firebase.initializeApp(config);
-
 const settings = { timestampsInSnapshots: true };
 const db = firebase.firestore();
 db.settings(settings);
 
-const onSave = () => {
-    const name = document.querySelector('#name');
-    const email = document.querySelector('#email3');
-    const age = document.querySelector('#child-age');
-    const tourDate = document.querySelector('#date');
-    const tourTime = document.querySelector('#time3');
+const convertDate = (date = new Date) => {
+    let month = String(date.getMonth() + 1);
+    let day = String(date.getDate());
+    const year = String(date.getFullYear());
+
+    if (month.length < 2) { month = '0' + month };
+    if (day.length < 2) { day = '0' + day };
+
+    return `${month}/${day}/${year}`
+}
+
+const onSave = (formNumber) => {
+    const name = document.querySelector(`#name${formNumber}`);
+    const email = document.querySelector(`#email${formNumber}`);
+    const age = document.querySelector(`#child-age${formNumber}`);
+    const tourDate = document.querySelector(`#date${formNumber}`);
+    const tourTime = document.querySelector(`#time${formNumber}`);
     const formData = {
         name: name.value,
         email: email.value,
         childAge: age.value,
         tourDate: tourDate.value,
         tourTime: tourTime.value,
-        submitTime: Date.now()
+        submitTime: convertDate()
     };
     
     db.collection('tours').add(formData).then(docRef => {
@@ -32,9 +42,4 @@ const onSave = () => {
     }).catch(error => {
         console.error('Error adding document: ', error);
     })
-  }
-
-const submit = document.querySelectorAll('.scheduleTour');
-submit.forEach(tourButton => {
-  tourButton.addEventListener('click', onSave)
-})
+}
