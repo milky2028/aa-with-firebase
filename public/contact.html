@@ -123,10 +123,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <textarea id="messageContact" name="message" maxlength="5000" placeholder="Enter your message" required="" data-name="Message" class="input textarea w-input"></textarea>
                 <button class="button register-button w-button" onclick="onContactSubmit()">Submit</button>
               </form>
-              <div class="register-success w-form-done">
+              <div id="contactSuccess" class="register-success w-form-done">
                 <div>Thank you! Your submission has been received!</div>
               </div>
-              <div class="register-error w-form-fail">
+              <div id="contactError" class="register-error w-form-fail">
                 <div>Oops! Something went wrong while submitting the form</div>
               </div>
             </div>

@@ -22,6 +22,16 @@ const convertDate = (date = new Date) => {
     return `${month}/${day}/${year}`
 }
 
+const areFieldsMissing = (objectToCheck) => {
+    let missingFields = false;
+    for (value in objectToCheck) {
+        if (!objectToCheck[value]) {
+            missingFields = true;
+        }
+    }
+    return missingFields;
+}
+
 const onSave = (formNumber) => {
     const name = document.querySelector(`#name${formNumber}`);
     const email = document.querySelector(`#email${formNumber}`);
@@ -39,26 +49,44 @@ const onSave = (formNumber) => {
     
     db.collection('tours').add(formData).then(docRef => {
         console.log('Database write complete:', docRef.id);
+        setTimeout(() => {
+            window.location.href = '/thank-you';
+        }, 2000);
     }).catch(error => {
         console.error('Error adding document: ', error);
     })
 }
 
 const onContactSubmit = () => {
+    const successElement = document.querySelector('#contactSuccess');
+    const errorElement = document.querySelector('#contactError');
     const name = document.querySelector('#nameContact');
     const email = document.querySelector('#emailContact');
     const message = document.querySelector('#messageContact');
     const formData = {
         name: name.value,
         email: email.value,
-        message: message.value,
-        submitDay: convertDate()
+        message: message.value
     }
 
-    console.log(formData);
-    db.collection('contactForms').add(formData).then(docRef => {
-        console.log('Database write complete:', docRef.id);
-    }).catch(error => {
-        console.error('Error posting document:', error);
-    }) 
+    const missingFields = areFieldsMissing(formData)
+    formData['submitDay'] = convertDate()
+
+    if (!missingFields) {
+        db.collection('contactForms').add(formData).then(docRef => {
+            console.log('Database write complete:', docRef.id);
+            if (errorElement.style.display === 'block') {
+                errorElement.style.display = 'none';
+            }
+
+            successElement.style.display = 'block';
+            setTimeout(() => {
+                window.location.href = '/thank-you-contact';
+            }, 2500);
+        }).catch(error => {
+            console.error('Error posting document:', error);
+        }) 
+    } else {
+        errorElement.style.display = 'block';
+    }
 }
