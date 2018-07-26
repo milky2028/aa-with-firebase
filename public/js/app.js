@@ -55,4 +55,9 @@ const onContactSubmit = () => {
     }
 
     console.log(formData);
+    db.collection('contactForms').add(formData).then(docRef => {
+        console.log('Database write complete:', docRef.id);
+    }).catch(error => {
+        console.error('Error posting document:', error);
+    }) 
 }
