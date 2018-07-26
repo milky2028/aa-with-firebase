@@ -1,6 +1,6 @@
 import * as functions from 'firebase-functions';
-import * as sgMail from '@sendgrid/mail';
-import { SENDGRID_API_KEY } from '../sendgridEnv'
+// import * as sgMail from '@sendgrid/mail';
+// import { SENDGRID_API_KEY } from '../sendgridEnv'
 
 // sgMail.setApiKey(SENDGRID_API_KEY);
 
@@ -13,7 +13,7 @@ const msg = {
   };
 
 export const sendMail = functions.https.onRequest((request, response) => {
-  response.send(msg);
+  response.send('Ok, but does it register changes?');
   // sgMail.send(msg).then(() => {
   //   response.send('It worked!');
   // }).catch(error => {
