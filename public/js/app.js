@@ -34,7 +34,7 @@ const onSave = (formNumber) => {
         childAge: age.value,
         tourDate: tourDate.value,
         tourTime: tourTime.value,
-        submitTime: convertDate()
+        submitDay: convertDate()
     };
     
     db.collection('tours').add(formData).then(docRef => {
@@ -51,7 +51,8 @@ const onContactSubmit = () => {
     const formData = {
         name: name.value,
         email: email.value,
-        message: message.value
+        message: message.value,
+        submitDay: convertDate()
     }
 
     console.log(formData);
