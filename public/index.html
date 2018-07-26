@@ -72,25 +72,42 @@
           <div class="new-form-container"><a href="#" data-ix="popup-close-overlay" class="popup-close-icon w-inline-block"></a><img src="images/sun.svg" width="70" alt="Smiling Sun cartoon drawing" class="image-2">
             <h3 class="register-headline">Schedule a Tour Today</h3>
             <div class="w-form">
-              <form>
-                <input type="text" id="name0" name="name" data-name="Name" maxlength="256" placeholder="Name" class="input w-input">
-                <input type="email" id="email0" name="Email" data-name="Email" placeholder="Email Address" maxlength="256" required="" class="input w-input">
-                <div class="text-block-4">Age of Child</div>
-                <select id="child-age0" name="Child-Age" required="" data-name="Child Age" class="select-field w-select">
-                  <option value="Infant">Infant</option>
-                  <option value="Two">Two</option>
-                  <option value="Three">Three</option>
-                  <option value="Four">Four</option>
-                  <option value="Five">Five</option></select>
-                <div class="html-embed w-embed">
-                  <fieldset>
-                    <label class="text-block-4" font-weight="normal" for="date">Date</label>
-                    <input id="date0" class="w-input" type="date" name="date">
-                  </fieldset>
-                </div>
-                <div class="text-block-4">Time</div><select id="time0" name="Time" required="" data-name="Time" class="select-field w-select"><option value="10:00AM">10:00AM</option><option value="10:30AM">10:30AM</option><option value="11:00AM">11:00AM</option><option value="11:30AM">11:30AM</option><option value="12:00PM">12:00PM</option><option value="12:30PM">12:30PM</option><option value="1:00PM">1:00PM</option><option value="1:30PM">1:30PM</option><option value="2:00PM">2:00PM</option><option value="2:30PM">2:30PM</option><option value="3:00PM">3:00PM</option><option value="3:30PM">3:30PM</option><option value="4:00PM">4:00PM</option><option value="4:30PM">4:30PM</option></select>
-                <div class="text-block-on-modal"><a href="contact">Contact us</a> to schedule a tour outside normal business hours.</div>
-                <input id="0" value="Submit" data-wait="Please wait..." class="button register-button w-button" onclick="onSave(this.id)"></form>
+                <form>
+                    <input type="text" id="name0" name="name" maxlength="256" placeholder="Name" class="input w-input">
+                    <input type="email" id="email0" name="Email" placeholder="Email Address" maxlength="256" required="" class="input w-input">
+                    <div class="text-block-4">Age of Child</div>
+                    <select id="child-age0" name="Age-of-Child" required="" class="select-field w-select">
+                      <option value="Infant">Infant</option>
+                      <option value="Two">Twos</option>
+                      <option value="Three">Threes</option>
+                      <option value="Four">Four</option>
+                      <option value="Five">Five</option></select>
+                    <div class="html-embed w-embed">
+                      <fieldset>
+                        <label class="text-block-4" font-weight="normal" for="date">Date</label>
+                        <input id="date0" class="w-input" type="date" name="date">
+                      </fieldset>
+                    </div>
+                    <div class="text-block-4">Time</div>
+                    <select id="time0" name="Time" required="" data-name="Time" class="select-field w-select">
+                      <option value="10:00AM">10:00AM</option>
+                      <option value="10:30AM">10:30AM</option>
+                      <option value="11:00AM">11:00AM</option>
+                      <option value="11:30AM">11:30AM</option>
+                      <option value="12:00PM">12:00PM</option>
+                      <option value="12:30PM">12:30PM</option>
+                      <option value="1:00PM">1:00PM</option>
+                      <option value="1:30PM">1:30PM</option>
+                      <option value="2:00PM">2:00PM</option>
+                      <option value="2:30PM">2:30PM</option>
+                      <option value="3:00PM">3:00PM</option>
+                      <option value="3:30PM">3:30PM</option>
+                      <option value="4:00PM">4:00PM</option>
+                      <option value="4:30PM">4:30PM</option>
+                    </select>
+                    <div class="text-block-on-modal"><a href="contact">Contact us</a> to schedule a tour outside normal business hours.</div>
+                    <button id="0" class="button register-button w-button" onclick="onSave(this.id)">Submit</button>
+                  </form>
               <div class="register-success w-form-done">
                 <div class="register-success">Thank you! Your tour has been scheduled!</div>
               </div>
@@ -625,41 +642,42 @@
                   <div data-ix="fadein-bottom-scroll" class="forms-container"><img src="images/sun.svg" width="85" alt="Child's smiling Sun cartoon drawing">
                     <h3 class="register-headline">Schedule a Tour Today</h3>
                     <div class="w-form">
-                      <form data-redirect="/thank-you" redirect="/thank-you">
-                        <input type="text" id="name1" name="name" data-name="Name" maxlength="256" placeholder="Name" class="input w-input">
-                        <input type="email" id="email1" name="Email" data-name="Email" placeholder="Email Address" maxlength="256" required="" class="input w-input">
-                        <div class="text-block-4">Age of Child</div>
-                        <select id="child-age1" name="Age-of-Child" required="" data-name="Age of Child" class="select-field w-select">
-                          <option value="Infant">Infant</option>
-                          <option value="Two">Twos</option>
-                          <option value="Three">Threes</option>
-                          <option value="Four">Four</option>
-                          <option value="Five">Five</option></select>
-                        <div class="html-embed w-embed">
-                          <fieldset>
-                            <label class="text-block-4" font-weight="normal" for="date">Date</label>
-                            <input id="date1" class="w-input" type="date" name="date">
-                          </fieldset>
-                        </div>
-                        <div>Time</div><select id="time1" name="Time" required="" data-name="Time" class="select-field w-select">
-                          <option value="10:00AM">10:00AM</option>
-                          <option value="10:30AM">10:30AM</option>
-                          <option value="11:00AM">11:00AM</option>
-                          <option value="11:30AM">11:30AM</option>
-                          <option value="12:00PM">12:00PM</option>
-                          <option value="12:30PM">12:30PM</option>
-                          <option value="1:00PM">1:00PM</option>
-                          <option value="1:30PM">1:30PM</option>
-                          <option value="2:00PM">2:00PM</option>
-                          <option value="2:30PM">2:30PM</option>
-                          <option value="3:00PM">3:00PM</option>
-                          <option value="3:30PM">3:30PM</option>
-                          <option value="4:00PM">4:00PM</option>
-                          <option value="4:30PM">4:30PM</option>
-                        </select>
-                        <div class="text-block-on-modal"><a href="contact">Contact us</a> to schedule a tour outside normal business hours.</div>
-                        <input id="1" value="Submit" data-wait="Please wait..." class="scheduleTour button register-button w-button">
-                      </form>
+                        <form>
+                            <input type="text" id="name1" name="name" maxlength="256" placeholder="Name" class="input w-input">
+                            <input type="email" id="email1" name="Email" placeholder="Email Address" maxlength="256" required="" class="input w-input">
+                            <div class="text-block-4">Age of Child</div>
+                            <select id="child-age1" name="Age-of-Child" required="" class="select-field w-select">
+                              <option value="Infant">Infant</option>
+                              <option value="Two">Twos</option>
+                              <option value="Three">Threes</option>
+                              <option value="Four">Four</option>
+                              <option value="Five">Five</option></select>
+                            <div class="html-embed w-embed">
+                              <fieldset>
+                                <label class="text-block-4" font-weight="normal" for="date">Date</label>
+                                <input id="date1" class="w-input" type="date" name="date">
+                              </fieldset>
+                            </div>
+                            <div class="text-block-4">Time</div>
+                            <select id="time1" name="Time" required="" data-name="Time" class="select-field w-select">
+                              <option value="10:00AM">10:00AM</option>
+                              <option value="10:30AM">10:30AM</option>
+                              <option value="11:00AM">11:00AM</option>
+                              <option value="11:30AM">11:30AM</option>
+                              <option value="12:00PM">12:00PM</option>
+                              <option value="12:30PM">12:30PM</option>
+                              <option value="1:00PM">1:00PM</option>
+                              <option value="1:30PM">1:30PM</option>
+                              <option value="2:00PM">2:00PM</option>
+                              <option value="2:30PM">2:30PM</option>
+                              <option value="3:00PM">3:00PM</option>
+                              <option value="3:30PM">3:30PM</option>
+                              <option value="4:00PM">4:00PM</option>
+                              <option value="4:30PM">4:30PM</option>
+                            </select>
+                            <div class="text-block-on-modal"><a href="contact">Contact us</a> to schedule a tour outside normal business hours.</div>
+                            <button id="1" class="button register-button w-button" onclick="onSave(this.id)">Submit</button>
+                          </form>
                       <div class="register-success w-form-done">
                         <div class="register-success">Thank you! Your your has been scheduled!</div>
                       </div>

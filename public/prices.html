@@ -14,6 +14,8 @@
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <link href="css/webflow.css" rel="stylesheet" type="text/css">
   <link href="css/adventure-academy-new-site.webflow.css" rel="stylesheet" type="text/css">
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-firestore.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js" type="text/javascript"></script>
   <script type="text/javascript">WebFont.load({  google: {    families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","Pompiere:regular"]  }});</script>
   <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
@@ -35,16 +37,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="new-form-container"><a href="#" data-ix="popup-close-overlay" class="popup-close-icon w-inline-block"></a><img src="images/sun.svg" width="70" alt="Smiling Sun cartoon drawing" class="image-2">
       <h3 class="register-headline">Schedule a Tour Today</h3>
       <div class="w-form">
-        <form id="wf-form-Tour-Form" name="wf-form-Tour-Form" data-name="Tour Form" data-redirect="/thank-you" redirect="/thank-you"><input type="text" id="name" name="name" data-name="Name" maxlength="256" placeholder="Name" class="input w-input"><input type="email" id="Email-3" name="Email" data-name="Email" placeholder="Email Address" maxlength="256" required="" class="input w-input">
-          <div class="text-block-4">Age of Child</div><select id="Child-Age" name="Child-Age" required="" data-name="Child Age" class="select-field w-select"><option value="Infant">Infant</option><option value="Two">Twos</option><option value="Three">Threes</option><option value="Four">Four</option><option value="Five">Five</option></select>
+        <form>
+          <input type="text" id="name0" name="name" maxlength="256" placeholder="Name" class="input w-input">
+          <input type="email" id="email0" name="Email" placeholder="Email Address" maxlength="256" required="" class="input w-input">
+          <div class="text-block-4">Age of Child</div>
+          <select id="child-age0" name="Age-of-Child" required="" class="select-field w-select">
+            <option value="Infant">Infant</option>
+            <option value="Two">Twos</option>
+            <option value="Three">Threes</option>
+            <option value="Four">Four</option>
+            <option value="Five">Five</option></select>
           <div class="html-embed w-embed">
             <fieldset>
-              <label font-weight="normal" for="date">Date</label>
-              <input class="w-input" type="date" name="date">
+              <label class="text-block-4" font-weight="normal" for="date">Date</label>
+              <input id="date0" class="w-input" type="date" name="date">
             </fieldset>
           </div>
-          <div class="text-block-4">Time</div><select id="Time-3" name="Time" required="" data-name="Time" class="select-field w-select"><option value="10:00AM">10:00AM</option><option value="10:30AM">10:30AM</option><option value="11:00AM">11:00AM</option><option value="11:30AM">11:30AM</option><option value="12:00PM">12:00PM</option><option value="12:30PM">12:30PM</option><option value="1:00PM">1:00PM</option><option value="1:30PM">1:30PM</option><option value="2:00PM">2:00PM</option><option value="2:30PM">2:30PM</option><option value="3:00PM">3:00PM</option><option value="3:30PM">3:30PM</option><option value="4:00PM">4:00PM</option><option value="4:30PM">4:30PM</option></select>
-          <div class="text-block-on-modal"><a href="contact">Contact us</a> to schedule a tour outside normal business hours.</div><input type="submit" value="Submit" data-wait="Please wait..." class="button register-button w-button"></form>
+          <div class="text-block-4">Time</div>
+          <select id="time0" name="Time" required="" data-name="Time" class="select-field w-select">
+            <option value="10:00AM">10:00AM</option>
+            <option value="10:30AM">10:30AM</option>
+            <option value="11:00AM">11:00AM</option>
+            <option value="11:30AM">11:30AM</option>
+            <option value="12:00PM">12:00PM</option>
+            <option value="12:30PM">12:30PM</option>
+            <option value="1:00PM">1:00PM</option>
+            <option value="1:30PM">1:30PM</option>
+            <option value="2:00PM">2:00PM</option>
+            <option value="2:30PM">2:30PM</option>
+            <option value="3:00PM">3:00PM</option>
+            <option value="3:30PM">3:30PM</option>
+            <option value="4:00PM">4:00PM</option>
+            <option value="4:30PM">4:30PM</option>
+          </select>
+          <div class="text-block-on-modal"><a href="contact">Contact us</a> to schedule a tour outside normal business hours.</div>
+          <button id="0" class="button register-button w-button" onclick="onSave(this.id)">Submit</button>
+        </form>
         <div class="register-success w-form-done">
           <div class="register-success">Thank you! Your tour has been scheduled!</div>
         </div>
@@ -297,6 +325,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
   <script src="js/webflow.js" type="text/javascript"></script>
+  <script src="js/app.js"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
   <!--  Google Tag Manager (noscript)  -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N3W6MDL" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
