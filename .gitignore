@@ -2,3 +2,4 @@ node_modules/
 lib/
 firebase-debug.log
 npm-debug.log
+functions/sendgridEnv.ts
