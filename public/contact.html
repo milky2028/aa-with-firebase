@@ -117,7 +117,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <div class="contact-form forms-container"><img src="images/register-icon.svg" width="65">
             <h3 class="register-headline">Contact us, and we&#x27;ll get back to you as soon as possible.</h3>
             <div class="register-success w-form">
-              <form id="email-form-2" name="email-form-2" data-name="Email Form 2" data-redirect="/thank-you-contact" redirect="/thank-you-contact"><input type="text" id="Name-4" name="Name" data-name="Name" placeholder="Enter your name" maxlength="256" required="" class="input w-input"><input type="email" id="Email-address" name="Email-address" data-name="Email address" placeholder="Enter your email address" maxlength="256" required="" class="input w-input"><textarea id="Message" name="Message" maxlength="5000" placeholder="Enter your message" required="" data-name="Message" class="input textarea w-input"></textarea><input type="submit" value="Submit" data-wait="Please wait..." class="button register-button w-button"></form>
+              <form>
+                <input type="text" id="nameContact" name="Name" data-name="Name" placeholder="Enter your name" maxlength="256" required="" class="input w-input">
+                <input type="email" id="emailContact" name="Email-address" data-name="Email address" placeholder="Enter your email address" maxlength="256" required="" class="input w-input">
+                <textarea id="messageContact" name="message" maxlength="5000" placeholder="Enter your message" required="" data-name="Message" class="input textarea w-input"></textarea>
+                <button class="button register-button w-button" onclick="onContactSubmit()">Submit</button>
+              </form>
               <div class="register-success w-form-done">
                 <div>Thank you! Your submission has been received!</div>
               </div>

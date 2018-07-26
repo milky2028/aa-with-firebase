@@ -43,3 +43,16 @@ const onSave = (formNumber) => {
         console.error('Error adding document: ', error);
     })
 }
+
+const onContactSubmit = () => {
+    const name = document.querySelector('#nameContact');
+    const email = document.querySelector('#emailContact');
+    const message = document.querySelector('#messageContact');
+    const formData = {
+        name: name.value,
+        email: email.value,
+        message: message.value
+    }
+
+    console.log(formData);
+}
