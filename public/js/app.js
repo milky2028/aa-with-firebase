@@ -52,6 +52,7 @@ const onSave = (formNumber, successOrFailNumber) => {
     if (!areFieldsMissing(formData)) {
         db.collection('tours').add(formData).then(docRef => {
             console.log('Database write complete:', docRef.id);
+            // error in is happening here. ID's for DOM elements are incorrect
             if (errorElement.style.display === 'block') {
                 errorElement.style.display = 'none';
             }
