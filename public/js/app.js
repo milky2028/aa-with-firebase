@@ -32,9 +32,9 @@ const areFieldsMissing = (objectToCheck) => {
     return missingFields;
 }
 
-const onSave = (formNumber, errorMessageNumber) => {
-    const successElement = document.querySelector(`#tourSuccess${errorMessageNumber}`);
-    const errorElement = document.querySelector(`#tourError${errorMessageNumber}`);
+const onSave = (formNumber, successOrFailNumber) => {
+    const successElement = document.querySelector(`#tourSuccess${successOrFailNumber}`);
+    const errorElement = document.querySelector(`#tourError${successOrFailNumber}`);
     const name = document.querySelector(`#name${formNumber}`);
     const email = document.querySelector(`#email${formNumber}`);
     const age = document.querySelector(`#child-age${formNumber}`);
