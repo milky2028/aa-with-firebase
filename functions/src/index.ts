@@ -22,9 +22,9 @@ export const tourFormSubmission = functions.firestore.document('tours/{tourId}')
 
   sgMail.send(msgToParent).then(() => {
     console.log('Message to parent worked.');
-  }).catch(error => console.error('Message to parent did not work :['));
+  }).catch(error => console.error('Message to parent did not work :[', error));
 
   return sgMail.send(msgToMom).then(() => {
     console.log('Message to mom worked.');
-  }).catch(error => console.error('Message to mom did not work :['));
+  }).catch(error => console.error('Message to mom did not work :[', error));
 });
