@@ -1249,7 +1249,7 @@
               form: i
           })), w(r);
           var o = i.closest("div.w-form");
-          r.done = o.find("> .w-form-done"), r.fail = o.find("> .w-form-fail");
+        //   r.done = o.find("> .w-form-done"), r.fail = o.find("> .w-form-fail");
           var s = r.action = i.attr("action");
           r.handler = null, r.redirect = i.attr("data-redirect"), v.test(s) ? r.handler = x : s || (a ? r.handler = "function" == typeof hostedSubmitWebflow ? hostedSubmitWebflow : y : m())
       }

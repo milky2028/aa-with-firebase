@@ -51,19 +51,13 @@ const onSave = (formNumber, successOrFailNumber) => {
     
     if (!areFieldsMissing(formData)) {
         db.collection('tours').add(formData).then(docRef => {
-            console.log('Database write complete:', docRef.id);
             // error in is happening here. ID's for DOM elements are incorrect
-            if (errorElement.style.display === 'block') {
-                errorElement.style.display = 'none';
-            }
-
+            errorElement.style.display = 'none';
             successElement.style.display = 'block';
             setTimeout(() => {
                 window.location.href = '/thank-you';
             }, 2500);
-        }).catch(error => {
-            console.error('Error posting document:', error);
-        }) 
+        }).catch(error => console.error('Error posting document:', error))
     } else {
         errorElement.style.display = 'block';
     }
@@ -84,18 +78,12 @@ const onContactSubmit = () => {
 
     if (!areFieldsMissing(formData)) {
         db.collection('contactForms').add(formData).then(docRef => {
-            console.log('Database write complete:', docRef.id);
-            if (errorElement.style.display === 'block') {
-                errorElement.style.display = 'none';
-            }
-
+            errorElement.style.display = 'none';
             successElement.style.display = 'block';
             setTimeout(() => {
                 window.location.href = '/thank-you-contact';
             }, 2500);
-        }).catch(error => {
-            console.error('Error posting document:', error);
-        }) 
+        }).catch(error => console.error('Error posting document:', error)) 
     } else {
         errorElement.style.display = 'block';
     }
