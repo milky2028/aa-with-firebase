@@ -1,0 +1,28 @@
+{
+  "name": "aa-with-firebase",
+  "version": "1.0.0",
+  "description": "Mom's website with firebase",
+  "main": "public/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/milky2028/aa-with-firebase.git"
+  },
+  "author": "Tyler Gross",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/milky2028/aa-with-firebase/issues"
+  },
+  "homepage": "https://github.com/milky2028/aa-with-firebase#readme",
+  "devDependencies": {
+    "eslint": "^5.2.0",
+    "eslint-config-google": "^0.9.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0"
+  }
+}
