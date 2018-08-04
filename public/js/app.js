@@ -33,13 +33,14 @@ const areFieldsMissing = (objectToCheck) => {
 }
 
 const onSave = (formNumber, successOrFailNumber) => {
-  const successElement = document.querySelector(`#tourSuccess${successOrFailNumber}`);
-  const errorElement = document.querySelector(`#tourError${successOrFailNumber}`);
-  const name = document.querySelector(`#name${formNumber}`);
-  const email = document.querySelector(`#email${formNumber}`);
-  const age = document.querySelector(`#child-age${formNumber}`);
-  const tourDate = document.querySelector(`#date${formNumber}`);
-  const tourTime = document.querySelector(`#time${formNumber}`);
+  event.preventDefault ? event.preventDefault() : event.returnValue = false
+  const successElement = document.querySelector(`#tourSuccess${successOrFailNumber}`)
+  const errorElement = document.querySelector(`#tourError${successOrFailNumber}`)
+  const name = document.querySelector(`#name${formNumber}`)
+  const email = document.querySelector(`#email${formNumber}`)
+  const age = document.querySelector(`#child-age${formNumber}`)
+  const tourDate = document.querySelector(`#date${formNumber}`)
+  const tourTime = document.querySelector(`#time${formNumber}`)
   const formData = {
     name: name.value,
     email: email.value,
@@ -63,6 +64,7 @@ const onSave = (formNumber, successOrFailNumber) => {
 }
 
 const onContactSubmit = () => {
+  event.preventDefault ? event.preventDefault() : event.returnValue = false
   const successElement = document.querySelector('#contactSuccess')
   const errorElement = document.querySelector('#contactError')
   const name = document.querySelector('#nameContact')
