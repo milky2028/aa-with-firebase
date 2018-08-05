@@ -48,14 +48,14 @@ export const contactFormSubmission = functions.firestore.document('contactForms/
     subject: 'Someone Submitted a New Contact Form On Your Website',
     html: `
     <div style="font-family: sans-serif">
-      <h2>Hey ma!</h2>
-      <p>Someone contacted you via the contact forms on your website. Here's who they were and what they had to say:</p>
+      <h2 style="color: black">Hey ma!</h2>
+      <p style="color: black">Someone contacted you via the contact forms on your website. Here's who they were and what they had to say:</p>
       <p>Name: ${submission.name}</p>
-      <p>Email: ${submission.emai}</p>
+      <p>Email: ${submission.email}</p>
       <p>Day Submitted: ${submission.submitDay}</p>
       <p>Message: ${submission.message}</p>
-      <p>Love you mom! I hope you're having a great day.</p>
-      <p>From Tylerbot</p>
+      <p style="color: black">Love you mom! I hope you're having a great day.</p>
+      <p style="color: black">From Tylerbot</p>
     </div>`
   }
 
@@ -69,14 +69,12 @@ export const contactFormSubmission = functions.firestore.document('contactForms/
       <table>
         <tr>
           <td><img style="height: 40px; width: 40px; margin: 8px" src="https://adventureacademyweb.com/images/white-logo.png"></td>
-            <td>
-          <h2 style="margin: 0; color: white; font-weight: 300">Adventure Academy</h2>
-          </td>
+          <td><h2 style="margin: 0; color: white; font-weight: 300">Adventure Academy</h2></td>
           </tr>
           </table>
       </div>
     <div>
-      <h1 style="font-size: 20px; padding-left: 24px;">Thank you for contacted Adventure Academy Daycare Center! We.ll be in touch with you soon.</h1>
+      <h1 style="font-size: 20px; padding-left: 24px;">Thank you for contacting Adventure Academy Daycare Center! We'll be in touch with you soon.</h1>
       <p style="padding-left: 36px; font-weight: bold; margin: 5px">Lisa Gross</p>
       <p style="padding-left: 36px; margin: 5px">Owner and Director</p>
       <p style="padding-left: 36px; margin: 5px">Adventure Academy Daycare Center</p>
