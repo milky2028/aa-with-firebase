@@ -1244,6 +1244,10 @@ figcaption {
   background-image: url('../images/Superkid.jpg');
 }
 
+.teaser-flex-grid-item.aug-2018 {
+  background-image: url('../images/fullsizeoutput_1de0.jpg');
+}
+
 .teaser-flex-grid-item-infos-footer {
   position: absolute;
   left: 40px;
@@ -2008,6 +2012,10 @@ figcaption {
   background-image: url('../images/Superkid_1.jpg');
 }
 
+.detail-image.playground-detail {
+  background-image: url('../images/fullsizeoutput_1de0.jpg');
+}
+
 .sidebar-headline {
   display: block;
   margin-top: 25px;
@@ -2319,6 +2327,26 @@ figcaption {
   background-image: url('../images/DSC_0332-01--thumb.jpg');
 }
 
+.lightbox-link.small._12 {
+  background-image: url('../images/IMG_2791.jpg');
+}
+
+.lightbox-link.small._13 {
+  background-image: url('../images/IMG_2792.jpg');
+}
+
+.lightbox-link.small._14 {
+  background-image: url('../images/IMG_2721.jpg');
+}
+
+.lightbox-link.small._15 {
+  background-image: url('../images/fullsizeoutput_1de2.jpg');
+}
+
+.lightbox-link.small._16 {
+  background-image: url('../images/fullsizeoutput_1de0.jpg');
+}
+
 .tabs-menu {
   margin-bottom: -2px;
   font-family: Pompiere, sans-serif;
@@ -2531,6 +2559,32 @@ figcaption {
 
 .list-item {
   font-size: 16px;
+}
+
+.article-image {
+  height: 45vh;
+  margin-top: 25px;
+  margin-bottom: 25px; 
+  padding-bottom: 0px;
+  background-image: url('../images/fullsizeoutput_1de2.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.article-image.second {
+  background-image: url('../images/IMG_2721.jpg');
+}
+
+.article-image.third {
+  background-image: url('../images/IMG_2724.jpg');
+}
+
+.article-image.fourth {
+  background-image: url('../images/IMG_2792.jpg');
+}
+
+.article-image.fifth {
+  background-image: url('../images/IMG_2791.jpg');
 }
 
 html.w-mod-js *[data-ix="fadein-bottom-scroll"] {
@@ -2935,38 +2989,6 @@ html.w-mod-js *[data-ix="popup-initial"] {
 }
 
 @media (max-width: 767px) {
-  .slide-1 {
-    background-image: url('../images/hero-mobile.jpg');
-  }
-
-  .family-image {
-    background-image: url('../images/family-mobile.jpg');
-  }
-
-  .teaser-flex-grid-item.infants {
-    background-image: url('../images/nursery-mobile.jpg');
-  }
-
-  .teaser-flex-grid-item.toddlers {
-    background-image: url('../images/toddlers-mobile.jpg');
-  }
-
-  .teaser-flex-grid-item {
-    background-image: url('../images/twos-mobile.jpg');
-  }
-
-  .teaser-flex-grid-item.threes {
-    background-image: url('../images/threes-mobile.jpg');
-  }
-
-  .teaser-flex-grid-item.pre-k {
-    background-image: url('../images/fours-mobile.jpg');
-  }
-
-  .teaser-flex-grid-item.am-pre {
-    background-image: url('../images/cute-kid-mobile.jpg');
-  }
-
   h1 {
     font-size: 39px;
     line-height: 44px;

@@ -56,7 +56,7 @@ const onSave = (formNumber, successOrFailNumber) => {
       successElement.style.display = 'block'
       setTimeout(() => {
         window.location.href = '/thank-you'
-      }, 2500)
+      }, 1500)
     }).catch(error => console.error('Error posting document:', error))
   } else {
     errorElement.style.display = 'block'
@@ -83,7 +83,7 @@ const onContactSubmit = () => {
       successElement.style.display = 'block'
       setTimeout(() => {
         window.location.href = '/thank-you-contact'
-      }, 2500)
+      }, 1500)
     }).catch(error => console.error('Error posting document:', error))
   } else {
     errorElement.style.display = 'block'
