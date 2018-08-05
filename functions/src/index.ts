@@ -11,13 +11,14 @@ export const tourFormSubmission = functions.firestore.document('tours/{tourId}')
     from: 'support@adventureacademyweb.com',
     subject: 'Hey Mom! Someone Submitted a New Tour Form',
     html: `<div style="font-family: sans-serif">
-    <h1 style="font-size: 20px; color: black">Here are the details about the tour:</h1>
-    <p style="color: black; font-size: 18px; margin: 3px 10px;">Name: ${submission.name}</p>
-    <p style="color: black; font-size: 18px; margin: 3px 10px;">Kid\'s Age: ${submission.childAge}</p>
-    <p style="color: black; font-size: 18px; margin: 3px 10px;">Tour Date: ${submission.tourDate}</p>
-    <p style="color: black; font-size: 18px; margin: 3px 10px; font-family: sans-serif">Tour Time: ${submission.tourTime}</p>
-    <p style="color: black; font-size: 18px;">I love you mom! You\'re the greatest.</p>
-    <p style="color: black; font-size: 18px; font-weight: bold">From Tylerbot</p></div>`,
+            <h1 style="font-size: 20px; color: black">Here are the details about the tour:</h1>
+            <p style="color: black; font-size: 18px; margin: 3px 10px;">Name: ${submission.name}</p>
+            <p style="color: black; font-size: 18px; margin: 3px 10px;">Kid\'s Age: ${submission.childAge}</p>
+            <p style="color: black; font-size: 18px; margin: 3px 10px;">Tour Date: ${submission.tourDate}</p>
+            <p style="color: black; font-size: 18px; margin: 3px 10px; font-family: sans-serif">Tour Time: ${submission.tourTime}</p>
+            <p style="color: black; font-size: 18px;">I love you mom! You\'re the greatest.</p>
+            <p style="color: black; font-size: 18px; font-weight: bold">From Tylerbot</p>
+          </div>`,
   };
 
   const msgToParent = {
@@ -46,16 +47,16 @@ export const contactFormSubmission = functions.firestore.document('contactForms/
     to: 'tylergross28@gmail.com',
     from: 'support@adventureacademyweb.com',
     subject: 'Someone Submitted a New Contact Form On Your Website',
-    html: `
-    <div style="font-family: sans-serif">
+    html: `<div style="font-family: sans-serif">
       <h2 style="color: black">Hey ma!</h2>
       <p style="color: black">Someone contacted you via the contact forms on your website. Here's who they were and what they had to say:</p>
-      <p>Name: ${submission.name}</p>
-      <p>Email: ${submission.email}</p>
-      <p>Day Submitted: ${submission.submitDay}</p>
-      <p>Message: ${submission.message}</p>
-      <p style="color: black">Love you mom! I hope you're having a great day.</p>
-      <p style="color: black">From Tylerbot</p>
+      <p style="margin: 5px">Name: ${submission.name}</p>
+      <p style="margin: 5px">Email: ${submission.email}</p>
+      <p style="margin: 5px">Day Submitted: ${submission.submitDay}</p>
+      <p style="margin: 5px">Message: ${submission.message}</p>
+      <p></p>
+      <p style="color: black; margin: 5px">Love you mom! I hope you're having a great day.</p>
+      <p style="color: black; margin: 5px">From Tylerbot</p>
     </div>`
   }
 
