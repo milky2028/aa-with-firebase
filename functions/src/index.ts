@@ -1,6 +1,6 @@
 import * as functions from 'firebase-functions';
 import * as sgMail from '@sendgrid/mail';
-import { SENDGRID_API_KEY } from './sendgridEnv'
+import { SENDGRID_API_KEY } from './sendgridEnv';
 
 sgMail.setApiKey(SENDGRID_API_KEY);
 export const tourFormSubmission = functions.firestore.document('tours/{tourId}').onCreate((snapshot, context) => {
@@ -29,7 +29,7 @@ export const tourFormSubmission = functions.firestore.document('tours/{tourId}')
     <div style="height: 60px; width: 100%; background-color: #49adea"><table><tr><td><img style="height: 40px; width: 40px; margin: 8px" src="https://adventureacademyweb.com/images/white-logo.png"></td><td><h2 style="margin: 0; color: white; font-weight: 300">Adventure Academy</h2></td></tr></table></div><div><h1 style="font-size: 20px; padding-left: 24px;">Thank you for scheduling a tour to see our center!</h1><p style="padding-left: 24px;">Here are the details of your visit:</p><p style="padding-left: 75px; margin: 5px">Tour Day: ${submission.tourDate}</p><p style="padding-left: 75px; margin: 5px">Tour Time: ${submission.tourTime}</p><p style="padding-left: 36px;">We'll see you soon!</p><p style="padding-left: 36px; font-weight: bold; margin: 5px">Lisa Gross</p><p style="padding-left: 36px; margin: 5px">Owner and Director</p><p style="padding-left: 36px; margin: 5px">Adventure Academy Daycare Center</p><p style="padding-left: 36px; margin: 5px">8383 Craig St #210, Indianapolis, IN 46250</p><a href="https://adventureacademyweb.com/" style="padding-left: 36px; margin: 5px">adventureacademyweb.com</a>
     </div>
     </body>`
-  }
+  };
 
   sgMail.send(msgToParent).then(() => {
     console.log('Message to parent worked.');
@@ -58,7 +58,7 @@ export const contactFormSubmission = functions.firestore.document('contactForms/
       <p style="color: black; margin: 5px">Love you mom! I hope you're having a great day.</p>
       <p style="color: black; margin: 5px">From Tylerbot</p>
     </div>`
-  }
+  };
 
   const msgToParent = {
     to: submission.email,
@@ -84,7 +84,7 @@ export const contactFormSubmission = functions.firestore.document('contactForms/
       </div>
     </body>
     `
-  }
+  };
 
   sgMail.send(msgToParent).then(() => {
     console.log('Message to parent worked.');
