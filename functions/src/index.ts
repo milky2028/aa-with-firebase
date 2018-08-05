@@ -7,7 +7,7 @@ export const tourFormSubmission = functions.firestore.document('tours/{tourId}')
   const submission = snapshot.data();
 
   const msgToMom = {
-    to: 'tylergross28@gmail.com, tgross1@me.com',
+    to: 'tylergross28@gmail.com, lisa.gross@adventureacademyweb.com',
     from: 'support@adventureacademyweb.com',
     subject: 'Hey Mom! Someone Submitted a New Tour Form',
     html: `<div style="font-family: sans-serif">
@@ -44,7 +44,7 @@ export const contactFormSubmission = functions.firestore.document('contactForms/
   const submission = snapshot.data();
 
   const msgToMom = {
-    to: 'tylergross28@gmail.com',
+    to: 'tylergross28@gmail.com, lisa.gross@adventureacademyweb.com',
     from: 'support@adventureacademyweb.com',
     subject: 'Someone Submitted a New Contact Form On Your Website',
     html: `<div style="font-family: sans-serif">
