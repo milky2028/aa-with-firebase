@@ -21,55 +21,55 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "9c177e0181129ecf19c9d0a316ef6173"
+    "revision": "22cdf9560d463d431c773a60d6b2e1e3"
   },
   {
     "url": "careers.html",
-    "revision": "9f01e8e09a61dfd116e7f7495e491b47"
+    "revision": "94a2cba538a60f66c2350b5c5ea5c6cc"
   },
   {
     "url": "classes/all-classes.html",
-    "revision": "22b6633ab97624095257c4fd0e522e8a"
+    "revision": "34566f74a2801cbc58c5e1967448ee5b"
   },
   {
     "url": "classes/am-preschool.html",
-    "revision": "5f4c5839a6d489de2f1921d3d0179517"
+    "revision": "70b3eef28a582f2745d1d5aa4b8bf10b"
   },
   {
     "url": "classes/fours-and-fives.html",
-    "revision": "a7033cd9472d10f7575c607a42581685"
+    "revision": "ee76cbb8b66809d4588fc68242d62e1d"
   },
   {
     "url": "classes/infants.html",
-    "revision": "3a0cc62f6714178bce793fa390f06bf6"
+    "revision": "8f4f3ede5ceba206a36afc58da4a2afa"
   },
   {
     "url": "classes/threes.html",
-    "revision": "01d6d074594eef4ed9e18b9d0de431d2"
+    "revision": "87e8b1aa0376b31969eb92e8ec113d25"
   },
   {
     "url": "classes/toddlers.html",
-    "revision": "6cae75f09d48dd927eb0126d1300f7f4"
+    "revision": "0295aca93f5a7c85523ffbe138893db4"
   },
   {
     "url": "classes/twos.html",
-    "revision": "4f992b93b7d2707302700a91e377cd49"
+    "revision": "5ce604f2a7e6e20ea587798127f773f4"
   },
   {
     "url": "contact.html",
-    "revision": "fa4be36cfdbbbdbdb710961fede59b5b"
+    "revision": "6598d13473e2a9c700e019de190b36a4"
   },
   {
     "url": "css/adventure-academy-new-site.webflow.css",
-    "revision": "6f39133ab687f015a8ef6bf57ce8dca5"
+    "revision": "02290c810d3b76ecec0e60f6494f393a"
   },
   {
     "url": "css/normalize.css",
-    "revision": "4951cc88307c632cf285d3ba988ab283"
+    "revision": "519121fa4cdf6782a4c1c412564605e2"
   },
   {
     "url": "css/webflow.css",
-    "revision": "b27083bd48eb69a35eb5efd33cf952e4"
+    "revision": "950ff3caf4baa2db0b0420ecac8f6ecb"
   },
   {
     "url": "documents/3-preapplication-spanish-mar2016.pdf",
@@ -85,15 +85,15 @@ self.__precacheManifest = [
   },
   {
     "url": "enroll.html",
-    "revision": "a5d0b01cd24272c8c343af4ea5a9775e"
+    "revision": "76b756667ebd05972ff599dcc9c5ad76"
   },
   {
     "url": "event/events-overview.html",
-    "revision": "32dc7f135aade26e25d449b5f121d31e"
+    "revision": "5231418059229979dde5896cf8b9508e"
   },
   {
     "url": "event/water-play-day.html",
-    "revision": "37cd524e2e39c7fc634cf5cc71cadd80"
+    "revision": "dc49faac8bc55255faa00a0fc99bf6a6"
   },
   {
     "url": "images/32x32png.png",
@@ -409,83 +409,87 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "c682c5e34891f1efcc59d8e06d058f5b"
+    "revision": "21498130ab69c8986f0ef1a6f0cf945a"
   },
   {
     "url": "js/app.js",
-    "revision": "622c51012565f404e458454b1c19bad2"
+    "revision": "4470f3beba907dfccd92651821476ec3"
+  },
+  {
+    "url": "js/config.js",
+    "revision": "15c7fcc669e6fd71695a65f8da9a285b"
   },
   {
     "url": "js/webflow.js",
-    "revision": "a1f7c17479954682f8b915beed879c15"
+    "revision": "27f05137ed761d7be0288ff54e9fc5d3"
   },
   {
     "url": "manifest.json",
-    "revision": "fe0d7c2eb66a9a4b7b963c06f229c615"
+    "revision": "fb9258e46484421348bf54387a4877fb"
   },
   {
     "url": "news/adventure-academy-accepts-ccdf.html",
-    "revision": "94dd783f3f6374c5aed3c81252ec6325"
+    "revision": "021380463fb7293a4cfb0f9d9da9c03f"
   },
   {
     "url": "news/april-2017-newsletter.html",
-    "revision": "1e46fd2df197e7348abea0afb0bd6a0b"
+    "revision": "894545f213d49cb043e8e2de5da4ad63"
   },
   {
     "url": "news/august-2016-newsletter.html",
-    "revision": "23f234a57e8f32d18d90ba81f13cb8c6"
+    "revision": "7ceb81aa7f0f5fe5efbf24cd6b262e78"
   },
   {
     "url": "news/august-2017-newsletter.html",
-    "revision": "9bd3d620a2de74070929845d9bdd2c82"
+    "revision": "0804af2919344e298357cc547e1d80c7"
   },
   {
     "url": "news/december-2016-newsletter.html",
-    "revision": "cdcd515a924d4cdef47af46209903bcc"
+    "revision": "772ec5c2421152295cb8ee421073ad8e"
   },
   {
     "url": "news/march-2017-newsletter.html",
-    "revision": "7a7a066cbc7b2818a2f795cdbf139786"
+    "revision": "691498ea197e66f0af891f3a818e68e1"
   },
   {
     "url": "news/new-playground.html",
-    "revision": "cf4b2f6b5e92053931cf04cbfab38254"
+    "revision": "0fdb543a353db3078ff54cff27f7ad13"
   },
   {
     "url": "news/october-2016-newsletter.html",
-    "revision": "bbe0a1c3042035f192fa62e1bf8f5b6f"
+    "revision": "e72bb20592a6483dfb6d73e13b4f2d57"
   },
   {
     "url": "news/october-2017-newsletter.html",
-    "revision": "f0e7433b4bc62ff976df0765b4acc96c"
+    "revision": "208d03dbad29ee8284f0c5523d5bacc1"
   },
   {
     "url": "news/overview.html",
-    "revision": "334e7b604705a6e63df0bd7a87328898"
+    "revision": "ec7d0c867e0d3f924af9e3698c53b579"
   },
   {
     "url": "news/september-2016-newsletter.html",
-    "revision": "28d93d47293011ce878ad334c175aadb"
+    "revision": "1a85a2ecb4b18b17d0164287df386fb0"
   },
   {
     "url": "news/september-2017-newsletter.html",
-    "revision": "167c1f6a989b532a8f577e012e568ec1"
+    "revision": "9d871fe65a2c3423cbe9e9e4096d97c2"
   },
   {
     "url": "our-center.html",
-    "revision": "77c965e4ad5e7b75ce1b522b6eaf789a"
+    "revision": "ce39c8d4be25f60a70a50127f12d0009"
   },
   {
     "url": "prices.html",
-    "revision": "59f195bcb09618a774e6d0bb737d8a60"
+    "revision": "ebc1599f1f5ed472c85d822bc31dbdba"
   },
   {
     "url": "thank-you-contact.html",
-    "revision": "338c383dfbe2dafa4db79e44ea0f2c87"
+    "revision": "ba9b714a3a8f0a6acb2884d0a25b68f9"
   },
   {
     "url": "thank-you.html",
-    "revision": "ae0fa815a6ddd7bf0b0eeeeb9e9fdf03"
+    "revision": "04d866f271dcb726ca39373f995c7c00"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
