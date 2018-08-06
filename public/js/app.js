@@ -1,11 +1,5 @@
-const config = {
-  apiKey: 'AIzaSyDkRY5dlk-aBvDYpDkyvLLC8nPDxXt2C60',
-  authDomain: 'adventure-academ-1501025774496.firebaseapp.com',
-  databaseURL: 'https://adventure-academ-1501025774496.firebaseio.com',
-  projectId: 'adventure-academ-1501025774496',
-  storageBucket: 'adventure-academ-1501025774496.appspot.com',
-  messagingSenderId: '784182344237'
-}
+import { config } from './config'
+
 firebase.initializeApp(config)
 const settings = { timestampsInSnapshots: true }
 const db = firebase.firestore()
@@ -56,7 +50,7 @@ const onSave = (formNumber, successOrFailNumber) => {
       successElement.style.display = 'block'
       setTimeout(() => {
         window.location.href = '/thank-you'
-      }, 2500)
+      }, 1500)
     }).catch(error => console.error('Error posting document:', error))
   } else {
     errorElement.style.display = 'block'
@@ -83,7 +77,7 @@ const onContactSubmit = () => {
       successElement.style.display = 'block'
       setTimeout(() => {
         window.location.href = '/thank-you-contact'
-      }, 2500)
+      }, 1500)
     }).catch(error => console.error('Error posting document:', error))
   } else {
     errorElement.style.display = 'block'
