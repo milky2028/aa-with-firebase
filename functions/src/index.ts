@@ -1,8 +1,7 @@
 import * as functions from 'firebase-functions';
 import * as sgMail from '@sendgrid/mail';
-import { SENDGRID_API_KEY } from './sendgridEnv';
 
-sgMail.setApiKey(SENDGRID_API_KEY);
+sgMail.setApiKey(functions.config().sendgrid.api.key);
 export const tourFormSubmission = functions.firestore.document('tours/{tourId}').onCreate((snapshot, context) => {
   const submission = snapshot.data();
 
