@@ -7,9 +7,9 @@ const config = {
   messagingSenderId: '784182344237'
 }
 
-firebase.initializeApp(config)
+window.firebase.initializeApp(config)
 const settings = { timestampsInSnapshots: true }
-const db = firebase.firestore()
+const db = window.firebase.firestore()
 db.settings(settings)
 
 const convertDate = (date = new Date()) => {
@@ -34,7 +34,7 @@ const areFieldsMissing = (objectToCheck) => {
 }
 
 const onSave = (formNumber, successOrFailNumber) => {
-  event.preventDefault ? event.preventDefault() : event.returnValue = false
+  window.event.preventDefault ? window.event.preventDefault() : window.event.returnValue = false
   const successElement = document.querySelector(`#tourSuccess${successOrFailNumber}`)
   const errorElement = document.querySelector(`#tourError${successOrFailNumber}`)
   const name = document.querySelector(`#name${formNumber}`)
@@ -65,7 +65,7 @@ const onSave = (formNumber, successOrFailNumber) => {
 }
 
 const onContactSubmit = () => {
-  event.preventDefault ? event.preventDefault() : event.returnValue = false
+  window.event.preventDefault ? window.event.preventDefault() : window.event.returnValue = false
   const successElement = document.querySelector('#contactSuccess')
   const errorElement = document.querySelector('#contactError')
   const name = document.querySelector('#nameContact')
