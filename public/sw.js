@@ -61,7 +61,7 @@ self.__precacheManifest = [
   },
   {
     "url": "css/adventure-academy-new-site.webflow.css",
-    "revision": "02290c810d3b76ecec0e60f6494f393a"
+    "revision": "955ae501a6618f2c8abfd74f05d9fa7c"
   },
   {
     "url": "css/normalize.css",
@@ -69,7 +69,7 @@ self.__precacheManifest = [
   },
   {
     "url": "css/webflow.css",
-    "revision": "950ff3caf4baa2db0b0420ecac8f6ecb"
+    "revision": "2762da06f7fbe95c1e2a9947c086137a"
   },
   {
     "url": "documents/3-preapplication-spanish-mar2016.pdf",
@@ -413,11 +413,7 @@ self.__precacheManifest = [
   },
   {
     "url": "js/app.js",
-    "revision": "4470f3beba907dfccd92651821476ec3"
-  },
-  {
-    "url": "js/config.js",
-    "revision": "15c7fcc669e6fd71695a65f8da9a285b"
+    "revision": "71ec8921a224c3654ac7d9aeba2819e1"
   },
   {
     "url": "js/webflow.js",
