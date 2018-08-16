@@ -2,11 +2,12 @@ import * as functions from 'firebase-functions';
 import * as sgMail from '@sendgrid/mail';
 
 sgMail.setApiKey(functions.config().sendgrid.api.key);
+const adventureRecepients = ['tylergross28@gmail.com', 'lisa.gross@adventureacademyweb.com'];
 export const tourFormSubmission = functions.firestore.document('tours/{tourId}').onCreate((snapshot, context) => {
   const submission = snapshot.data();
 
   const msgToMom = {
-    to: 'tylergross28@gmail.com, lisa.gross@adventureacademyweb.com',
+    to: adventureRecepients,
     from: 'support@adventureacademyweb.com',
     subject: 'Hey Mom! Someone Submitted a New Tour Form',
     html: `<div style="font-family: sans-serif">
@@ -43,7 +44,7 @@ export const contactFormSubmission = functions.firestore.document('contactForms/
   const submission = snapshot.data();
 
   const msgToMom = {
-    to: 'tylergross28@gmail.com, lisa.gross@adventureacademyweb.com',
+    to: adventureRecepients,
     from: 'support@adventureacademyweb.com',
     subject: 'Someone Submitted a New Contact Form On Your Website',
     html: `<div style="font-family: sans-serif">
