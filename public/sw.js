@@ -477,7 +477,7 @@ self.__precacheManifest = [
   },
   {
     "url": "prices.html",
-    "revision": "ebc1599f1f5ed472c85d822bc31dbdba"
+    "revision": "e9cc6b9d9f1881775c3b335c4d49e8a6"
   },
   {
     "url": "thank-you-contact.html",
