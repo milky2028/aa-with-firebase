@@ -11,7 +11,7 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.1/workbox-sw.js");
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
@@ -21,55 +21,55 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "22cdf9560d463d431c773a60d6b2e1e3"
+    "revision": "9c177e0181129ecf19c9d0a316ef6173"
   },
   {
     "url": "careers.html",
-    "revision": "94a2cba538a60f66c2350b5c5ea5c6cc"
+    "revision": "9f01e8e09a61dfd116e7f7495e491b47"
   },
   {
     "url": "classes/all-classes.html",
-    "revision": "34566f74a2801cbc58c5e1967448ee5b"
+    "revision": "22b6633ab97624095257c4fd0e522e8a"
   },
   {
     "url": "classes/am-preschool.html",
-    "revision": "70b3eef28a582f2745d1d5aa4b8bf10b"
+    "revision": "1d0f1a2ebd2f8c114e5c7953fb718b93"
   },
   {
     "url": "classes/fours-and-fives.html",
-    "revision": "ee76cbb8b66809d4588fc68242d62e1d"
+    "revision": "0d152d5ebe1ca103dc327ff723ca930a"
   },
   {
     "url": "classes/infants.html",
-    "revision": "8f4f3ede5ceba206a36afc58da4a2afa"
+    "revision": "d8e4a0874057f243015f83ed39331ca1"
   },
   {
     "url": "classes/threes.html",
-    "revision": "87e8b1aa0376b31969eb92e8ec113d25"
+    "revision": "c2827fa46c43b829da28a9285314ebd3"
   },
   {
     "url": "classes/toddlers.html",
-    "revision": "0295aca93f5a7c85523ffbe138893db4"
+    "revision": "a9a08dfdd09c42fbdb2cf5d6d23a7923"
   },
   {
     "url": "classes/twos.html",
-    "revision": "5ce604f2a7e6e20ea587798127f773f4"
+    "revision": "09f89c303363ab604cda689efac6c33b"
   },
   {
     "url": "contact.html",
-    "revision": "6598d13473e2a9c700e019de190b36a4"
+    "revision": "fa4be36cfdbbbdbdb710961fede59b5b"
   },
   {
     "url": "css/adventure-academy-new-site.webflow.css",
-    "revision": "955ae501a6618f2c8abfd74f05d9fa7c"
+    "revision": "70a8e6c9eb238a6f631f980d3d2f9b6d"
   },
   {
     "url": "css/normalize.css",
-    "revision": "519121fa4cdf6782a4c1c412564605e2"
+    "revision": "4951cc88307c632cf285d3ba988ab283"
   },
   {
     "url": "css/webflow.css",
-    "revision": "2762da06f7fbe95c1e2a9947c086137a"
+    "revision": "ef0bad0458acd2e06a9d1dd5ee8b0d95"
   },
   {
     "url": "documents/3-preapplication-spanish-mar2016.pdf",
@@ -85,15 +85,15 @@ self.__precacheManifest = [
   },
   {
     "url": "enroll.html",
-    "revision": "76b756667ebd05972ff599dcc9c5ad76"
+    "revision": "a5d0b01cd24272c8c343af4ea5a9775e"
   },
   {
     "url": "event/events-overview.html",
-    "revision": "5231418059229979dde5896cf8b9508e"
+    "revision": "32dc7f135aade26e25d449b5f121d31e"
   },
   {
     "url": "event/water-play-day.html",
-    "revision": "dc49faac8bc55255faa00a0fc99bf6a6"
+    "revision": "37cd524e2e39c7fc634cf5cc71cadd80"
   },
   {
     "url": "images/32x32png.png",
@@ -409,83 +409,87 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "21498130ab69c8986f0ef1a6f0cf945a"
+    "revision": "c682c5e34891f1efcc59d8e06d058f5b"
   },
   {
     "url": "js/app.js",
-    "revision": "71ec8921a224c3654ac7d9aeba2819e1"
+    "revision": "0e91e6a7d0608521b934cb189197e96f"
+  },
+  {
+    "url": "js/config.js",
+    "revision": "8333aebf085f4c3988c2df38de7df13f"
   },
   {
     "url": "js/webflow.js",
-    "revision": "27f05137ed761d7be0288ff54e9fc5d3"
+    "revision": "a1f7c17479954682f8b915beed879c15"
   },
   {
     "url": "manifest.json",
-    "revision": "fb9258e46484421348bf54387a4877fb"
+    "revision": "fe0d7c2eb66a9a4b7b963c06f229c615"
   },
   {
     "url": "news/adventure-academy-accepts-ccdf.html",
-    "revision": "021380463fb7293a4cfb0f9d9da9c03f"
+    "revision": "94dd783f3f6374c5aed3c81252ec6325"
   },
   {
     "url": "news/april-2017-newsletter.html",
-    "revision": "894545f213d49cb043e8e2de5da4ad63"
+    "revision": "1e46fd2df197e7348abea0afb0bd6a0b"
   },
   {
     "url": "news/august-2016-newsletter.html",
-    "revision": "7ceb81aa7f0f5fe5efbf24cd6b262e78"
+    "revision": "23f234a57e8f32d18d90ba81f13cb8c6"
   },
   {
     "url": "news/august-2017-newsletter.html",
-    "revision": "0804af2919344e298357cc547e1d80c7"
+    "revision": "9bd3d620a2de74070929845d9bdd2c82"
   },
   {
     "url": "news/december-2016-newsletter.html",
-    "revision": "772ec5c2421152295cb8ee421073ad8e"
+    "revision": "cdcd515a924d4cdef47af46209903bcc"
   },
   {
     "url": "news/march-2017-newsletter.html",
-    "revision": "691498ea197e66f0af891f3a818e68e1"
+    "revision": "7a7a066cbc7b2818a2f795cdbf139786"
   },
   {
     "url": "news/new-playground.html",
-    "revision": "0fdb543a353db3078ff54cff27f7ad13"
+    "revision": "cf4b2f6b5e92053931cf04cbfab38254"
   },
   {
     "url": "news/october-2016-newsletter.html",
-    "revision": "e72bb20592a6483dfb6d73e13b4f2d57"
+    "revision": "bbe0a1c3042035f192fa62e1bf8f5b6f"
   },
   {
     "url": "news/october-2017-newsletter.html",
-    "revision": "208d03dbad29ee8284f0c5523d5bacc1"
+    "revision": "f0e7433b4bc62ff976df0765b4acc96c"
   },
   {
     "url": "news/overview.html",
-    "revision": "ec7d0c867e0d3f924af9e3698c53b579"
+    "revision": "334e7b604705a6e63df0bd7a87328898"
   },
   {
     "url": "news/september-2016-newsletter.html",
-    "revision": "1a85a2ecb4b18b17d0164287df386fb0"
+    "revision": "28d93d47293011ce878ad334c175aadb"
   },
   {
     "url": "news/september-2017-newsletter.html",
-    "revision": "9d871fe65a2c3423cbe9e9e4096d97c2"
+    "revision": "167c1f6a989b532a8f577e012e568ec1"
   },
   {
     "url": "our-center.html",
-    "revision": "ce39c8d4be25f60a70a50127f12d0009"
+    "revision": "77c965e4ad5e7b75ce1b522b6eaf789a"
   },
   {
     "url": "prices.html",
-    "revision": "e9cc6b9d9f1881775c3b335c4d49e8a6"
+    "revision": "4d72f298fe346abb05d67b849d5316f6"
   },
   {
     "url": "thank-you-contact.html",
-    "revision": "ba9b714a3a8f0a6acb2884d0a25b68f9"
+    "revision": "338c383dfbe2dafa4db79e44ea0f2c87"
   },
   {
     "url": "thank-you.html",
-    "revision": "04d866f271dcb726ca39373f995c7c00"
+    "revision": "ae0fa815a6ddd7bf0b0eeeeb9e9fdf03"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
