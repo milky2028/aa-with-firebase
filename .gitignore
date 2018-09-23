@@ -4,3 +4,4 @@ firebase-debug.log
 npm-debug.log
 functions/sendgridEnv.ts
 public/js/config.js
+.firebase/

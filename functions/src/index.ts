@@ -12,12 +12,12 @@ export const tourFormSubmission = functions.firestore.document('tours/{tourId}')
     subject: 'Hey Mom! Someone Submitted a New Tour Form',
     html: `<div style="font-family: sans-serif">
             <h1 style="font-size: 20px; color: black">Here are the details about the tour:</h1>
-            <p style="color: black; font-size: 18px; margin: 3px 10px;">Name: ${submission.email}</p>
             <p style="color: black; font-size: 18px; margin: 3px 10px;">Name: ${submission.name}</p>
-            <p style="color: black; font-size: 18px; margin: 3px 10px;">Kid\'s Age: ${submission.childAge}</p>
+            <p style="color: black; font-size: 18px; margin: 3px 10px;">Email: ${submission.email}</p>
+            <p style="color: black; font-size: 18px; margin: 3px 10px;">Kid's Age: ${submission.childAge}</p>
             <p style="color: black; font-size: 18px; margin: 3px 10px;">Tour Date: ${submission.tourDate}</p>
             <p style="color: black; font-size: 18px; margin: 3px 10px; font-family: sans-serif">Tour Time: ${submission.tourTime}</p>
-            <p style="color: black; font-size: 18px;">I love you mom! You\'re the greatest.</p>
+            <p style="color: black; font-size: 18px;">I love you mom! You're the greatest.</p>
             <p style="color: black; font-size: 18px; font-weight: bold">From Tylerbot</p>
           </div>`,
   };
