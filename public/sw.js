@@ -416,10 +416,6 @@ self.__precacheManifest = [
     "revision": "0e91e6a7d0608521b934cb189197e96f"
   },
   {
-    "url": "js/config.js",
-    "revision": "8333aebf085f4c3988c2df38de7df13f"
-  },
-  {
     "url": "js/webflow.js",
     "revision": "a1f7c17479954682f8b915beed879c15"
   },
