@@ -3,7 +3,7 @@ import * as sgMail from '@sendgrid/mail';
 
 sgMail.setApiKey(functions.config().sendgrid.api.key);
 const adventureRecepients = ['tylergross28@gmail.com', 'lisa.gross@adventureacademyweb.com'];
-export const tourFormSubmission = functions.firestore.document('tours/{tourId}').onCreate((snapshot, context) => {
+export const tourFormSubmission = functions.firestore.document('tours/{tourId}').onCreate(async (snapshot, context) => {
   const submission = snapshot.data();
 
   const msgToMom = {
@@ -47,16 +47,20 @@ export const tourFormSubmission = functions.firestore.document('tours/{tourId}')
     </body>`
   };
 
-  sgMail.send(msgToParent).then(() => {
-    console.log('Message to parent worked.');
-  }).catch(error => console.error('Message to parent did not work :[', error));
+  await sgMail.send(msgToParent).catch(error => console.error('Message to parent did not work :[', error));
+  console.log('Message to parent worked.');
 
-  return sgMail.send(msgToMom).then(() => {
+  try {
+    await sgMail.send(msgToMom);
     console.log('Message to mom worked.');
-  }).catch(error => console.error('Message to mom did not work :[', error));
+  }
+  catch (e) {
+    console.error('Message to mom did not work :[', e);
+    return;
+  }
 });
 
-export const contactFormSubmission = functions.firestore.document('contactForms/{formId}').onCreate((snapshot, context) => {
+export const contactFormSubmission = functions.firestore.document('contactForms/{formId}').onCreate(async (snapshot, context) => {
   const submission = snapshot.data();
 
   const msgToMom = {
@@ -102,11 +106,15 @@ export const contactFormSubmission = functions.firestore.document('contactForms/
     `
   };
 
-  sgMail.send(msgToParent).then(() => {
-    console.log('Message to parent worked.');
-  }).catch(error => console.error('Message to parent did not work :[', error));
+  await sgMail.send(msgToParent).catch(error => console.error('Message to parent did not work :[', error));
+  console.log('Message to parent worked.');
 
-  return sgMail.send(msgToMom).then(() => {
+  try {
+    await sgMail.send(msgToMom);
     console.log('Message to mom worked.');
-  }).catch(error => console.error('Message to mom did not work :[', error));
+  }
+  catch (e) {
+    console.error('Message to mom did not work :[', e);
+    return;
+  }
 });
