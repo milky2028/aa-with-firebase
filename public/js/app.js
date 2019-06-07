@@ -51,7 +51,11 @@ const onSave = (formNumber, successOrFailNumber) => {
     submitDay: convertDate()
   }
 
-  if (!areFieldsMissing(formData)) {
+  const tourDateObject = formData.tourDate ? new Date(formData.tourDate) : null
+  const today = new Date()
+  const validDate = tourDateObject > today
+
+  if (!areFieldsMissing(formData) && validDate) {
     db.collection('tours').add(formData).then(docRef => {
       errorElement.style.display = 'none'
       successElement.style.display = 'block'
@@ -59,6 +63,9 @@ const onSave = (formNumber, successOrFailNumber) => {
         window.location.href = '/thank-you'
       }, 1500)
     }).catch(error => console.error('Error posting document:', error))
+  } else if (!validDate) {
+    errorElement.style.display = 'block'
+    errorElement.innerHTML = 'Please select a valid date'
   } else {
     errorElement.style.display = 'block'
   }
