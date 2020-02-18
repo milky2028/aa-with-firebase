@@ -6,3 +6,5 @@ functions/sendgridEnv.ts
 public/js/config.js
 .firebase
 .DS_store
+
+build/dist
