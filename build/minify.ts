@@ -1,5 +1,6 @@
 // import { minify } from 'html-minifier';
-import { readdirSync, statSync } from 'fs';
+import { readdir, stat } from 'fs';
+import { promisify } from 'util';
 import path from 'path';
 
 // const minifierOptions = {
@@ -17,19 +18,38 @@ import path from 'path';
 //   minifyJS: true
 // };
 
+async function main() {
+  const cwd = process.cwd();
+  const statAsync = promisify(stat);
+  const readdirAsync = promisify(readdir);
 
-const cwd = process.cwd();
-function recursiveDirRead(dirPath: string): string[] {
-  return readdirSync(dirPath).flatMap((dirItem) => {
-    const dStats = statSync(path.join(dirPath, dirItem))
-    if (dStats.isFile()) {
-      return path.join(dirPath, dirItem);
-    } else {
-      return recursiveDirRead(path.join(dirPath, dirItem));
-    }
-  })
+  async function recursiveDirRead(dirPath: string): Promise<string[]> {
+    const files = await readdirAsync(dirPath);
+    const nestedFiles = await Promise.all(
+      files.map(async (dirItem) => {
+        const dStats = await statAsync(path.join(dirPath, dirItem));
+        if (dStats.isFile()) {
+          return path.join(dirPath, dirItem);
+        } else {
+          return recursiveDirRead(path.join(dirPath, dirItem));
+        }
+      })
+    );
+
+    return nestedFiles.flat(Infinity);
+  }
+
+  // const result = minify('<p>Pizza</p>', minifierOptions);
+  const files = recursiveDirRead(path.join(cwd, 'public'));
+  return files;
 }
 
-// const result = minify('<p>Pizza</p>', minifierOptions);
-const files = recursiveDirRead(path.join(cwd, 'public'));
-console.log(files);
+main()
+  .then((res) => {
+    console.log(res);
+    process.exit(0);
+  })
+  .catch((e) => {
+    process.exit(1);
+    console.error(e);
+  });
