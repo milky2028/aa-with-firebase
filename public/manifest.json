@@ -8,7 +8,7 @@
   "background_color": "#efefef",
   "lang": "en-US",
   "icons": [{
-      "src": "../images/32x32png.png",
+      "src": "../images/32x32.png",
       "sizes": "32x32",
       "type": "image/png"
     }, {
