@@ -18,6 +18,7 @@
   "homepage": "https://github.com/milky2028/aa-with-firebase#readme",
   "devDependencies": {
     "@types/html-minifier": "^3.5.3",
+    "@types/rimraf": "^2.0.3",
     "eslint": "^5.2.0",
     "eslint-config-google": "^0.9.1",
     "eslint-config-standard": "^11.0.0",
@@ -26,6 +27,8 @@
     "eslint-plugin-promise": "^3.8.0",
     "eslint-plugin-standard": "^3.1.0",
     "html-minifier": "^4.0.0",
+    "rimraf": "^3.0.2",
     "typescript": "^3.7.5"
-  }
+  },
+  "dependencies": {}
 }
