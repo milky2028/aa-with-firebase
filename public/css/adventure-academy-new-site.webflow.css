@@ -2158,6 +2158,11 @@ figcaption {
   display: inline;
 }
 
+.brand .image {
+  width: 40px;
+  margin-bottom: 4px;
+}
+
 .paragraph {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;

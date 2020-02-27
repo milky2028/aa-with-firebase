@@ -1,292 +1,828 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com  -->
 <!--  Last Published: Sat Oct 14 2017 19:56:02 GMT+0000 (UTC)  -->
-<html data-wf-page="5977f3e14752750001131abd" data-wf-site="59417ef1f83e8a48c44db0c0" lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Adventure Academy Accepts CCDF - Adventure Academy Daycare Center</title>
-  <meta content="Adventure Academy Daycare Center is proud to partner with Indiana’s Children’s Bureau, Inc. to allow CCDF as a form of payment for childcare services." name="description">
-  <meta content="Adventure Academy Accepts CCDF - Adventure Academy Daycare Center" property="og:title">
-  <meta content="Adventure Academy Daycare Center is proud to partner with Indiana’s Children’s Bureau, Inc. to allow CCDF as a form of payment for childcare services." property="og:description">
-  <meta content="summary" name="twitter:card">
-  <meta content="width=device-width, initial-scale=1" name="viewport">
-  <meta content="Webflow" name="generator">
-  <link href="../css/normalize.css" rel="stylesheet" type="text/css">
-  <link href="../css/webflow.css" rel="stylesheet" type="text/css">
-  <link href="../css/adventure-academy-new-site.webflow.css" rel="stylesheet" type="text/css">
-  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-firestore.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js" type="text/javascript"></script>
-  <script type="text/javascript">WebFont.load({  google: {    families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","Pompiere:regular"]  }});</script>
-  <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
-  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
-  <link href="../images/32x32.png" rel="shortcut icon" type="image/x-icon">
-  <link href="../images/256x256.png" rel="apple-touch-icon">
-  <link rel="manifest" href="/manifest.json">
-  <!--  Google Tag Manager  -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-N3W6MDL');</script>
-  <!--  End Google Tag Manager  -->
-  <meta name="theme-color" content="#49ADEA">
-</head>
-<body>
-  <div data-ix="popup-initial" class="pop-up-modal">
-    <div class="new-form-container"><a href="#" data-ix="popup-close-overlay" class="popup-close-icon w-inline-block"></a><img src="../images/sun.svg" width="70" alt="Smiling Sun cartoon drawing" class="image-2">
-      <h3 class="register-headline">Schedule a Tour Today</h3>
-      <div class="w-form">
-        <form>
-          <input type="text" id="name0" name="name" maxlength="256" placeholder="Name" class="input w-input">
-          <input type="email" id="email0" name="Email" placeholder="Email Address" maxlength="256" required="" class="input w-input">
-          <div class="text-block-4">Age of Child</div>
-          <select id="child-age0" name="Age-of-Child" required="" class="select-field w-select">
-            <option value="Infant">Infants</option>
-            <option value="Toddlers">Toddlers</option>
-            <option value="Two">Twos</option>
-            <option value="Three">Threes</option>
-            <option value="Four">Four</option>
-            <option value="Five">Five</option></select>
-          <div class="html-embed w-embed">
-            <fieldset>
-              <label class="text-block-4" font-weight="normal" for="date">Date</label>
-              <input id="date0" class="w-input" type="date" name="date">
-            </fieldset>
+<html
+  data-wf-page="5977f3e14752750001131abd"
+  data-wf-site="59417ef1f83e8a48c44db0c0"
+  lang="en"
+>
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      Adventure Academy Accepts CCDF - Adventure Academy Daycare Center
+    </title>
+    <meta
+      content="Adventure Academy Daycare Center is proud to partner with Indiana’s Children’s Bureau, Inc. to allow CCDF as a form of payment for childcare services."
+      name="description"
+    />
+    <meta
+      content="Adventure Academy Accepts CCDF - Adventure Academy Daycare Center"
+      property="og:title"
+    />
+    <meta
+      content="Adventure Academy Daycare Center is proud to partner with Indiana’s Children’s Bureau, Inc. to allow CCDF as a form of payment for childcare services."
+      property="og:description"
+    />
+    <meta content="summary" name="twitter:card" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Webflow" name="generator" />
+    <link href="../css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="../css/webflow.css" rel="stylesheet" type="text/css" />
+    <link
+      href="../css/adventure-academy-new-site.webflow.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-firestore.js"></script>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"
+      type="text/javascript"
+    ></script>
+    <script type="text/javascript">
+      WebFont.load({
+        google: {
+          families: [
+            'Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic',
+            'Pompiere:regular'
+          ]
+        }
+      });
+    </script>
+    <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
+    <script type="text/javascript">
+      !(function(o, c) {
+        var n = c.documentElement,
+          t = ' w-mod-';
+        (n.className += t + 'js'),
+          ('ontouchstart' in o ||
+            (o.DocumentTouch && c instanceof DocumentTouch)) &&
+            (n.className += t + 'touch');
+      })(window, document);
+    </script>
+    <link href="../images/32x32.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="../images/256x256.png" rel="apple-touch-icon" />
+    <link rel="manifest" href="/manifest.json" />
+    <!--  Google Tag Manager  -->
+    <script>
+      (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-N3W6MDL');
+    </script>
+    <!--  End Google Tag Manager  -->
+    <meta name="theme-color" content="#49ADEA" />
+  </head>
+  <body>
+    <div data-ix="popup-initial" class="pop-up-modal">
+      <div class="new-form-container">
+        <a
+          href="#"
+          data-ix="popup-close-overlay"
+          class="popup-close-icon w-inline-block"
+        ></a
+        ><img
+          src="../images/sun.svg"
+          width="70"
+          alt="Smiling Sun cartoon drawing"
+          class="image-2"
+        />
+        <h3 class="register-headline">Schedule a Tour Today</h3>
+        <div class="w-form">
+          <form>
+            <input
+              type="text"
+              id="name0"
+              name="name"
+              maxlength="256"
+              placeholder="Name"
+              class="input w-input"
+            />
+            <input
+              type="email"
+              id="email0"
+              name="Email"
+              placeholder="Email Address"
+              maxlength="256"
+              required=""
+              class="input w-input"
+            />
+            <div class="text-block-4">Age of Child</div>
+            <select
+              id="child-age0"
+              name="Age-of-Child"
+              required=""
+              class="select-field w-select"
+            >
+              <option value="Infant">Infants</option>
+              <option value="Toddlers">Toddlers</option>
+              <option value="Two">Twos</option>
+              <option value="Three">Threes</option>
+              <option value="Four">Four</option>
+              <option value="Five">Five</option></select
+            >
+            <div class="html-embed w-embed">
+              <fieldset>
+                <label class="text-block-4" font-weight="normal" for="date"
+                  >Date</label
+                >
+                <input id="date0" class="w-input" type="date" name="date" />
+              </fieldset>
+            </div>
+            <div class="text-block-4">Time</div>
+            <select
+              id="time0"
+              name="Time"
+              required=""
+              data-name="Time"
+              class="select-field w-select"
+            >
+              <option value="10:00AM">10:00AM</option>
+              <option value="10:30AM">10:30AM</option>
+              <option value="11:00AM">11:00AM</option>
+              <option value="11:30AM">11:30AM</option>
+              <option value="12:00PM">12:00PM</option>
+              <option value="12:30PM">12:30PM</option>
+              <option value="1:00PM">1:00PM</option>
+              <option value="1:30PM">1:30PM</option>
+              <option value="2:00PM">2:00PM</option>
+              <option value="2:30PM">2:30PM</option>
+              <option value="3:00PM">3:00PM</option>
+              <option value="3:30PM">3:30PM</option>
+              <option value="4:00PM">4:00PM</option>
+              <option value="4:30PM">4:30PM</option>
+            </select>
+            <div class="text-block-on-modal">
+              <a href="contact">Contact us</a> to schedule a tour outside normal
+              business hours.
+            </div>
+            <button
+              id="0"
+              class="button register-button w-button"
+              onclick="onSave(this.id, 0)"
+            >
+              Submit
+            </button>
+          </form>
+          <div id="tourSuccess0" class="register-success w-form-done">
+            <div class="register-success">
+              Thank you! Your tour has been scheduled!
+            </div>
           </div>
-          <div class="text-block-4">Time</div>
-          <select id="time0" name="Time" required="" data-name="Time" class="select-field w-select">
-            <option value="10:00AM">10:00AM</option>
-            <option value="10:30AM">10:30AM</option>
-            <option value="11:00AM">11:00AM</option>
-            <option value="11:30AM">11:30AM</option>
-            <option value="12:00PM">12:00PM</option>
-            <option value="12:30PM">12:30PM</option>
-            <option value="1:00PM">1:00PM</option>
-            <option value="1:30PM">1:30PM</option>
-            <option value="2:00PM">2:00PM</option>
-            <option value="2:30PM">2:30PM</option>
-            <option value="3:00PM">3:00PM</option>
-            <option value="3:30PM">3:30PM</option>
-            <option value="4:00PM">4:00PM</option>
-            <option value="4:30PM">4:30PM</option>
-          </select>
-          <div class="text-block-on-modal"><a href="contact">Contact us</a> to schedule a tour outside normal business hours.</div>
-          <button id="0" class="button register-button w-button" onclick="onSave(this.id, 0)">Submit</button>
-        </form>
-        <div id="tourSuccess0" class="register-success w-form-done">
-          <div class="register-success">Thank you! Your tour has been scheduled!</div>
-        </div>
-        <div id="tourError0" class="register-error w-form-fail">
-          <div class="text-block-13">Oops! Something went wrong while submitting the form. Please try again.</div>
+          <div id="tourError0" class="register-error w-form-fail">
+            <div class="text-block-13">
+              Oops! Something went wrong while submitting the form. Please try
+              again.
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div data-collapse="medium" data-animation="over-right" data-duration="400" data-doc-height="1" data-no-scroll="1" class="menu-2 menu-wrapper w-nav"><a href="../" class="brand menu-3 w-clearfix w-nav-brand"><img src="../images/whiteLogo.svg" class="image"><div class="logo">Adventure Academy</div></a>
-    <div class="register-now"><a href="#" data-ix="show-popup-modal" class="button register-menu solid-menu transparent w-button">Schedule a Tour</a></div>
-    <nav role="navigation" class="nav-menu w-nav-menu"><a href="../" class="nav-link w-nav-link">Home</a><a href="../our-center" class="nav-link w-nav-link">Our Center</a><a href="../prices" class="nav-link w-nav-link">Prices</a><a href="../enroll" class="nav-link w-nav-link">Enroll Now</a>
-      <div data-delay="0" class="dropdown w-dropdown">
-        <div class="nav-link w-dropdown-toggle">
-          <div class="classes-menu-block">Classes</div>
-          <div class="w-icon-dropdown-toggle"></div>
-        </div>
-        <nav class="submenu w-dropdown-list"><a href="../classes/all-classes" class="submenu-item w-dropdown-link">All Classes</a><a href="../classes/infants" class="submenu-item w-dropdown-link">Infants</a><a href="../classes/toddlers" class="submenu-item w-dropdown-link">Toddlers</a><a href="../classes/twos" class="submenu-item w-dropdown-link">Twos</a><a href="../classes/threes" class="submenu-item w-dropdown-link">Threes</a><a href="../classes/fours-and-fives" class="submenu-item w-dropdown-link">Fours and Fives</a><a href="../classes/am-preschool" class="submenu-item w-dropdown-link">A.M. Preschool</a></nav>
-      </div><a href="../news/overview" class="nav-link w-nav-link">News</a><a href="../careers" class="nav-link w-nav-link">Careers</a><a href="../contact" class="nav-link w-nav-link">Contact</a><a href="#" data-ix="show-popup-modal" class="button nav-button sidebar-button-orange w-button">Schedule a Tour</a></nav>
-    <div class="menu-button w-nav-button">
-      <div class="icon w-icon-nav-menu"></div>
-    </div>
-    <div class="menu-background"></div>
-  </div>
-  <div class="page-title">
-    <div class="container-fluid">
-      <ul class="location">
-        <li class="location-item"><a href="../" class="location-item-link">Home</a>
-          <div class="location-item-slash">/</div>
-        </li>
-        <li class="location-item"><a href="../news/overview" class="active location-item-link">NEws</a>
-          <div class="location-item-slash">/</div><a href="#" class="active location-item-link">Adventure Academy Accepts CCDF</a></li>
-      </ul>
-      <div data-ix="fadein-sroll-lazyload" class="row w-row">
-        <div class="w-col w-col-2 w-col-stack w-hidden-medium w-hidden-small w-hidden-tiny"></div>
-        <div class="w-col w-col-8 w-col-stack">
-          <h1 data-ix="fadein-bottom-scroll" class="text-center">Adventure Academy Accepts CCDF</h1>
-        </div>
-        <div class="w-col w-col-2 w-col-stack w-hidden-medium w-hidden-small w-hidden-tiny"></div>
+    <div
+      data-collapse="medium"
+      data-animation="over-right"
+      data-duration="400"
+      data-doc-height="1"
+      data-no-scroll="1"
+      class="menu-2 menu-wrapper w-nav"
+    >
+      <a href="../" class="brand menu-3 w-clearfix w-nav-brand"
+        ><img src="../images/whiteLogo.svg" class="image" />
+        <div class="logo">Adventure Academy</div></a
+      >
+      <div class="register-now">
+        <a
+          href="#"
+          data-ix="show-popup-modal"
+          class="button register-menu solid-menu transparent w-button"
+          >Schedule a Tour</a
+        >
       </div>
-    </div>
-  </div>
-  <div class="b-b page-title-after section">
-    <div class="container-fluid">
-      <div class="reverse-row row w-row">
-        <div class="w-col w-col-3 w-col-small-small-stack w-col-stack w-col-tiny-tiny-stack">
-          <div class="sidebar">
-            <h4 class="sidebar-headline">Adventure Academy Accepts CCDF</h4>
-            <h4 class="sidebar-headline">Helpful Links</h4>
-            <div class="sidebar-text-block"><a target="_blank" href="../documents/3-preapplications-mar2016.pdf">CCDF Application</a></div>
-            <div class="sidebar-text-block"><a target="_blank" href="../documents/3-preapplication-spanish-mar2016.pdf">CCDF Spanish Application</a></div>
-            <div class="sidebar-text-block"><a href="http://www.childrensbureau.org/ccdf-eligibility-guidelines" target="_blank">CCDF Eligibility Guidelines</a></div>
-            <div class="sidebar-text-block"><a href="http://www.iaccrr.org/default.cfm?page=voucher-info" target="_blank">What Is CCDF?</a></div>
-            <div class="sidebar-text-block"><a href="http://www.childrensbureau.org/what-we-do/child-care-development-fund-ccdf" target="_blank">CCDF Overview</a></div>
-          </div><a href="#" data-ix="show-popup-modal" class="button register-menu solid-menu transparent w-button">Schedule a Tour</a></div>
-        <div class="column-6 w-col w-col-8 w-col-small-small-stack w-col-stack w-col-tiny-tiny-stack">
-          <div class="ccdf-detail detail-image"></div>
-          <div class="rich-text-block-2 w-richtext">
-            <p>Adventure Academy Daycare Center is proud to partner with Indiana’s Children’s Bureau, Inc. to allow <a href="http://www.childrensbureau.org/what-we-do/child-care-development-fund-ccdf" target="_blank">CCDF</a> as a form of payment for childcare services. </p>
-            <p>CCDF is broken up into a number of regions which offer childcare throughout the state of Indiana. Adventure Academy is a part of Region 3, which serves Marion County, Hendricks County, Hamilton County, and Madison County.</p>
-            <h2>What is CCDF?</h2>
-            <p>CCDF stands for Child Care and Development Fund. Indiana’s Child Care and Development Fund is a federal program that helps low-income families, families receiving temporary public assistance, and those transitioning away from public assistance by covering those costs of child care in order to allow individuals to find work, attend training, or continue their education.</p>
-            <p>In a nutshell,<a href="http://www.iaccrr.org/default.cfm?page=voucher-info" target="_blank"> CCDF is a federal program</a> that helps parents pay for childcare so they can transition back to the workplace.</p>
-            <p>According to the state of Indiana’s website, the purpose of CCDF is, “To increase the availability, affordability, and quality of childcare.”</p>
-            <p>Throughout the state of Indiana, there are a number of organizations that partner with the state to accept CCDF as a form of payment (in the form of CCDF vouchers) for childcare services. Adventure Academy Daycare Center is one of the organizations that is proud to work with the state of Indiana to help families in need get back on their feet, while providing the absolute best opportunity for your child to learn, grow, and develop.</p>
-            <h2>How can I apply for CCDF?</h2>
-            <p>Now that you know exactly what CCDF is, you might want to see if you qualify for vouchers which may cover the cost of your child’s care.</p>
-            <h3>Applying for CCDF</h3>
-            <p>The first step is to find out if you qualify. To find out if you’re eligible, <a href="http://www.childrensbureau.org/ccdf-eligibility-guidelines" target="_blank">follow this link</a> and read the requirements in-depth in order to get a better idea of what applying for CCDF entails. According to the state of Indiana’s guidelines, you must meet one or more of the following requirements in order to be eligible for CCDF.</p>
-            <h3>To Qualify for CCDF through Children&#x27;s Bureau</h3>
-            <ul>
-              <li>Parents/foster parents who are working or going to school or have a referral from Department of Child Services (DCS) or a referral from TANF/IMPACT.</li>
-              <li>Be within income guidelines</li>
-              <li>Have proof of identity for all family members</li>
-              <li>Be a resident of the county where you are applying for assistance</li>
-              <li>Children receiving care must be 12 years of age or younger unless they have special needs</li>
-              <li>The child receiving assistance must be a U. S. Citizen or qualified legal alien.</li>
-            </ul>
-            <p>As mentioned above, parents eligible to receive CCDF must be within a range of income guidelines. These income guidelines are listed below.</p>
-            <h3>Income Guidelines</h3>
-            <p><strong>Size of Family</strong> <strong>(Pre-Tax Monthly)</strong></p>
-            <p>Income Limit</p>
-            <p><strong>1</strong></p>
-            <p>$1,276.00</p>
-            <p><strong>2</strong></p>
-            <p>$1,719.00</p>
-            <p><strong>3</strong></p>
-            <p>$2,161.00</p>
-            <p><strong>4</strong></p>
-            <p>$2,604.00</p>
-            <p><strong>5</strong></p>
-            <p>$3,046.00</p>
-            <p><strong>6</strong></p>
-            <p>$3,488.00</p>
-            <p><strong>7</strong></p>
-            <p>$3,931.00</p>
-            <p><strong>8</strong></p>
-            <p>$4,373.00</p>
-            <p>The table above is a quick tool that enables you to understand if you and your family are eligible for CCDF, but the general rule of thumb is that, in order to qualify, your family’s income must not exceed 127% of the Federal Poverty Level.</p>
-            <p>If you enroll in the program, but you get a new job or your family’s income increases, you can remain in the program as long as your income does not exceed 170% of the Federal Level.</p>
-            <p>As an example, if you are in a family of four, you’re eligible for CCDF so long as you make less than $2604 per month or $31,248 per year. If your life situation changes and you get a new job or start to make more money, you’ll continue to be eligible for the program as long as you make less than $41,310 a year or $3442 per month.</p>
-            <p>Keep in mind that there are some exceptions to these guidelines though. Licensed Foster parents trying to find care for foster children do not have to be within these income guidelines, as well as a few other exceptions. Contact the CCDF office in your area for more details.</p>
-            <p>After you’ve verified that you qualify for CCDF, the next step is to find a child care provider that accepts CCDF vouchers, but you’ve already done that step! Adventure Academy Daycare Center accepts CCDF vouchers and is happy to assist you in the process of getting your child enrolled in our organization.</p>
-            <h2>Begin your application process</h2>
-            <p>Now that you know you’re eligible, and you’ve found Adventure Academy, you need to complete and mail your pre-application form to the Region 3 CCDF office. <a href="http://www.childrensbureau.org/files/file/3-preapplications-mar2016.pdf" target="_blank">Download and complete this short pre-application form</a> (or use this <a href="http://www.childrensbureau.org/files/file/3-preapplication-spanish-mar2016.pdf" target="_blank">Spanish version</a> if you prefer), it only takes a minute or two to fill out, then mail your pre-application to one of the following Region 3 office locations.</p>
-            <p><strong>Fay Biccard Glick Family Place</strong></p>
-            <p>3801 N. Temple Ave, Indianapolis, IN 46205</p>
-            <p>Monday 8am - 7pm; Tuesday - Friday: 8am - 5pm</p>
-            <p><strong>NACS West                                                   </strong></p>
-            <p>652 N. Girls School Road Suite #230, Indianapolis, IN 46214</p>
-            <p>Monday, Wednesday, Thursday: 8am - 5pm; Tuesday: 8am - 7pm; Closed Friday</p>
-            <p><strong>Gene Glick Family Support Center</strong></p>
-            <p>1575 Dr. Martin Luther King Jr. St., Indianapolis, IN 46202</p>
-            <p>Monday, Tuesday, Thursday: 8am - 5pm; Wednesday: 8am - 7pm; Friday: Receptionist Only</p>
-            <p>Second Saturday of every month: 8am - 4:30pm     </p>
-            <p>Since you’re applying in the Region 3 area, you’ll probably be happy to know that a phone hotline is available to assist you during the day at (317) 545-5281 x196 or 1-866-287-2420 x196 (toll free).</p>
-            <h2>Conclusion</h2>
-            <p>After you’ve sent in your pre-application, the state of Indiana may require that you provide a number of other documents in order to complete the process, but fret not! Make sure to remember the phone hotline if you have any questions and don’t hesitate to contact Adventure Academy if you have any questions about how we accept vouchers or troubles throughout the process.</p>
-            <p>You can also use this <a href="http://www.childrensbureau.org/contact-the-region-3-staff">contact form</a> to contact the CCDF Region 3 Staff if you have any questions. </p>
-            <p>We can’t wait to see your child in our center soon!</p>
-            <p>Below is a complete list of resources offered from the state in case you need to download additional documentation forms.</p>
-            <p><strong>Downloadable Forms:</strong></p>
-            <ul>
-              <li><a href="http://www.childrensbureau.org/files/file/3-preapplications-mar2016.pdf" target="_blank">Pre-Application</a> (English)</li>
-              <li><a href="http://www.childrensbureau.org/files/file/3-preapplication-spanish-mar2016.pdf" target="_blank">Pre-Application</a> (Espanol)</li>
-              <li><a href="http://www.childrensbureau.org/files/file/3-eligibilitydocumentationletter-march17.pdf" target="_blank">Eligibility Letter</a></li>
-              <li><a href="http://www.childrensbureau.org/files/file/3-eligibilitydocumentationletter-march17.pdf" target="_blank">Provider Information Page</a></li>
-              <li><a href="http://www.childrensbureau.org/files/file/3-applicantappealprocedure-march17.pdf" target="_blank">Parent Appeal Procedures</a></li>
-              <li><a href="http://www.childrensbureau.org/files/file/3-applicantappealprocedure-march17.pdf" target="_blank">Appeal Form</a></li>
-              <li><a href="http://www.childrensbureau.org/files/file/wage-detail-form-march17.pdf" target="_blank">Wage Detail Form</a></li>
-              <li><a href="http://www.childrensbureau.org/files/file/wage-detail-form-march17.pdf" target="_blank">Profit and Loss Statement</a></li>
-              <li><a href="http://www.childrensbureau.org/files/file/parent-reauthorization-packet-update.pdf" target="_blank">Parent Reauthorization Packet</a></li>
-              <li><a href="http://www.childrensbureau.org/files/file/parent-reauthorization-packet-update.pdf" target="_blank">Parent/Applicant Worksheet</a></li>
-              <li><a href="http://www.childrensbureau.org/files/file/child-support-declaration.pdf" target="_blank">Child Support Declaration Authorization for Release of Information</a></li>
-              <li><a href="http://www.childrensbureau.org/files/file/verification-of-new-job.pdf" target="_blank">Verification of New Job</a></li>
-              <li><a href="http://www.childrensbureau.org/files/file/verification-of-new-job.pdf" target="_blank">Tipped Employee Worksheet</a></li>
-              <li><a href="http://www.childrensbureau.org/files/file/ccdf-name-attestation.pdf" target="_blank">Name Attestation</a></li>
-              <li><a href="http://www.childrensbureau.org/files/file/ccdf-name-attestation.pdf" target="_blank">Hoosier Child Care Swipe Card</a></li>
-              <li><a href="http://www.childrensbureau.org/files/file/2016-acknowledgement-of-policy.pdf" target="_blank">Acknowledgement of Policy</a></li>
-              <li><a href="http://www.childrensbureau.org/files/file/2016-acknowledgement-of-policy.pdf" target="_blank">Provider/ Parent Statement</a></li>
-              <li><a href="http://www.childrensbureau.org/files/file/middle-high-school-enrollment-verification-march17.pdf" target="_blank">High School Enrollment Form</a></li>
-            </ul>
-            <p>Adventure Academy Daycare Center is proud to accept CCDF vouchers in order to provide childcare to families in need. Schedule a tour today to check out our center or enroll online today!</p>
+      <nav role="navigation" class="nav-menu w-nav-menu">
+        <a href="../" class="nav-link w-nav-link">Home</a
+        ><a href="../our-center" class="nav-link w-nav-link">Our Center</a
+        ><a href="../prices" class="nav-link w-nav-link">Prices</a
+        ><a href="../enroll" class="nav-link w-nav-link">Enroll</a>
+        <div data-delay="0" class="dropdown w-dropdown">
+          <div class="nav-link w-dropdown-toggle">
+            <div class="classes-menu-block">Classes</div>
+            <div class="w-icon-dropdown-toggle"></div>
           </div>
-          <div class="blogpost-author w-clearfix"><img src="../images/Momma.jpg" class="blog-author-photo">
-            <h5 class="blogpost-author-title">Adventure Academy Director</h5>
-            <h3 class="blogpost-author-name">Lisa Gross</h3>
-          </div>
+          <nav class="submenu w-dropdown-list">
+            <a
+              href="../classes/all-classes"
+              class="submenu-item w-dropdown-link"
+              >All Classes</a
+            ><a href="../classes/infants" class="submenu-item w-dropdown-link"
+              >Infants</a
+            ><a href="../classes/toddlers" class="submenu-item w-dropdown-link"
+              >Toddlers</a
+            ><a href="../classes/twos" class="submenu-item w-dropdown-link"
+              >Twos</a
+            ><a href="../classes/threes" class="submenu-item w-dropdown-link"
+              >Threes</a
+            ><a
+              href="../classes/fours-and-fives"
+              class="submenu-item w-dropdown-link"
+              >Fours and Fives</a
+            ><a
+              href="../classes/am-preschool"
+              class="submenu-item w-dropdown-link"
+              >A.M. Preschool</a
+            >
+          </nav>
         </div>
-        <div class="w-col w-col-1 w-col-small-small-stack w-col-stack w-col-tiny-tiny-stack zero-height-column"></div>
+        <a href="../news/overview" class="nav-link w-nav-link">News</a
+        ><a href="../careers" class="nav-link w-nav-link">Careers</a
+        ><a href="../contact" class="nav-link w-nav-link">Contact</a
+        ><a
+          href="#"
+          data-ix="show-popup-modal"
+          class="button nav-button sidebar-button-orange w-button"
+          >Schedule a Tour</a
+        >
+      </nav>
+      <div class="menu-button w-nav-button">
+        <div class="icon w-icon-nav-menu"></div>
       </div>
+      <div class="menu-background"></div>
     </div>
-  </div>
-  <footer class="footer">
-    <div class="footer-section section">
+    <div class="page-title">
       <div class="container-fluid">
-        <div class="w-row">
-          <div class="column-3 w-col w-col-4 w-col-stack">
-            <div class="logo logo-footer">Adventure Academy Daycare</div>
-            <div class="footer-text">
-              <p class="centered">Adventure Academy Daycare began in 2016 with a unique philosophy: allow children to learn in the ways that best serve their needs.<br><br><a href="../news/adventure-academy-accepts-ccdf">Adventure Academy accepts CCDF.</a></p>
+        <ul class="location">
+          <li class="location-item">
+            <a href="../" class="location-item-link">Home</a>
+            <div class="location-item-slash">/</div>
+          </li>
+          <li class="location-item">
+            <a href="../news/overview" class="active location-item-link"
+              >NEws</a
+            >
+            <div class="location-item-slash">/</div>
+            <a href="#" class="active location-item-link"
+              >Adventure Academy Accepts CCDF</a
+            >
+          </li>
+        </ul>
+        <div data-ix="fadein-sroll-lazyload" class="row w-row">
+          <div
+            class="w-col w-col-2 w-col-stack w-hidden-medium w-hidden-small w-hidden-tiny"
+          ></div>
+          <div class="w-col w-col-8 w-col-stack">
+            <h1 data-ix="fadein-bottom-scroll" class="text-center">
+              Adventure Academy Accepts CCDF
+            </h1>
+          </div>
+          <div
+            class="w-col w-col-2 w-col-stack w-hidden-medium w-hidden-small w-hidden-tiny"
+          ></div>
+        </div>
+      </div>
+    </div>
+    <div class="b-b page-title-after section">
+      <div class="container-fluid">
+        <div class="reverse-row row w-row">
+          <div
+            class="w-col w-col-3 w-col-small-small-stack w-col-stack w-col-tiny-tiny-stack"
+          >
+            <div class="sidebar">
+              <h4 class="sidebar-headline">Adventure Academy Accepts CCDF</h4>
+              <h4 class="sidebar-headline">Helpful Links</h4>
+              <div class="sidebar-text-block">
+                <a
+                  target="_blank"
+                  href="../documents/3-preapplications-mar2016.pdf"
+                  >CCDF Application</a
+                >
+              </div>
+              <div class="sidebar-text-block">
+                <a
+                  target="_blank"
+                  href="../documents/3-preapplication-spanish-mar2016.pdf"
+                  >CCDF Spanish Application</a
+                >
+              </div>
+              <div class="sidebar-text-block">
+                <a
+                  href="http://www.childrensbureau.org/ccdf-eligibility-guidelines"
+                  target="_blank"
+                  >CCDF Eligibility Guidelines</a
+                >
+              </div>
+              <div class="sidebar-text-block">
+                <a
+                  href="http://www.iaccrr.org/default.cfm?page=voucher-info"
+                  target="_blank"
+                  >What Is CCDF?</a
+                >
+              </div>
+              <div class="sidebar-text-block">
+                <a
+                  href="http://www.childrensbureau.org/what-we-do/child-care-development-fund-ccdf"
+                  target="_blank"
+                  >CCDF Overview</a
+                >
+              </div>
             </div>
-            <div class="footer-text">
-              <p class="paragraph-5">Copyright 2017 © Adventure Academy Daycare</p>
+            <a
+              href="#"
+              data-ix="show-popup-modal"
+              class="button register-menu solid-menu transparent w-button"
+              >Schedule a Tour</a
+            >
+          </div>
+          <div
+            class="column-6 w-col w-col-8 w-col-small-small-stack w-col-stack w-col-tiny-tiny-stack"
+          >
+            <div class="ccdf-detail detail-image"></div>
+            <div class="rich-text-block-2 w-richtext">
+              <p>
+                Adventure Academy Daycare Center is proud to partner with
+                Indiana’s Children’s Bureau, Inc. to allow
+                <a
+                  href="http://www.childrensbureau.org/what-we-do/child-care-development-fund-ccdf"
+                  target="_blank"
+                  >CCDF</a
+                >
+                as a form of payment for childcare services.
+              </p>
+              <p>
+                CCDF is broken up into a number of regions which offer childcare
+                throughout the state of Indiana. Adventure Academy is a part of
+                Region 3, which serves Marion County, Hendricks County, Hamilton
+                County, and Madison County.
+              </p>
+              <h2>What is CCDF?</h2>
+              <p>
+                CCDF stands for Child Care and Development Fund. Indiana’s Child
+                Care and Development Fund is a federal program that helps
+                low-income families, families receiving temporary public
+                assistance, and those transitioning away from public assistance
+                by covering those costs of child care in order to allow
+                individuals to find work, attend training, or continue their
+                education.
+              </p>
+              <p>
+                In a nutshell,<a
+                  href="http://www.iaccrr.org/default.cfm?page=voucher-info"
+                  target="_blank"
+                >
+                  CCDF is a federal program</a
+                >
+                that helps parents pay for childcare so they can transition back
+                to the workplace.
+              </p>
+              <p>
+                According to the state of Indiana’s website, the purpose of CCDF
+                is, “To increase the availability, affordability, and quality of
+                childcare.”
+              </p>
+              <p>
+                Throughout the state of Indiana, there are a number of
+                organizations that partner with the state to accept CCDF as a
+                form of payment (in the form of CCDF vouchers) for childcare
+                services. Adventure Academy Daycare Center is one of the
+                organizations that is proud to work with the state of Indiana to
+                help families in need get back on their feet, while providing
+                the absolute best opportunity for your child to learn, grow, and
+                develop.
+              </p>
+              <h2>How can I apply for CCDF?</h2>
+              <p>
+                Now that you know exactly what CCDF is, you might want to see if
+                you qualify for vouchers which may cover the cost of your
+                child’s care.
+              </p>
+              <h3>Applying for CCDF</h3>
+              <p>
+                The first step is to find out if you qualify. To find out if
+                you’re eligible,
+                <a
+                  href="http://www.childrensbureau.org/ccdf-eligibility-guidelines"
+                  target="_blank"
+                  >follow this link</a
+                >
+                and read the requirements in-depth in order to get a better idea
+                of what applying for CCDF entails. According to the state of
+                Indiana’s guidelines, you must meet one or more of the following
+                requirements in order to be eligible for CCDF.
+              </p>
+              <h3>To Qualify for CCDF through Children&#x27;s Bureau</h3>
+              <ul>
+                <li>
+                  Parents/foster parents who are working or going to school or
+                  have a referral from Department of Child Services (DCS) or a
+                  referral from TANF/IMPACT.
+                </li>
+                <li>Be within income guidelines</li>
+                <li>Have proof of identity for all family members</li>
+                <li>
+                  Be a resident of the county where you are applying for
+                  assistance
+                </li>
+                <li>
+                  Children receiving care must be 12 years of age or younger
+                  unless they have special needs
+                </li>
+                <li>
+                  The child receiving assistance must be a U. S. Citizen or
+                  qualified legal alien.
+                </li>
+              </ul>
+              <p>
+                As mentioned above, parents eligible to receive CCDF must be
+                within a range of income guidelines. These income guidelines are
+                listed below.
+              </p>
+              <h3>Income Guidelines</h3>
+              <p>
+                <strong>Size of Family</strong>
+                <strong>(Pre-Tax Monthly)</strong>
+              </p>
+              <p>Income Limit</p>
+              <p><strong>1</strong></p>
+              <p>$1,276.00</p>
+              <p><strong>2</strong></p>
+              <p>$1,719.00</p>
+              <p><strong>3</strong></p>
+              <p>$2,161.00</p>
+              <p><strong>4</strong></p>
+              <p>$2,604.00</p>
+              <p><strong>5</strong></p>
+              <p>$3,046.00</p>
+              <p><strong>6</strong></p>
+              <p>$3,488.00</p>
+              <p><strong>7</strong></p>
+              <p>$3,931.00</p>
+              <p><strong>8</strong></p>
+              <p>$4,373.00</p>
+              <p>
+                The table above is a quick tool that enables you to understand
+                if you and your family are eligible for CCDF, but the general
+                rule of thumb is that, in order to qualify, your family’s income
+                must not exceed 127% of the Federal Poverty Level.
+              </p>
+              <p>
+                If you enroll in the program, but you get a new job or your
+                family’s income increases, you can remain in the program as long
+                as your income does not exceed 170% of the Federal Level.
+              </p>
+              <p>
+                As an example, if you are in a family of four, you’re eligible
+                for CCDF so long as you make less than $2604 per month or
+                $31,248 per year. If your life situation changes and you get a
+                new job or start to make more money, you’ll continue to be
+                eligible for the program as long as you make less than $41,310 a
+                year or $3442 per month.
+              </p>
+              <p>
+                Keep in mind that there are some exceptions to these guidelines
+                though. Licensed Foster parents trying to find care for foster
+                children do not have to be within these income guidelines, as
+                well as a few other exceptions. Contact the CCDF office in your
+                area for more details.
+              </p>
+              <p>
+                After you’ve verified that you qualify for CCDF, the next step
+                is to find a child care provider that accepts CCDF vouchers, but
+                you’ve already done that step! Adventure Academy Daycare Center
+                accepts CCDF vouchers and is happy to assist you in the process
+                of getting your child enrolled in our organization.
+              </p>
+              <h2>Begin your application process</h2>
+              <p>
+                Now that you know you’re eligible, and you’ve found Adventure
+                Academy, you need to complete and mail your pre-application form
+                to the Region 3 CCDF office.
+                <a
+                  href="http://www.childrensbureau.org/files/file/3-preapplications-mar2016.pdf"
+                  target="_blank"
+                  >Download and complete this short pre-application form</a
+                >
+                (or use this
+                <a
+                  href="http://www.childrensbureau.org/files/file/3-preapplication-spanish-mar2016.pdf"
+                  target="_blank"
+                  >Spanish version</a
+                >
+                if you prefer), it only takes a minute or two to fill out, then
+                mail your pre-application to one of the following Region 3
+                office locations.
+              </p>
+              <p><strong>Fay Biccard Glick Family Place</strong></p>
+              <p>3801 N. Temple Ave, Indianapolis, IN 46205</p>
+              <p>Monday 8am - 7pm; Tuesday - Friday: 8am - 5pm</p>
+              <p><strong>NACS West </strong></p>
+              <p>652 N. Girls School Road Suite #230, Indianapolis, IN 46214</p>
+              <p>
+                Monday, Wednesday, Thursday: 8am - 5pm; Tuesday: 8am - 7pm;
+                Closed Friday
+              </p>
+              <p><strong>Gene Glick Family Support Center</strong></p>
+              <p>1575 Dr. Martin Luther King Jr. St., Indianapolis, IN 46202</p>
+              <p>
+                Monday, Tuesday, Thursday: 8am - 5pm; Wednesday: 8am - 7pm;
+                Friday: Receptionist Only
+              </p>
+              <p>Second Saturday of every month: 8am - 4:30pm</p>
+              <p>
+                Since you’re applying in the Region 3 area, you’ll probably be
+                happy to know that a phone hotline is available to assist you
+                during the day at (317) 545-5281 x196 or 1-866-287-2420 x196
+                (toll free).
+              </p>
+              <h2>Conclusion</h2>
+              <p>
+                After you’ve sent in your pre-application, the state of Indiana
+                may require that you provide a number of other documents in
+                order to complete the process, but fret not! Make sure to
+                remember the phone hotline if you have any questions and don’t
+                hesitate to contact Adventure Academy if you have any questions
+                about how we accept vouchers or troubles throughout the process.
+              </p>
+              <p>
+                You can also use this
+                <a
+                  href="http://www.childrensbureau.org/contact-the-region-3-staff"
+                  >contact form</a
+                >
+                to contact the CCDF Region 3 Staff if you have any questions.
+              </p>
+              <p>We can’t wait to see your child in our center soon!</p>
+              <p>
+                Below is a complete list of resources offered from the state in
+                case you need to download additional documentation forms.
+              </p>
+              <p><strong>Downloadable Forms:</strong></p>
+              <ul>
+                <li>
+                  <a
+                    href="http://www.childrensbureau.org/files/file/3-preapplications-mar2016.pdf"
+                    target="_blank"
+                    >Pre-Application</a
+                  >
+                  (English)
+                </li>
+                <li>
+                  <a
+                    href="http://www.childrensbureau.org/files/file/3-preapplication-spanish-mar2016.pdf"
+                    target="_blank"
+                    >Pre-Application</a
+                  >
+                  (Espanol)
+                </li>
+                <li>
+                  <a
+                    href="http://www.childrensbureau.org/files/file/3-eligibilitydocumentationletter-march17.pdf"
+                    target="_blank"
+                    >Eligibility Letter</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="http://www.childrensbureau.org/files/file/3-eligibilitydocumentationletter-march17.pdf"
+                    target="_blank"
+                    >Provider Information Page</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="http://www.childrensbureau.org/files/file/3-applicantappealprocedure-march17.pdf"
+                    target="_blank"
+                    >Parent Appeal Procedures</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="http://www.childrensbureau.org/files/file/3-applicantappealprocedure-march17.pdf"
+                    target="_blank"
+                    >Appeal Form</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="http://www.childrensbureau.org/files/file/wage-detail-form-march17.pdf"
+                    target="_blank"
+                    >Wage Detail Form</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="http://www.childrensbureau.org/files/file/wage-detail-form-march17.pdf"
+                    target="_blank"
+                    >Profit and Loss Statement</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="http://www.childrensbureau.org/files/file/parent-reauthorization-packet-update.pdf"
+                    target="_blank"
+                    >Parent Reauthorization Packet</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="http://www.childrensbureau.org/files/file/parent-reauthorization-packet-update.pdf"
+                    target="_blank"
+                    >Parent/Applicant Worksheet</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="http://www.childrensbureau.org/files/file/child-support-declaration.pdf"
+                    target="_blank"
+                    >Child Support Declaration Authorization for Release of
+                    Information</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="http://www.childrensbureau.org/files/file/verification-of-new-job.pdf"
+                    target="_blank"
+                    >Verification of New Job</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="http://www.childrensbureau.org/files/file/verification-of-new-job.pdf"
+                    target="_blank"
+                    >Tipped Employee Worksheet</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="http://www.childrensbureau.org/files/file/ccdf-name-attestation.pdf"
+                    target="_blank"
+                    >Name Attestation</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="http://www.childrensbureau.org/files/file/ccdf-name-attestation.pdf"
+                    target="_blank"
+                    >Hoosier Child Care Swipe Card</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="http://www.childrensbureau.org/files/file/2016-acknowledgement-of-policy.pdf"
+                    target="_blank"
+                    >Acknowledgement of Policy</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="http://www.childrensbureau.org/files/file/2016-acknowledgement-of-policy.pdf"
+                    target="_blank"
+                    >Provider/ Parent Statement</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="http://www.childrensbureau.org/files/file/middle-high-school-enrollment-verification-march17.pdf"
+                    target="_blank"
+                    >High School Enrollment Form</a
+                  >
+                </li>
+              </ul>
+              <p>
+                Adventure Academy Daycare Center is proud to accept CCDF
+                vouchers in order to provide childcare to families in need.
+                Schedule a tour today to check out our center or enroll online
+                today!
+              </p>
+            </div>
+            <div class="blogpost-author w-clearfix">
+              <img src="../images/Momma.jpg" class="blog-author-photo" />
+              <h5 class="blogpost-author-title">Adventure Academy Director</h5>
+              <h3 class="blogpost-author-name">Lisa Gross</h3>
             </div>
           </div>
-          <div class="w-col w-col-2 w-col-stack w-hidden-medium w-hidden-small w-hidden-tiny"></div>
-          <div class="w-col w-col-4 w-col-stack">
-            <h4 class="heading">Sitemap</h4>
-            <ul class="sitemap">
-              <li><a href="../" class="sitemap-link">Home</a></li>
-              <li><a href="../our-center" class="sitemap-link">Our Center</a></li>
-              <li><a href="../prices" class="sitemap-link">Prices</a></li>
-              <li><a href="../enroll" class="sitemap-link">Enroll Now</a></li>
-              <li><a href="../classes/all-classes" class="sitemap-link">Classes</a></li>
-              <li><a href="../news/overview" class="sitemap-link">News</a></li>
-              <li><a href="../careers" class="sitemap-link">Careers</a></li>
-              <li><a href="../contact" class="sitemap-link">Contact</a></li>
-            </ul>
-          </div>
-          <div class="w-col w-col-2 w-col-stack">
-            <h4 class="heading-2">Contact Us</h4>
-            <div class="footer-text">
-              <p class="paragraph-6"><a href="tel:+13179130848">+1 (317) 913-0848<br xmlns="http://www.w3.org/1999/xhtml"></a><a href="mailto:Lisa.Gross@AdventureAcademyWeb.com?subject=Adventure%20Academy%20Daycare%20Inquiry">Lisa.Gross@AdventureAcademyWeb.com</a></p>
+          <div
+            class="w-col w-col-1 w-col-small-small-stack w-col-stack w-col-tiny-tiny-stack zero-height-column"
+          ></div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-section section">
+        <div class="container-fluid">
+          <div class="w-row">
+            <div class="column-3 w-col w-col-4 w-col-stack">
+              <div class="logo logo-footer">Adventure Academy Daycare</div>
+              <div class="footer-text">
+                <p class="centered">
+                  Adventure Academy Daycare began in 2016 with a unique
+                  philosophy: allow children to learn in the ways that best
+                  serve their needs.<br /><br /><a
+                    href="../news/adventure-academy-accepts-ccdf"
+                    >Adventure Academy accepts CCDF.</a
+                  >
+                </p>
+              </div>
+              <div class="footer-text">
+                <p class="paragraph-5">
+                  Copyright 2017 © Adventure Academy Daycare
+                </p>
+              </div>
             </div>
-            <div class="footer-text">
-              <ul class="footer-social-media-list w-clearfix">
-                <li class="footer-social-media-item"><a href="https://www.facebook.com/adventureacademyindianapolis/" target="_blank" class="facebook footer-social-media-link w-inline-block"></a></li>
-                <li class="footer-social-media-item"><a href="#" class="footer-social-media-link twitter w-inline-block"></a></li>
-                <li class="footer-social-media-item"><a href="https://goo.gl/maps/QQkEx5AAvfF2" target="_blank" class="footer-social-media-link google w-inline-block"></a></li>
+            <div
+              class="w-col w-col-2 w-col-stack w-hidden-medium w-hidden-small w-hidden-tiny"
+            ></div>
+            <div class="w-col w-col-4 w-col-stack">
+              <h4 class="heading">Sitemap</h4>
+              <ul class="sitemap">
+                <li><a href="../" class="sitemap-link">Home</a></li>
+                <li>
+                  <a href="../our-center" class="sitemap-link">Our Center</a>
+                </li>
+                <li><a href="../prices" class="sitemap-link">Prices</a></li>
+                <li><a href="../enroll" class="sitemap-link">Enroll</a></li>
+                <li>
+                  <a href="../classes/all-classes" class="sitemap-link"
+                    >Classes</a
+                  >
+                </li>
+                <li>
+                  <a href="../news/overview" class="sitemap-link">News</a>
+                </li>
+                <li><a href="../careers" class="sitemap-link">Careers</a></li>
+                <li><a href="../contact" class="sitemap-link">Contact</a></li>
               </ul>
             </div>
+            <div class="w-col w-col-2 w-col-stack">
+              <h4 class="heading-2">Contact Us</h4>
+              <div class="footer-text">
+                <p class="paragraph-6">
+                  <a href="tel:+13179130848"
+                    >+1 (317) 913-0848<br
+                      xmlns="http://www.w3.org/1999/xhtml"/></a
+                  ><a
+                    href="mailto:Lisa.Gross@AdventureAcademyWeb.com?subject=Adventure%20Academy%20Daycare%20Inquiry"
+                    >Lisa.Gross@AdventureAcademyWeb.com</a
+                  >
+                </p>
+              </div>
+              <div class="footer-text">
+                <ul class="footer-social-media-list w-clearfix">
+                  <li class="footer-social-media-item">
+                    <a
+                      href="https://www.facebook.com/adventureacademyindianapolis/"
+                      target="_blank"
+                      class="facebook footer-social-media-link w-inline-block"
+                    ></a>
+                  </li>
+                  <li class="footer-social-media-item">
+                    <a
+                      href="#"
+                      class="footer-social-media-link twitter w-inline-block"
+                    ></a>
+                  </li>
+                  <li class="footer-social-media-item">
+                    <a
+                      href="https://goo.gl/maps/QQkEx5AAvfF2"
+                      target="_blank"
+                      class="footer-social-media-link google w-inline-block"
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
-  <script src="../js/webflow.js" type="text/javascript"></script>
-  <script src="../js/app.js"></script>
-  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
-  <!--  Google Tag Manager (noscript)  -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N3W6MDL" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!--  End Google Tag Manager (noscript)  -->
-  <script>
-    if(navigator.serviceWorker) {
-      window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/sw.js')
-        .catch(function(err) {
-          console.error('The service worker is totally not working.', err);
+    </footer>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+      type="text/javascript"
+    ></script>
+    <script src="../js/webflow.js" type="text/javascript"></script>
+    <script src="../js/app.js"></script>
+    <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+    <!--  Google Tag Manager (noscript)  -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-N3W6MDL"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+      ></iframe
+    ></noscript>
+    <!--  End Google Tag Manager (noscript)  -->
+    <script>
+      if (navigator.serviceWorker) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/sw.js').catch(function(err) {
+            console.error('The service worker is totally not working.', err);
+          });
         });
-      });
-    }
-</script>
-</body>
+      }
+    </script>
+  </body>
 </html>
