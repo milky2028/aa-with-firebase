@@ -98,15 +98,6 @@ img {
   margin-bottom: 20px;
 }
 
-blockquote {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 10px 20px;
-  border-left: 3px solid #e2e2e2;
-  font-size: 18px;
-  line-height: 30px;
-}
-
 figcaption {
   position: absolute;
   bottom: 20px;
@@ -3248,12 +3239,6 @@ html.w-mod-js *[data-ix='popup-initial'] {
   h3 {
     font-size: 20px;
     line-height: 28px;
-  }
-  blockquote {
-    padding-right: 10px;
-    padding-left: 10px;
-    font-size: 16px;
-    line-height: 25px;
   }
   .hero {
     height: 160vh;
