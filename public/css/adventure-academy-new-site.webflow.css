@@ -1119,7 +1119,7 @@ figcaption {
   position: absolute;
   top: 0px;
   right: 8px;
-  z-index: 1100;
+  z-index: 99999999;
   padding-top: 2px;
   padding-bottom: 1px;
 }
