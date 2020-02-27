@@ -375,14 +375,5 @@
       ></iframe
     ></noscript>
     <!--  End Google Tag Manager (noscript)  -->
-    <script>
-      if (navigator.serviceWorker) {
-        window.addEventListener('load', function() {
-          navigator.serviceWorker.register('/sw.js').catch(function(err) {
-            console.error('The service worker is totally not working.', err);
-          });
-        });
-      }
-    </script>
   </body>
 </html>
