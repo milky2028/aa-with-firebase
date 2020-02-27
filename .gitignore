@@ -8,3 +8,4 @@ public/js/config.js
 .DS_store
 
 build/dist
+public/dist
