@@ -1,5 +1,5 @@
 export interface AAClass {
-  name: string;
+  routeName: string;
   displayName: string;
   subtitle: string;
   ageRange: {
@@ -32,9 +32,9 @@ function timesOffered(className: string) {
   return `All our ${className} classes are offered Monday - Friday, from 6:30am to 6:00pm.`;
 }
 
-export const classes: AAClass[] = [
+const classes: AAClass[] = [
   {
-    name: 'infants',
+    routeName: 'infants',
     displayName: 'Infants',
     subtitle: 'Learn and Play',
     ageRange: {
@@ -69,7 +69,7 @@ export const classes: AAClass[] = [
     timesOffered: timesOffered('Infant')
   },
   {
-    name: 'toddlers',
+    routeName: 'toddlers',
     displayName: 'Toddlers',
     subtitle: 'Question and Answer',
     ageRange: {
@@ -102,7 +102,7 @@ export const classes: AAClass[] = [
     timesOffered: timesOffered('Toddler')
   },
   {
-    name: 'twos',
+    routeName: 'twos',
     displayName: 'Twos',
     subtitle: 'Speak and Listen',
     ageRange: {
@@ -135,7 +135,7 @@ export const classes: AAClass[] = [
     timesOffered: timesOffered('Twos')
   },
   {
-    name: 'threes',
+    routeName: 'threes',
     displayName: 'Threes',
     subtitle: 'Move and Explore',
     ageRange: {
@@ -168,7 +168,7 @@ export const classes: AAClass[] = [
     timesOffered: timesOffered('Threes')
   },
   {
-    name: 'fours-and-fives',
+    routeName: 'fours-and-fives',
     displayName: 'Fours and Fives',
     subtitle: 'Grow and Develop',
     ageRange: {
@@ -201,7 +201,7 @@ export const classes: AAClass[] = [
     timesOffered: timesOffered('Fours and Fives')
   },
   {
-    name: 'am-preschool',
+    routeName: 'am-preschool',
     displayName: 'A.M. Preschool',
     subtitle: 'Create and Engage',
     ageRange: {
@@ -235,3 +235,5 @@ export const classes: AAClass[] = [
       'All A.M. Preschool classes are offered Monday - Friday, from 9:00am to 12:30pm. A.M. Preschool is only for 3-5 year olds.'
   }
 ];
+
+export default classes;

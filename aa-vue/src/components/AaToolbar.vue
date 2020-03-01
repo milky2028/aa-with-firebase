@@ -1,29 +1,15 @@
 <template>
   <nav role="navigation">
     <router-link
-      v-for="menuItems of menu"
-      :to="menuItems.link"
-      :key="menuItems.name"
+      v-for="menuItem of menu"
+      :to="menuItem.link"
+      :key="menuItem.name"
       class="nav-link"
-      ><h4 class="lighten">{{ menuItems.name }}</h4>
+      ><h4 class="lighten">
+        {{ menuItem.name }}
+        <aa-icon v-if="menuItem.subroutes">arrow_drop_down</aa-icon>
+      </h4>
     </router-link>
-    <!-- <div class="dropdown w-dropdown">
-      <div class="nav-link w-dropdown-toggle">
-        <div class="classes-menu-block">Classes</div>
-        <aa-icon>arrow_drop_down</aa-icon>
-        <div class="w-icon-dropdown-toggle" />
-      </div>
-      <nav class="submenu w-dropdown-list">
-        <router-link
-          to="/classes/all-classes"
-          class="submenu-item w-dropdown-link"
-          >All Classes</router-link
-        >
-      </nav>
-    </div> -->
-    <!-- <a href="#" data-ix="show-popup-modal" class="button nav-button w-button"
-      >Schedule a Tour</a
-    > -->
   </nav>
 </template>
 

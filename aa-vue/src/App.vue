@@ -1,13 +1,22 @@
 <template>
   <main>
-    <AAToolbar />
-    <router-view />
+    <aa-toolbar />
+    <router-view class="router-view" />
   </main>
 </template>
 
 <style>
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Mukta+Malar:400,500,600,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500,700|Pompiere&display=swap');
+
+:root {
+  --blue: #49adea;
+  --open-sans: 'Open Sans';
+}
+
+.router-view {
+  padding-top: 65px;
+}
 
 * {
   margin: 0;
@@ -36,15 +45,25 @@ button {
 ul {
   list-style: none;
 }
+
+h4 {
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.lighten {
+  opacity: 0.9;
+}
 </style>
 
 <script lang="ts">
 import { defineComponent } from '@vue/composition-api';
-import AAToolbar from '@/components/AAToolbar.vue';
+import AaToolbar from '@/components/AaToolbar.vue';
 
 export default defineComponent({
   components: {
-    AAToolbar
+    AaToolbar
   }
 });
 </script>
