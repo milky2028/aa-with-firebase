@@ -1,5 +1,9 @@
 <template>
   <nav role="navigation">
+    <router-link class="logo" to="/"
+      ><img src="" alt="Adventure Academy Globe Logo" />
+      <h3>Adventure Academy</h3>
+    </router-link>
     <router-link
       v-for="menuItem of menu"
       :to="menuItem.link"
@@ -14,6 +18,12 @@
 </template>
 
 <style scoped>
+.logo {
+  position: absolute;
+  color: white;
+  font-family: 'Pompiere', sans-serif;
+}
+
 nav {
   padding: 0 240px;
   width: 100%;

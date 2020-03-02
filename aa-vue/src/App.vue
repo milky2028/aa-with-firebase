@@ -46,6 +46,18 @@ ul {
   list-style: none;
 }
 
+h1 {
+  font-size: 55px;
+}
+
+h2 {
+  font-size: 34px;
+}
+
+h3 {
+  font-size: 26px;
+}
+
 h4 {
   font-weight: 400;
   letter-spacing: 1px;
