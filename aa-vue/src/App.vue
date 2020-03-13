@@ -73,6 +73,10 @@ h4 {
   justify-items: center;
   align-items: center;
 }
+
+.white-text {
+  color: white;
+}
 </style>
 
 <script lang="ts">
