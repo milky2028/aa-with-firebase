@@ -67,6 +67,12 @@ h4 {
 .lighten {
   opacity: 0.9;
 }
+
+.centered-grid {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
 </style>
 
 <script lang="ts">

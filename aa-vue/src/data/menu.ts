@@ -12,7 +12,7 @@ const menu = [
       link: `/classes/${routeName}`
     }))
   },
-  { name: 'News', link: '/news/overview', subroutes: [] },
+  { name: 'News', link: '/news/overview' },
   { name: 'Careers', link: 'careers' },
   { name: 'Contact', link: 'contact' }
 ];

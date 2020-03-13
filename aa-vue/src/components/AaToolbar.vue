@@ -1,7 +1,7 @@
 <template>
   <nav role="navigation">
-    <router-link class="logo" to="/"
-      ><img src="" alt="Adventure Academy Globe Logo" />
+    <router-link class="centered-grid logo" to="/">
+      <img src="/images/whiteLogo.svg" alt="Adventure Academy Globe Logo" />
       <h3>Adventure Academy</h3>
     </router-link>
     <router-link
@@ -9,7 +9,8 @@
       :to="menuItem.link"
       :key="menuItem.name"
       class="nav-link"
-      ><h4 class="lighten">
+    >
+      <h4 class="lighten">
         {{ menuItem.name }}
         <aa-icon v-if="menuItem.subroutes">arrow_drop_down</aa-icon>
       </h4>
@@ -19,9 +20,16 @@
 
 <style scoped>
 .logo {
+  grid-auto-flow: column;
+  column-gap: 0.5rem;
+  padding-left: 0.5rem;
   position: absolute;
   color: white;
   font-family: 'Pompiere', sans-serif;
+}
+
+img {
+  width: 40px;
 }
 
 nav {
