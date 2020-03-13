@@ -17,7 +17,27 @@
         </h4>
       </router-link>
     </nav>
-    <aa-icon class="white-text menu-icon" v-if="!isDesktop">menu</aa-icon>
+    <aa-icon
+      class="white-text menu-icon"
+      :class="{ 'black-text': menuOpened }"
+      v-if="!isDesktop"
+      @icon-click="menuOpened = !menuOpened"
+      >{{ menuOpened ? 'close' : 'menu' }}</aa-icon
+    >
+    <transition name="fly-in">
+      <nav v-if="menuOpened" ref="mobileNav" class="mobile-nav">
+        <router-link
+          v-for="menuItem of menu"
+          :to="menuItem.link"
+          :key="menuItem.name"
+        >
+          <h4>
+            {{ menuItem.name }}
+            <aa-icon v-if="menuItem.subroutes">arrow_drop_down</aa-icon>
+          </h4>
+        </router-link>
+      </nav>
+    </transition>
   </nav>
 </template>
 
@@ -46,22 +66,57 @@ img {
   background-color: var(--blue);
 }
 
+.transparent {
+  background-color: transparent;
+}
+
 .child-nav {
   padding: 0 240px;
   grid-auto-flow: column;
   height: 100%;
 }
 
+.mobile-nav {
+  position: fixed;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  right: 0;
+  background-color: white;
+  height: 100vh;
+  width: 300px;
+}
+
+.fly-in-enter,
+.fly-in-leave-to {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.fly-in-enter-active {
+  transition: transform 150ms ease-out, opacity 150ms ease-out;
+}
+
+.fly-in-leave-active {
+  transition: transform 100ms ease-in, opacity 100ms ease-in;
+}
+
+.fly-in-enter-to,
+.fly-in-leave {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .menu-icon {
+  z-index: 100;
+  cursor: pointer;
   position: absolute;
   right: 1rem;
-  margin-top: 1rem;
+  margin-top: 18px;
   font-size: 24px;
 }
 </style>
 
 <script lang="ts">
-import { defineComponent } from '@vue/composition-api';
+import { defineComponent, ref } from '@vue/composition-api';
 import useMatchMedia from '@/use/matchMedia';
 import AaIcon from './AaIcon.vue';
 import Menu from '../data/menu';
@@ -71,10 +126,12 @@ export default defineComponent({
     AaIcon
   },
   setup() {
-    const menu = Menu;
     const { isDesktop } = useMatchMedia();
 
-    return { menu, isDesktop };
+    const menu = Menu;
+    const menuOpened = ref(false);
+
+    return { menu, isDesktop, menuOpened };
   }
 });
 </script>
