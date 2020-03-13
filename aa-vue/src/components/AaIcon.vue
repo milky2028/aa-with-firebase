@@ -1,9 +1,9 @@
 <template>
-  <span><slot /></span>
+  <button @click="$emit('icon-click')"><slot /></button>
 </template>
 
 <style scoped>
-span {
+button {
   font-size: 20px;
   font-family: 'Material Icons' !important;
   text-transform: lowercase;
