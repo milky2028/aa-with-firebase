@@ -77,6 +77,10 @@ h4 {
 .white-text {
   color: white;
 }
+
+.black-text {
+  color: black;
+}
 </style>
 
 <script lang="ts">
