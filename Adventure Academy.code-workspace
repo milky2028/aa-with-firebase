@@ -6,5 +6,8 @@
 		{
 			"path": "public"
 		}
-	]
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "public"
+	}
 }

@@ -10,6 +10,22 @@ body {
   letter-spacing: 0.3px;
 }
 
+.logo-container {
+  padding: 50px 0;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: center;
+  justify-items: center;
+  grid-gap: 25px;
+  background-color: #fff;
+  width: 100%;
+}
+
+.logo-container a p {
+  text-align: center;
+}
+
 h1 {
   color: #373737;
   font-size: 52px;
