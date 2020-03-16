@@ -25,9 +25,10 @@
       >{{ menuOpened ? 'close' : 'menu' }}</aa-icon
     >
     <transition name="fly-in">
-      <nav v-if="menuOpened" ref="mobileNav" class="mobile-nav">
+      <nav v-if="menuOpened" class="centered-grid mobile-nav">
         <router-link
           v-for="menuItem of menu"
+          :class="{ activeRoute: isActiveRoute(menuItem.link) }"
           :to="menuItem.link"
           :key="menuItem.name"
         >
@@ -78,11 +79,19 @@ img {
 
 .mobile-nav {
   position: fixed;
+  padding: 18px 25px 18px 25px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   right: 0;
   background-color: white;
   height: 100vh;
-  width: 300px;
+  width: 275px;
+  font-size: 19px;
+  justify-items: start;
+}
+
+.activeRoute {
+  font-weight: 700;
+  color: var(--orange);
 }
 
 .fly-in-enter,
@@ -116,7 +125,7 @@ img {
 </style>
 
 <script lang="ts">
-import { defineComponent, ref } from '@vue/composition-api';
+import { defineComponent, ref, watch } from '@vue/composition-api';
 import useMatchMedia from '@/use/matchMedia';
 import AaIcon from './AaIcon.vue';
 import Menu from '../data/menu';
@@ -125,13 +134,22 @@ export default defineComponent({
   components: {
     AaIcon
   },
-  setup() {
+  setup(_, ctx) {
     const { isDesktop } = useMatchMedia();
 
     const menu = Menu;
     const menuOpened = ref(false);
 
-    return { menu, isDesktop, menuOpened };
+    function isActiveRoute(route: string) {
+      return route === ctx.root.$route.path;
+    }
+
+    watch(
+      () => ctx.root.$route,
+      () => (menuOpened.value = false)
+    );
+
+    return { menu, isDesktop, menuOpened, isActiveRoute };
   }
 });
 </script>
