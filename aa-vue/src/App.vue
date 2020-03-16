@@ -12,6 +12,7 @@
 :root {
   --blue: #49adea;
   --open-sans: 'Open Sans';
+  --orange: #e88b33;
 }
 
 .router-view {
