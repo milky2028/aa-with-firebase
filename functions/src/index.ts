@@ -2,15 +2,20 @@ import * as functions from 'firebase-functions';
 import * as sgMail from '@sendgrid/mail';
 
 sgMail.setApiKey(functions.config().sendgrid.api.key);
-const adventureRecepients = ['tylergross28@gmail.com', 'lisa.gross@adventureacademyweb.com'];
-export const tourFormSubmission = functions.firestore.document('tours/{tourId}').onCreate(async (snapshot, context) => {
-  const submission = snapshot.data();
+const adventureRecepients = [
+  'tylergross28@gmail.com',
+  'lisa.gross@adventureacademyweb.com'
+];
+export const tourFormSubmission = functions.firestore
+  .document('tours/{tourId}')
+  .onCreate(async (snapshot) => {
+    const submission = snapshot.data();
 
-  const msgToMom = {
-    to: adventureRecepients,
-    from: 'support@adventureacademyweb.com',
-    subject: 'Hey Mom! Someone Submitted a New Tour Form',
-    html: `<div style="font-family: sans-serif">
+    const msgToMom = {
+      to: adventureRecepients,
+      from: 'support@adventureacademyweb.com',
+      subject: 'Hey Mom! Someone Submitted a New Tour Form',
+      html: `<div style="font-family: sans-serif">
             <h1 style="font-size: 20px; color: black">Here are the details about the tour:</h1>
             <p style="color: black; font-size: 18px; margin: 3px 10px;">Name: ${submission.name}</p>
             <p style="color: black; font-size: 18px; margin: 3px 10px;">Email: ${submission.email}</p>
@@ -19,14 +24,14 @@ export const tourFormSubmission = functions.firestore.document('tours/{tourId}')
             <p style="color: black; font-size: 18px; margin: 3px 10px; font-family: sans-serif">Tour Time: ${submission.tourTime}</p>
             <p style="color: black; font-size: 18px;">I love you mom! You're the greatest.</p>
             <p style="color: black; font-size: 18px; font-weight: bold">From Tylerbot</p>
-          </div>`,
-  };
+          </div>`
+    };
 
-  const msgToParent = {
-    to: submission.email,
-    from: 'support@adventureacademyweb.com',
-    subject: 'Thank You Scheduling a Tour to See Our Center!',
-    html: `<body style="margin: 0; font-family: sans-serif">
+    const msgToParent = {
+      to: submission.email,
+      from: 'support@adventureacademyweb.com',
+      subject: 'Thank You Scheduling a Tour to See Our Center!',
+      html: `<body style="margin: 0; font-family: sans-serif">
     <div style="height: 60px; width: 100%; background-color: #49adea">
     <table>
       <tr><td><img style="height: 40px; width: 35px; margin: 8px" src="https://adventureacademyweb.com/images/white-logo.png"></td>
@@ -45,29 +50,34 @@ export const tourFormSubmission = functions.firestore.document('tours/{tourId}')
           <a href="https://adventureacademyweb.com/" style="padding-left: 36px; margin: 5px">adventureacademyweb.com</a>
     </div>
     </body>`
-  };
+    };
 
-  await sgMail.send(msgToParent).catch(error => console.error('Message to parent did not work :[', error));
-  console.log('Message to parent worked.');
+    await sgMail
+      .send(msgToParent)
+      .catch((error) =>
+        console.error('Message to parent did not work :[', error)
+      );
+    console.log('Message to parent worked.');
 
-  try {
-    await sgMail.send(msgToMom);
-    console.log('Message to mom worked.');
-  }
-  catch (e) {
-    console.error('Message to mom did not work :[', e);
-    return;
-  }
-});
+    try {
+      await sgMail.send(msgToMom);
+      console.log('Message to mom worked.');
+    } catch (e) {
+      console.error('Message to mom did not work :[', e);
+      return;
+    }
+  });
 
-export const contactFormSubmission = functions.firestore.document('contactForms/{formId}').onCreate(async (snapshot, context) => {
-  const submission = snapshot.data();
+export const contactFormSubmission = functions.firestore
+  .document('contactForms/{formId}')
+  .onCreate(async (snapshot) => {
+    const submission = snapshot.data();
 
-  const msgToMom = {
-    to: adventureRecepients,
-    from: 'support@adventureacademyweb.com',
-    subject: 'Someone Submitted a New Contact Form On Your Website',
-    html: `<div style="font-family: sans-serif">
+    const msgToMom = {
+      to: adventureRecepients,
+      from: 'support@adventureacademyweb.com',
+      subject: 'Someone Submitted a New Contact Form On Your Website',
+      html: `<div style="font-family: sans-serif">
       <h2 style="color: black">Hey ma!</h2>
       <p style="color: black">Someone contacted you via the contact forms on your website. Here's who they were and what they had to say:</p>
       <p style="margin: 5px">Name: ${submission.name}</p>
@@ -78,13 +88,13 @@ export const contactFormSubmission = functions.firestore.document('contactForms/
       <p style="color: black; margin: 5px">Love you mom! I hope you're having a great day.</p>
       <p style="color: black; margin: 5px">From Tylerbot</p>
     </div>`
-  };
+    };
 
-  const msgToParent = {
-    to: submission.email,
-    from: 'support@adventureacademyweb.com',
-    subject: 'Thank You for Contacting Adventure Academy',
-    html: `
+    const msgToParent = {
+      to: submission.email,
+      from: 'support@adventureacademyweb.com',
+      subject: 'Thank You for Contacting Adventure Academy',
+      html: `
     <body style="margin: 0; font-family: sans-serif">
     <div style="height: 60px; width: 100%; background-color: #49adea">
       <table>
@@ -104,17 +114,20 @@ export const contactFormSubmission = functions.firestore.document('contactForms/
       </div>
     </body>
     `
-  };
+    };
 
-  await sgMail.send(msgToParent).catch(error => console.error('Message to parent did not work :[', error));
-  console.log('Message to parent worked.');
+    await sgMail
+      .send(msgToParent)
+      .catch((error) =>
+        console.error('Message to parent did not work :[', error)
+      );
+    console.log('Message to parent worked.');
 
-  try {
-    await sgMail.send(msgToMom);
-    console.log('Message to mom worked.');
-  }
-  catch (e) {
-    console.error('Message to mom did not work :[', e);
-    return;
-  }
-});
+    try {
+      await sgMail.send(msgToMom);
+      console.log('Message to mom worked.');
+    } catch (e) {
+      console.error('Message to mom did not work :[', e);
+      return;
+    }
+  });
