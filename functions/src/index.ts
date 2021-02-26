@@ -4,7 +4,7 @@ import * as sgMail from '@sendgrid/mail';
 sgMail.setApiKey(functions.config().sendgrid.api.key);
 const adventureRecepients = [
   'tylergross28@gmail.com',
-  'lisa.gross@adventureacademyweb.com'
+  'lisa.gross@adventureacademyweb.com',
 ];
 export const tourFormSubmission = functions.firestore
   .document('tours/{tourId}')
@@ -24,7 +24,7 @@ export const tourFormSubmission = functions.firestore
             <p style="color: black; font-size: 18px; margin: 3px 10px; font-family: sans-serif">Tour Time: ${submission.tourTime}</p>
             <p style="color: black; font-size: 18px;">I love you mom! You're the greatest.</p>
             <p style="color: black; font-size: 18px; font-weight: bold">From Tylerbot</p>
-          </div>`
+          </div>`,
     };
 
     const msgToParent = {
@@ -49,7 +49,7 @@ export const tourFormSubmission = functions.firestore
           <p style="padding-left: 36px; margin: 5px">8383 Craig St #210, Indianapolis, IN 46250</p>
           <a href="https://adventureacademyweb.com/" style="padding-left: 36px; margin: 5px">adventureacademyweb.com</a>
     </div>
-    </body>`
+    </body>`,
     };
 
     await sgMail
@@ -87,7 +87,7 @@ export const contactFormSubmission = functions.firestore
       <p></p>
       <p style="color: black; margin: 5px">Love you mom! I hope you're having a great day.</p>
       <p style="color: black; margin: 5px">From Tylerbot</p>
-    </div>`
+    </div>`,
     };
 
     const msgToParent = {
@@ -113,7 +113,7 @@ export const contactFormSubmission = functions.firestore
       <a href="https://adventureacademyweb.com/" style="padding-left: 36px; margin: 5px">adventureacademyweb.com</a>
       </div>
     </body>
-    `
+    `,
     };
 
     await sgMail
