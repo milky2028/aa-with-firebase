@@ -10,3 +10,4 @@ public/js/config.js
 build/dist
 public/dist
 dist
+functions/.runtimeconfig.json
