@@ -1,4 +1,25 @@
 {
   "git.ignoreLimitWarning": true,
-  "liveServer.settings.root": "/public"
+  "files.autoSave": "onFocusChange",
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "git.autofetch": true,
+  "editor.tabSize": 2,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "debug.toolBarLocation": "docked",
+  "editor.wordWrap": "on",
+  "eslint.packageManager": "yarn",
+  "npm.packageManager": "yarn",
+  "liveServer.settings.root": "./public",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "html",
+    "typescript",
+    "typescriptreact",
+    "svelte"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }
