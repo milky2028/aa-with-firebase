@@ -311,6 +311,8 @@ label {
 .w-input,
 .w-select {
   display: block;
+  -webkit-appearance: button;
+  -webkit-min-logical-width: calc(100% - 16px);
   width: 100%;
   height: 38px;
   padding: 8px 12px;
