@@ -5,6 +5,7 @@ const config = {
   projectId: 'adventure-academ-1501025774496',
   storageBucket: 'adventure-academ-1501025774496.appspot.com',
   messagingSenderId: '784182344237',
+  appId: '1:784182344237:web:bf4e47c2f7738f691516a4',
 };
 
 window.firebase.initializeApp(config);
@@ -61,11 +62,7 @@ function onSave(formNumber, successOrFailNumber) {
     submitDay: convertDate(),
   };
 
-  const tourDateObject = formData.tourDate ? new Date(formData.tourDate) : null;
-  const today = new Date();
-  const validDate = tourDateObject > today;
-
-  if (!areFieldsMissing(formData) && validDate) {
+  if (!areFieldsMissing(formData)) {
     db.collection('tours')
       .add(formData)
       .then(() => {
@@ -76,9 +73,6 @@ function onSave(formNumber, successOrFailNumber) {
         }, 1500);
       })
       .catch((error) => console.error('Error posting document:', error));
-  } else if (!validDate) {
-    errorElement.style.display = 'block';
-    errorElement.innerHTML = 'Please select a valid date';
   } else {
     errorElement.style.display = 'block';
   }
@@ -116,9 +110,31 @@ function onContactSubmit() {
   }
 }
 
-const dateControls = document.querySelectorAll('input[type="date"]');
-const today = new Date().toLocaleDateString('en-CA');
-for (const control of dateControls) {
-  control.min = today;
-  console.log(control.min);
+const today = new Date();
+const dates = [];
+const date0 = document.getElementById('date0');
+const date1 = document.getElementById('date1');
+
+while (dates.length < 20) {
+  const tomorrow = new Date(today.setDate(today.getDate() + 1));
+  if (tomorrow.getDay() !== 6 && tomorrow.getDay() !== 0) {
+    dates.push(tomorrow);
+  }
+}
+
+const dateOptions = {
+  weekday: 'short',
+  month: 'short',
+  day: 'numeric',
+};
+
+for (const day of dates) {
+  const option = document.createElement('option');
+  const formattedDate = day.toLocaleDateString(navigator.language, dateOptions);
+  option.value = formattedDate;
+  option.innerText = formattedDate;
+  date0.appendChild(option);
+  if (date1) {
+    date1.appendChild(option.cloneNode(true));
+  }
 }
