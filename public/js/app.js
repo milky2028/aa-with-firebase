@@ -4,7 +4,7 @@ const config = {
   databaseURL: 'https://adventure-academ-1501025774496.firebaseio.com',
   projectId: 'adventure-academ-1501025774496',
   storageBucket: 'adventure-academ-1501025774496.appspot.com',
-  messagingSenderId: '784182344237'
+  messagingSenderId: '784182344237',
 };
 
 window.firebase.initializeApp(config);
@@ -58,7 +58,7 @@ function onSave(formNumber, successOrFailNumber) {
     childAge: age.value,
     tourDate: tourDate.value,
     tourTime: tourTime.value,
-    submitDay: convertDate()
+    submitDay: convertDate(),
   };
 
   const tourDateObject = formData.tourDate ? new Date(formData.tourDate) : null;
@@ -97,7 +97,7 @@ function onContactSubmit() {
     name: fName.value,
     email: email.value,
     message: message.value,
-    submitDay: convertDate()
+    submitDay: convertDate(),
   };
 
   if (!areFieldsMissing(formData)) {
@@ -114,4 +114,11 @@ function onContactSubmit() {
   } else {
     errorElement.style.display = 'block';
   }
+}
+
+const dateControls = document.querySelectorAll('input[type="date"]');
+const today = new Date().toLocaleDateString('en-CA');
+for (const control of dateControls) {
+  control.min = today;
+  console.log(control.min);
 }
