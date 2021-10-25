@@ -10,7 +10,7 @@
     "clean": "rm -rf dist node_modules functions/node_modules",
     "build:functions": "cd functions && yarn build",
     "minify": "html-minifier --file-ext html --input-dir public -c minify.conf --output-dir dist && cp -r public/js dist/js && cp -r public/images dist/images && cp -r public/css dist/css && cp -r public/documents dist/documents && cp -r public/manifest.json dist/manifest.json",
-    "build": "yarn clean && yarn install && cd .. && yarn build:functions && yarn minify",
+    "build": "yarn clean && yarn install && yarn build:functions && yarn minify",
     "deploy": "yarn build && firebase deploy"
   },
   "engines": {
