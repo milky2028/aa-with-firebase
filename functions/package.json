@@ -2,8 +2,9 @@
   "version": "3.0.1",
   "name": "functions",
   "scripts": {
-    "lint": "eslint '**/*.ts' --fix",
-    "build": "tsc",
+    "lint": "eslint '**/*.ts'",
+    "lint:fix": "eslint '**/*.ts' --fix",
+    "build": "yarn lint && tsc",
     "serve": "npm run lint && npm run build && firebase serve --only functions",
     "shell": "npm run build && firebase functions:shell",
     "start": "npm run shell",
