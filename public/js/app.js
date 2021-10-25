@@ -9,9 +9,7 @@ const config = {
 };
 
 window.firebase.initializeApp(config);
-const settings = { timestampsInSnapshots: true };
 const db = window.firebase.firestore();
-db.settings(settings);
 
 function convertDate(date = new Date()) {
   let month = String(date.getMonth() + 1);
