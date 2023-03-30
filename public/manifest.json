@@ -1,7 +1,7 @@
 {
   "name": "Adventure Academy Daycare Center",
   "short_name": "AA Daycare",
-  "description": "Adventure Academy is Castleton and Indianapolis' premier daycare center, with classes for Infants, Toddlers, Twos, Threes, Fours and Fives, and A.M. Preschoolers.",
+  "description": "Adventure Academy is Castleton and Indianapolis' premier daycare center, with classes for Infants, Toddlers, Twos, Threes, and Fours and Fives year olds.",
   "start_url": "/",
   "display": "standalone",
   "theme_color": "#49ADEA",
