@@ -14,7 +14,7 @@
     "deploy": "yarn build && firebase deploy"
   },
   "engines": {
-    "node": "14"
+    "node": "16"
   },
   "repository": {
     "type": "git",
