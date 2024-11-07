@@ -1,16 +1,15 @@
-import * as functions from 'firebase-functions';
 import * as sgMail from '@sendgrid/mail';
 import { onDocumentCreated } from 'firebase-functions/firestore';
 
-sgMail.setApiKey(functions.config().sendgrid.api.key);
 const adventureRecepients = [
   'tylergross28@gmail.com',
   'lisa.gross@adventureacademyweb.com',
 ];
 
 export const tourFormSubmission = onDocumentCreated(
-  'tours/{tourId}',
+  { document: 'tours/{tourId}', secrets: ['SENDGRID_API_KEY'] },
   async (event) => {
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
     const submission = event.data.data();
 
     const msgToMom = {
@@ -72,8 +71,9 @@ export const tourFormSubmission = onDocumentCreated(
 );
 
 export const contactFormSubmission = onDocumentCreated(
-  'contactForms/{formId}',
+  { document: 'contactForms/{formId}', secrets: ['SENDGRID_API_KEY'] },
   async (snapshot) => {
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
     const submission = snapshot.data.data();
 
     const msgToMom = {
