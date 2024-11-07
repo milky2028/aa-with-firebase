@@ -1,15 +1,17 @@
 import * as functions from 'firebase-functions';
 import * as sgMail from '@sendgrid/mail';
+import { onDocumentCreated } from 'firebase-functions/firestore';
 
 sgMail.setApiKey(functions.config().sendgrid.api.key);
 const adventureRecepients = [
   'tylergross28@gmail.com',
   'lisa.gross@adventureacademyweb.com',
 ];
-export const tourFormSubmission = functions.firestore
-  .document('tours/{tourId}')
-  .onCreate(async (snapshot) => {
-    const submission = snapshot.data();
+
+export const tourFormSubmission = onDocumentCreated(
+  'tours/{tourId}',
+  async (event) => {
+    const submission = event.data.data();
 
     const msgToMom = {
       to: adventureRecepients,
@@ -55,7 +57,7 @@ export const tourFormSubmission = functions.firestore
     await sgMail
       .send(msgToParent)
       .catch((error) =>
-        console.error('Message to parent did not work :[', error)
+        console.error('Message to parent did not work :[', error),
       );
     console.log('Message to parent worked.');
 
@@ -66,12 +68,13 @@ export const tourFormSubmission = functions.firestore
       console.error('Message to mom did not work :[', e);
       return;
     }
-  });
+  },
+);
 
-export const contactFormSubmission = functions.firestore
-  .document('contactForms/{formId}')
-  .onCreate(async (snapshot) => {
-    const submission = snapshot.data();
+export const contactFormSubmission = onDocumentCreated(
+  'contactForms/{formId}',
+  async (snapshot) => {
+    const submission = snapshot.data.data();
 
     const msgToMom = {
       to: adventureRecepients,
@@ -119,7 +122,7 @@ export const contactFormSubmission = functions.firestore
     await sgMail
       .send(msgToParent)
       .catch((error) =>
-        console.error('Message to parent did not work :[', error)
+        console.error('Message to parent did not work :[', error),
       );
     console.log('Message to parent worked.');
 
@@ -130,4 +133,5 @@ export const contactFormSubmission = functions.firestore
       console.error('Message to mom did not work :[', e);
       return;
     }
-  });
+  },
+);
