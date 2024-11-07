@@ -15,6 +15,7 @@
   "main": "lib/index.js",
   "dependencies": {
     "@firebase/app-types": "^0.9.2",
+    "@google-cloud/functions-framework": "^3.4.2",
     "@sendgrid/mail": "^8.1.4",
     "firebase-admin": "^12.7.0",
     "firebase-functions": "^6.1.0",
