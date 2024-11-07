@@ -8,8 +8,6 @@
   "editor.multiCursorModifier": "ctrlCmd",
   "debug.toolBarLocation": "docked",
   "editor.wordWrap": "on",
-  "eslint.packageManager": "yarn",
-  "npm.packageManager": "yarn",
   "liveServer.settings.root": "./public",
   "eslint.validate": [
     "javascript",

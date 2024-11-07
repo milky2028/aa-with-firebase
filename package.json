@@ -8,13 +8,13 @@
   ],
   "scripts": {
     "clean": "rm -rf dist node_modules functions/node_modules",
-    "build:functions": "cd functions && yarn build",
+    "build:functions": "cd functions && npm run build",
     "minify": "html-minifier --file-ext html --input-dir public -c minify.conf --output-dir dist && cp -r public/js dist/js && cp -r public/images dist/images && cp -r public/css dist/css && cp -r public/documents dist/documents && cp -r public/manifest.json dist/manifest.json",
-    "build": "yarn clean && yarn install && yarn build:functions && yarn minify",
-    "deploy": "yarn build && firebase deploy"
+    "build": "npm run clean && pnpm i && cd functions && pnpm i && npm run build && cd .. && npm run minify",
+    "deploy": "npm run build && firebase deploy"
   },
   "engines": {
-    "node": "16"
+    "node": "20"
   },
   "repository": {
     "type": "git",
@@ -27,8 +27,8 @@
   },
   "homepage": "https://github.com/milky2028/aa-with-firebase#readme",
   "devDependencies": {
-    "eslint": "^7.20.0",
-    "firebase-tools": "^9.5.0",
+    "eslint": "^9.14.0",
+    "firebase-tools": "^13.24.1",
     "html-minifier": "^4.0.0"
   },
   "private": true
