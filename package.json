@@ -31,5 +31,8 @@
     "firebase-tools": "^13.24.1",
     "html-minifier": "^4.0.0"
   },
-  "private": true
+  "private": true,
+  "dependencies": {
+    "@google-cloud/functions-framework": "^3.4.2"
+  }
 }
