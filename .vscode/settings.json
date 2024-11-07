@@ -5,7 +5,6 @@
   "git.enableSmartCommit": true,
   "git.autofetch": true,
   "editor.tabSize": 2,
-  "editor.multiCursorModifier": "ctrlCmd",
   "debug.toolBarLocation": "docked",
   "editor.wordWrap": "on",
   "liveServer.settings.root": "./public",
