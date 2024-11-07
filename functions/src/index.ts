@@ -6,7 +6,7 @@ const adventureRecepients = [
   'lisa.gross@adventureacademyweb.com',
 ];
 
-export const tourFormSubmission = onDocumentCreated(
+export const tourFormSubmissionV2 = onDocumentCreated(
   { document: 'tours/{tourId}', secrets: ['SENDGRID_API_KEY'] },
   async (event) => {
     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
@@ -70,7 +70,7 @@ export const tourFormSubmission = onDocumentCreated(
   },
 );
 
-export const contactFormSubmission = onDocumentCreated(
+export const contactFormSubmissionV2 = onDocumentCreated(
   { document: 'contactForms/{formId}', secrets: ['SENDGRID_API_KEY'] },
   async (snapshot) => {
     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
