@@ -1,9 +1,6 @@
-import { mount } from 'svelte'
-import './app.css'
-import App from './App.svelte'
+import { mount } from 'svelte';
+import './app.css';
+import Footer from './lib/Footer.svelte';
 
-const app = mount(App, {
-  target: document.getElementById('app')!,
-})
-
-export default app
+const footer = document.querySelector('#svelte-footer') as Element;
+mount(Footer, { target: footer });
