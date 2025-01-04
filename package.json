@@ -5,9 +5,11 @@
   "main": "public/index.html",
   "scripts": {
     "clean": "rm -rf .firebase dist node_modules functions/node_modules components/node_modules components/.svelte-kit components/dist components/components components/build",
+    "install-deps": "pnpm i && cd functions && pnpm i && cd ../components && pnpm i",
+    "build:components": "cd components && npm run build",
     "build:functions": "cd functions && npm run build",
-    "minify": "html-minifier --file-ext html --input-dir public -c minify.conf --output-dir dist && cp -r public/js dist/js && cp -r public/images dist/images && cp -r public/css dist/css && cp -r public/documents dist/documents && cp -r public/manifest.json dist/manifest.json",
-    "build": "npm run clean && pnpm i && cd functions && pnpm i && npm run build && cd ../components && pnpm i && cd .. && npm run minify",
+    "build:minify": "html-minifier --file-ext html --input-dir public -c minify.conf --output-dir dist && cp -r public/js dist/js && cp -r public/images dist/images && cp -r public/css dist/css && cp -r public/documents dist/documents && cp -r public/manifest.json dist/manifest.json",
+    "build": "npm run clean && npm run install-deps && npm run build:functions && npm run build:minify && npm run build:components",
     "deploy": "npm run build && firebase deploy"
   },
   "engines": {
