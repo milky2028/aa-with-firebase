@@ -55,24 +55,6 @@
             "value": "max-age=31536000"
           }
         ]
-      },
-      {
-        "source": "**/*.@(css|js|`)",
-        "headers": [
-          {
-            "key": "Cache-Control",
-            "value": "max-age=1209600"
-          }
-        ]
-      },
-      {
-        "source": "sw.js",
-        "headers": [
-          {
-            "key": "Cache-Control",
-            "value": "max-age=0"
-          }
-        ]
       }
     ],
     "redirects": [
