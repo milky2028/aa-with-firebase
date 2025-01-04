@@ -3,14 +3,11 @@
   "version": "3.0.1",
   "description": "Mom's website with firebase",
   "main": "public/index.html",
-  "workspaces": [
-    "functions"
-  ],
   "scripts": {
-    "clean": "rm -rf dist node_modules functions/node_modules",
+    "clean": "rm -rf .firebase dist node_modules functions/node_modules components/node_modules components/.svelte-kit",
     "build:functions": "cd functions && npm run build",
     "minify": "html-minifier --file-ext html --input-dir public -c minify.conf --output-dir dist && cp -r public/js dist/js && cp -r public/images dist/images && cp -r public/css dist/css && cp -r public/documents dist/documents && cp -r public/manifest.json dist/manifest.json",
-    "build": "npm run clean && pnpm i && cd functions && pnpm i && npm run build && cd .. && npm run minify",
+    "build": "npm run clean && pnpm i && cd functions && pnpm i && npm run build && cd ../components && pnpm i && cd .. && npm run minify",
     "deploy": "npm run build && firebase deploy"
   },
   "engines": {
