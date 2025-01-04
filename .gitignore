@@ -1,5 +1,5 @@
 node_modules/
-lib/
+functions/lib/
 firebase-debug.log
 npm-debug.log
 functions/sendgridEnv.ts
