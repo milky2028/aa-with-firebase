@@ -1,3 +1,4 @@
 import Footer from './Footer.svelte';
 
-export { Footer };
+const footer = document.querySelector('#svelte-footer') as Element;
+new Footer({ target: footer });
