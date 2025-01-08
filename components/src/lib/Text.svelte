@@ -5,7 +5,7 @@
     size?: 'small' | 'med';
   }
 
-  const { size = 'med', ...rest }: Props = $props();
+  const { size = 'med', children, ...rest }: Props = $props();
 </script>
 
 <p
@@ -13,7 +13,7 @@
   class="open-sans"
   class:med={size === 'med'}
   class:small={size === 'small'}>
-  <slot></slot>
+  {@render children?.()}
 </p>
 
 <style>

@@ -1,4 +1,8 @@
-<div><slot></slot></div>
+<script lang="ts">
+  const { children } = $props();
+</script>
+
+<div>{@render children?.()}</div>
 
 <style lang="postcss">
   div {

@@ -1,8 +1,8 @@
 <script lang="ts">
-  const { orange = false, ...rest } = $props();
+  const { orange = false, children, ...rest } = $props();
 </script>
 
-<a {...rest} class:orange class="open-sans"><slot></slot></a>
+<a {...rest} class:orange class="open-sans">{@render children?.()}</a>
 
 <style lang="postcss">
   a {
