@@ -15,9 +15,20 @@
 {/if}
 
 <style>
-  h3 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
     margin: 0;
     padding: 1.5rem 0;
+  }
+
+  h3 {
     font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
   }
 </style>

@@ -23,7 +23,7 @@
           >Copyright 2025 © Adventure Academy Daycare</Text>
       </div>
       <div>
-        <Heading pompiere>Sitemap</Heading>
+        <Heading level={4} pompiere>Sitemap</Heading>
         <ul>
           {#each pages as page}
             <li style="min-width: 8rem;">
@@ -35,7 +35,7 @@
         </ul>
       </div>
       <div>
-        <Heading pompiere>Contact Us</Heading>
+        <Heading level={4} pompiere>Contact Us</Heading>
         <Link orange href="tel:+13179130848">+1 (317) 913-0848</Link>
         <br />
         <Link
