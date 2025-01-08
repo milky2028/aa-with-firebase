@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Heading from './Heading.svelte';
   import { NAME } from './constants/name';
   import { pages } from './data/pages';
   import Link from './Link.svelte';
@@ -9,7 +10,7 @@
   <PageContainer>
     <div class="container">
       <div>
-        <Link orange><h3 class="pompiere">{NAME}</h3></Link>
+        <Link orange><Heading pompiere>{NAME}</Heading></Link>
         <p>
           Adventure Academy Daycare began in 2016 with a unique philosophy:
           allow children to learn in the ways that best serve their needs.
@@ -20,7 +21,7 @@
         <p>Copyright 2025 © Adventure Academy Daycare</p>
       </div>
       <div>
-        <h3 class="pompiere">Sitemap</h3>
+        <Heading pompiere>Sitemap</Heading>
         <ul>
           {#each pages as page}
             <li><Link href={page.href}>{page.name}</Link></li>
@@ -28,7 +29,7 @@
         </ul>
       </div>
       <div>
-        <h3 class="pompiere">Contact Us</h3>
+        <Heading pompiere>Contact Us</Heading>
         <Link orange href="tel:+13179130848">+1 (317) 913-0848</Link>
         <br />
         <Link
