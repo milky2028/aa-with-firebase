@@ -2,7 +2,7 @@
   const { orange = false, ...rest } = $props();
 </script>
 
-<a {...rest} class:orange><slot></slot></a>
+<a {...rest} class:orange class="open-sans"><slot></slot></a>
 
 <style lang="postcss">
   a {

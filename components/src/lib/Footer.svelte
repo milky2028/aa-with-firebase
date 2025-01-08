@@ -1,5 +1,6 @@
 <script lang="ts">
   import Heading from './Heading.svelte';
+  import Text from './Text.svelte';
   import { NAME } from './constants/name';
   import { pages } from './data/pages';
   import Link from './Link.svelte';
@@ -11,20 +12,25 @@
     <div class="container">
       <div>
         <Link orange><Heading pompiere>{NAME}</Heading></Link>
-        <p>
+        <Text style="margin-top: 0; margin-bottom: 1.5rem;">
           Adventure Academy Daycare began in 2016 with a unique philosophy:
           allow children to learn in the ways that best serve their needs.
-        </p>
+        </Text>
         <Link orange href="/news/adventure-academy-accepts-ccdf">
           Adventure Academy accepts CCDF.
         </Link>
-        <p>Copyright 2025 © Adventure Academy Daycare</p>
+        <Text style="margin-top: 1.5rem;"
+          >Copyright 2025 © Adventure Academy Daycare</Text>
       </div>
       <div>
         <Heading pompiere>Sitemap</Heading>
         <ul>
           {#each pages as page}
-            <li><Link href={page.href}>{page.name}</Link></li>
+            <li style="min-width: 8rem;">
+              <Link href={page.href}>
+                <Text style="padding: 0.25rem" size="small">{page.name}</Text>
+              </Link>
+            </li>
           {/each}
         </ul>
       </div>
@@ -44,13 +50,14 @@
 
 <style>
   footer {
+    padding: 2rem 0;
     background-color: var(--grey);
   }
 
   .container {
     display: grid;
-    column-gap: 2rem;
-    grid-template-columns: 2fr 1fr 1fr;
+    column-gap: 3rem;
+    grid-template-columns: 3fr 1fr 1fr;
   }
 
   ul {
