@@ -6,3 +6,11 @@
 * {
   box-sizing: border-box;
 }
+
+.pompiere {
+  font-family: Pompiere, sans-serif;
+}
+
+.open-sans {
+  font-family: 'Open Sans', sans-serif;
+}
