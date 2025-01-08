@@ -1,6 +1,7 @@
 <script lang="ts">
   import { NAME } from './constants/name';
   import { pages } from './data/pages';
+  import Link from './Link.svelte';
   import PageContainer from './PageContainer.svelte';
 </script>
 
@@ -8,32 +9,33 @@
   <PageContainer>
     <div class="container">
       <div>
-        <a href="/"><h3 class="pompiere">{NAME}</h3></a>
+        <Link orange><h3 class="pompiere">{NAME}</h3></Link>
         <p>
           Adventure Academy Daycare began in 2016 with a unique philosophy:
           allow children to learn in the ways that best serve their needs.
         </p>
-        <a href="/news/adventure-academy-accepts-ccdf">
+        <Link orange href="/news/adventure-academy-accepts-ccdf">
           Adventure Academy accepts CCDF.
-        </a>
+        </Link>
         <p>Copyright 2025 © Adventure Academy Daycare</p>
       </div>
       <div>
         <h3 class="pompiere">Sitemap</h3>
         <ul>
           {#each pages as page}
-            <li><a href={page.href}>{page.name}</a></li>
+            <li><Link href={page.href}>{page.name}</Link></li>
           {/each}
         </ul>
       </div>
       <div>
         <h3 class="pompiere">Contact Us</h3>
-        <a href="tel:+13179130848">+1 (317) 913-0848</a>
+        <Link orange href="tel:+13179130848">+1 (317) 913-0848</Link>
         <br />
-        <a
+        <Link
+          orange
           href="mailto:Lisa.Gross@AdventureAcademyWeb.com?subject=Adventure%20Academy%20Daycare%20Inquiry">
           Contact via Email
-        </a>
+        </Link>
       </div>
     </div>
   </PageContainer>
