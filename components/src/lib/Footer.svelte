@@ -5,6 +5,8 @@
   import { pages } from './data/pages';
   import Link from './Link.svelte';
   import PageContainer from './PageContainer.svelte';
+  import google from '../assets/google.svg';
+  import facebook from '../assets/facebook.png';
 </script>
 
 <footer>
@@ -43,6 +45,18 @@
           href="mailto:Lisa.Gross@AdventureAcademyWeb.com?subject=Adventure%20Academy%20Daycare%20Inquiry">
           Contact via Email
         </Link>
+        <div style="margin-top: 0.5rem;">
+          <Link href="https://maps.app.goo.gl/uNQg6R3RdMj1RBUm8">
+            <img alt="Google logo" class="logo" src={google} />
+          </Link>
+          <Link href="https://www.facebook.com/adventureacademyindianapolis/">
+            <img
+              alt="Facebook logo"
+              class="logo"
+              style="background-color: #0865fe;"
+              src={facebook} />
+          </Link>
+        </div>
       </div>
     </div>
   </PageContainer>
@@ -65,5 +79,13 @@
     padding: 0;
     margin: 0;
     column-count: 2;
+  }
+
+  .logo {
+    background-color: white;
+    border-radius: 50%;
+    height: 2.25rem;
+    width: 2.25rem;
+    padding: 0.75rem;
   }
 </style>
