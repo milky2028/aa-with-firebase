@@ -6,6 +6,7 @@
 
 <style lang="postcss">
   a {
+    font-size: 1rem;
     cursor: pointer;
     color: black;
     text-decoration: none;
