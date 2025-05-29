@@ -22,10 +22,10 @@
   }
 
   .orange {
-    color: var(--orange);
+    color: var(--orange) !important;
 
     &:vistied {
-      color: var(--orange);
+      color: var(--orange) !important;
     }
   }
 </style>
