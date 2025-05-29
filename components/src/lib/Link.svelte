@@ -16,16 +16,16 @@
       text-decoration: underline;
     }
 
-    &:vistied {
+    &:visited {
       color: black;
     }
   }
 
   .orange {
-    color: var(--orange) !important;
+    color: var(--orange);
 
-    &:vistied {
-      color: var(--orange) !important;
+    &:visited {
+      color: var(--orange);
     }
   }
 </style>
