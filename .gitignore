@@ -12,3 +12,4 @@ public/dist
 dist
 functions/.runtimeconfig.json
 firestore-debug.log
+functions/key.json
