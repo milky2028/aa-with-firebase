@@ -1,5 +1,5 @@
 <script lang="ts">
-  const { orange = false, children, ...rest } = $props();
+  const { orange = false, white = false, children, ...rest } = $props();
 </script>
 
 <style lang="postcss">
@@ -26,6 +26,20 @@
       color: var(--orange);
     }
   }
+
+  .white {
+    color: #fff;
+
+    &:visited {
+      color: #fff;
+    }
+
+    &:hover {
+      color: #fff;
+    }
+  }
 </style>
 
-<a {...rest} class:orange class="open-sans">{@render children?.()}</a>
+<a {...rest} class:orange class:white class="open-sans {rest.class}"
+  >{@render children?.()}</a
+>
