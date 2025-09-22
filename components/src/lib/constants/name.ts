@@ -1,1 +1,1 @@
-export const NAME = 'Adventure Academy Daycare Center and Preschool';
+export const NAME = "Adventure Academy Daycare Center and Preschool";

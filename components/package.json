@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "format": "prettier . --write",
     "dev": "vite",
     "build": "vite build && cp dist/assets/* ../dist",
     "preview": "vite preview",
@@ -12,6 +13,8 @@
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^5.0.3",
     "@tsconfig/svelte": "^5.0.4",
+    "prettier": "^3.6.2",
+    "prettier-plugin-svelte": "^3.4.0",
     "svelte": "^5.15.0",
     "svelte-check": "^4.1.1",
     "typescript": "~5.6.2",

@@ -2,8 +2,6 @@
   const { children } = $props();
 </script>
 
-<div>{@render children?.()}</div>
-
 <style lang="postcss">
   div {
     margin: 0 auto;
@@ -11,3 +9,5 @@
     padding: 2rem;
   }
 </style>
+
+<div>{@render children?.()}</div>

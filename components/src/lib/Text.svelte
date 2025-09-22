@@ -1,20 +1,12 @@
 <script lang="ts">
-  import type { HTMLAttributes } from 'svelte/elements';
+  import type { HTMLAttributes } from "svelte/elements";
 
   interface Props extends HTMLAttributes<HTMLParagraphElement> {
-    size?: 'small' | 'med';
+    size?: "small" | "med";
   }
 
-  const { size = 'med', children, ...rest }: Props = $props();
+  const { size = "med", children, ...rest }: Props = $props();
 </script>
-
-<p
-  {...rest}
-  class="open-sans"
-  class:med={size === 'med'}
-  class:small={size === 'small'}>
-  {@render children?.()}
-</p>
 
 <style>
   p {
@@ -31,3 +23,12 @@
     font-size: 1rem;
   }
 </style>
+
+<p
+  {...rest}
+  class="open-sans"
+  class:med={size === "med"}
+  class:small={size === "small"}
+>
+  {@render children?.()}
+</p>
