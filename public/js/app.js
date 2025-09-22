@@ -1,113 +1,3 @@
-const config = {
-  apiKey: 'AIzaSyDkRY5dlk-aBvDYpDkyvLLC8nPDxXt2C60',
-  authDomain: 'adventure-academ-1501025774496.firebaseapp.com',
-  databaseURL: 'https://adventure-academ-1501025774496.firebaseio.com',
-  projectId: 'adventure-academ-1501025774496',
-  storageBucket: 'adventure-academ-1501025774496.appspot.com',
-  messagingSenderId: '784182344237',
-  appId: '1:784182344237:web:bf4e47c2f7738f691516a4',
-};
-
-window.firebase.initializeApp(config);
-const db = window.firebase.firestore();
-
-function convertDate(date = new Date()) {
-  let month = String(date.getMonth() + 1);
-  let day = String(date.getDate());
-  const year = String(date.getFullYear());
-
-  if (month.length < 2) {
-    month = '0' + month;
-  }
-  if (day.length < 2) {
-    day = '0' + day;
-  }
-
-  return `${month}/${day}/${year}`;
-}
-
-function areFieldsMissing(objectToCheck) {
-  let missingFields = false;
-  for (const value in objectToCheck) {
-    if (!objectToCheck[value]) {
-      missingFields = true;
-    }
-  }
-  return missingFields;
-}
-
-function onSave(formNumber, successOrFailNumber) {
-  window.event.preventDefault
-    ? window.event.preventDefault()
-    : (window.event.returnValue = false);
-  const successElement = document.querySelector(
-    `#tourSuccess${successOrFailNumber}`
-  );
-  const errorElement = document.querySelector(
-    `#tourError${successOrFailNumber}`
-  );
-  const fName = document.querySelector(`#name${formNumber}`);
-  const email = document.querySelector(`#email${formNumber}`);
-  const age = document.querySelector(`#child-age${formNumber}`);
-  const tourDate = document.querySelector(`#date${formNumber}`);
-  const tourTime = document.querySelector(`#time${formNumber}`);
-  const formData = {
-    name: fName.value,
-    email: email.value,
-    childAge: age.value,
-    tourDate: tourDate.value,
-    tourTime: tourTime.value,
-    submitDay: convertDate(),
-  };
-
-  if (!areFieldsMissing(formData)) {
-    db.collection('tours')
-      .add(formData)
-      .then(() => {
-        errorElement.style.display = 'none';
-        successElement.style.display = 'block';
-        setTimeout(() => {
-          window.location.href = '/thank-you';
-        }, 1500);
-      })
-      .catch((error) => console.error('Error posting document:', error));
-  } else {
-    errorElement.style.display = 'block';
-  }
-}
-
-function onContactSubmit() {
-  window.event.preventDefault
-    ? window.event.preventDefault()
-    : (window.event.returnValue = false);
-  const successElement = document.querySelector('#contactSuccess');
-  const errorElement = document.querySelector('#contactError');
-  const fName = document.querySelector('#nameContact');
-  const email = document.querySelector('#emailContact');
-  const message = document.querySelector('#messageContact');
-  const formData = {
-    name: fName.value,
-    email: email.value,
-    message: message.value,
-    submitDay: convertDate(),
-  };
-
-  if (!areFieldsMissing(formData)) {
-    db.collection('contactForms')
-      .add(formData)
-      .then(() => {
-        errorElement.style.display = 'none';
-        successElement.style.display = 'block';
-        setTimeout(() => {
-          window.location.href = '/thank-you-contact';
-        }, 1500);
-      })
-      .catch((error) => console.error('Error posting document:', error));
-  } else {
-    errorElement.style.display = 'block';
-  }
-}
-
 const today = new Date();
 const dates = [];
 const date0 = document.getElementById('date0');
@@ -135,4 +25,99 @@ for (const day of dates) {
   if (date1) {
     date1.appendChild(option.cloneNode(true));
   }
+}
+
+const CONFIG = {
+  apiKey: 'AIzaSyDkRY5dlk-aBvDYpDkyvLLC8nPDxXt2C60',
+  authDomain: 'adventure-academ-1501025774496.firebaseapp.com',
+  databaseURL: 'https://adventure-academ-1501025774496.firebaseio.com',
+  projectId: 'adventure-academ-1501025774496',
+  storageBucket: 'adventure-academ-1501025774496.appspot.com',
+  messagingSenderId: '784182344237',
+  appId: '1:784182344237:web:bf4e47c2f7738f691516a4',
+};
+
+let firestore;
+let db;
+async function initializeFirebase() {
+  if (!firestore) {
+    const [{ initializeApp }, module] = await Promise.all([
+      import('https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js'),
+      import(
+        'https://www.gstatic.com/firebasejs/12.3.0/firebase-firestore-lite.js'
+      ),
+    ]);
+
+    const app = initializeApp(CONFIG);
+    firestore = module;
+    db = firestore.getFirestore(app);
+  }
+}
+
+async function onSubmit(event) {
+  event.preventDefault();
+
+  await initializeFirebase();
+  const formData = new FormData(event.target);
+
+  if (event.target.id === 'contact-form') {
+    await onContact(formData);
+  } else {
+    await onTour(formData);
+  }
+}
+
+const tourSuccess = document.querySelector('#tourSuccess');
+const tourError = document.querySelector('#tourError');
+
+async function onTour(formData) {
+  tourSuccess.style.display = 'none';
+  tourError.style.display = 'none';
+
+  try {
+    const tours = firestore.collection(db, 'tours');
+    const submission = {
+      name: formData.get('name'),
+      email: formData.get('Email'),
+      childAge: formData.get('Age-of-Child'),
+      tourDate: formData.get('date'),
+      tourTime: formData.get('Time'),
+      submitTimestamp: firestore.serverTimestamp(),
+    };
+
+    await firestore.addDoc(tours, submission);
+    tourSuccess.style.display = 'block';
+  } catch (error) {
+    console.error('onTour error', error);
+    tourError.style.display = 'block';
+  }
+}
+
+const contactSuccess = document.querySelector('#contactSuccess');
+const contactError = document.querySelector('#contactError');
+
+async function onContact(formData) {
+  contactSuccess.style.display = 'none';
+  contactError.style.display = 'none';
+
+  try {
+    const contactForms = firestore.collection(db, 'contactForms');
+    const submission = {
+      name: formData.get('Name'),
+      email: formData.get('Email-address'),
+      message: formData.get('message'),
+      submitTimestamp: firestore.serverTimestamp(),
+    };
+
+    await firestore.addDoc(contactForms, submission);
+    contactSuccess.style.display = 'block';
+  } catch (error) {
+    console.error('onContact error', error);
+    contactError.style.display = 'block';
+  }
+}
+
+const forms = document.querySelectorAll('form');
+for (const form of forms) {
+  form.addEventListener('submit', onSubmit);
 }

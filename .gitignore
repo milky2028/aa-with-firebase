@@ -11,3 +11,4 @@ build/dist
 public/dist
 dist
 functions/.runtimeconfig.json
+firestore-debug.log
