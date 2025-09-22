@@ -1317,7 +1317,7 @@
           var e = t.form,
               n = t.redirect,
               r = t.success;
-          r && n ? i.location(n) : (t.done.toggle(r), t.fail.toggle(!r), e.toggle(!r), w(t))
+          r && n ? i.location(n) : (t.done?.toggle(r), t.fail?.toggle(!r), e.toggle(!r), w(t))
       }
 
       function _(t) {
