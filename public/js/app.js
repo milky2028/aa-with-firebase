@@ -87,6 +87,9 @@ async function onTour(formData) {
 
     await firestore.addDoc(tours, submission);
     tourSuccess.style.display = 'block';
+    setTimeout(() => {
+      window.location.href = '/thank-you';
+    }, 1500);
   } catch (error) {
     console.error('onTour error', error);
     tourError.style.display = 'block';
@@ -111,6 +114,9 @@ async function onContact(formData) {
 
     await firestore.addDoc(contactForms, submission);
     contactSuccess.style.display = 'block';
+    setTimeout(() => {
+      window.location.href = '/thank-you-contact';
+    }, 1500);
   } catch (error) {
     console.error('onContact error', error);
     contactError.style.display = 'block';
