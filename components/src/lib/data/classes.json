@@ -1,0 +1,115 @@
+[
+  {
+    "id": "infants",
+    "name": "Infants",
+    "tagline": "Learn and Play",
+    "img": "infants",
+    "alt": "A baby lying down and sleeping with a smile on their face.",
+    "ageRange": "0 - 12 months",
+    "times": "All  Infant classes are offered Monday - Friday, from 6:30am to 6:00pm.",
+    "shortDescription": "From helpless newborn to active toddler, your child will grow and learn more in their first 12 months than any other time of their life.",
+    "description": "From helpless newborn to active toddler, your child will grow and learn more in their first 12 months than any other time of their life.\n\nYour child's safety is key to our nursery caregivers, and for this reason, we practice safe sleep as recommended by The American Academy of Pediatrics. Each crib is used by only one child. Crib sheets are changed daily as well as sanitized weekly.\n\nAt Adventure Academy, we help to foster this time of growth by talking, singing, reading, and being face to face with your child. Our Nursery Caregivers will cuddle, coo, and nurture your child to help your child feel not only safe, but also loved.\n\nThese early months create a foundation for the fundamental building blocks your child will use to learn throughout their entire life!",
+    "meals": "Table food is provided for infants who are table-food ready, including breakfast, lunch, morning snack, and afternoon snack. Whole milk is provided when a child is ready to make the switch from formula or breast milk. Sippy cups are also provided when a child is ready.",
+    "infoForParents": "Parents provide diapers, wipes, bottles, and baby food (when ready).",
+    "prices": [
+      { "days": 5, "cost": 225 },
+      { "days": 4, "cost": 210 },
+      { "days": 3, "cost": 185 },
+      { "days": 2, "cost": 150 }
+    ]
+  },
+  {
+    "id": "toddlers",
+    "name": "Toddlers",
+    "tagline": "Question and Answer",
+    "img": "infants",
+    "alt": "",
+    "ageRange": "12 - 24 months",
+    "times": "All Toddlers classes are offered Monday - Friday, from 6:30am to 6:00pm.",
+    "shortDescription": "Active is often the first word that comes to mind when describing a Toddler. During these 12 months, children go from walking unsteadily to running constantly",
+    "description": "Active is often the first word that comes to mind when describing a Toddler. During these 12 months, children go from walking unsteadily to running constantly. Children aged 12-24 months are eager to explore and test everything.\n\nAt Adventure Academy, we want to foster that curiosity. We offer toddlers lots of time to move and explore, while also offering opportunities to sit, listen to books, and try out sitting still (even if they won't stay put for long). Of course we still offer lots of time to cuddle!",
+    "meals": "Breakfast, lunch, morning snacks, and afternoon snacks are all provided. Sippy cups are provided as well.",
+    "infoForParents": "Please supply one or more extra changes of clothes, as well as diapers and wipes for your child. Please also supply your child with a blanket for nap time.",
+    "prices": [
+      { "days": 5, "cost": 210 },
+      { "days": 4, "cost": 195 },
+      { "days": 3, "cost": 170 },
+      { "days": 2, "cost": 145 }
+    ]
+  },
+  {
+    "id": "twos",
+    "name": "Twos",
+    "tagline": "Speak and Listen",
+    "img": "infants",
+    "alt": "",
+    "ageRange": "24 - 36 months",
+    "times": "All Twos classes are offered Monday - Friday, from 6:30am to 6:00pm.",
+    "shortDescription": "By the time a child enters his or her second year, he or she has often become quite verbal and, though we may not understand every word, our attention to the stories they tell is crucial",
+    "description": "By the time a child enters his or her second year, he or she has often become quite verbal and, though we may not understand every word, our attention to the stories they tell is crucial. Children aged 24-36 months are starting to understand their part in the world around them, and they see themselves placed directly at the center of that world.\n\nAt Adventure Academy, we will listen and encourage your child to express themselves in as many positive ways we can. This includes continuing to give them plenty of large motor control exercises, while also helping them to hone their new small motor skills.",
+    "meals": "Breakfast, lunch, morning snacks, and afternoon snacks are all provided.",
+    "infoForParents": "Please supply one or more extra changes of clothes for your child. If your child is still potty-training, please supply diapers and wipes. Please also supply your child with a blanket for nap time.",
+    "prices": [
+      { "days": 5, "cost": 210 },
+      { "days": 4, "cost": 195 },
+      { "days": 3, "cost": 170 },
+      { "days": 2, "cost": 145 }
+    ]
+  },
+  {
+    "id": "threes",
+    "name": "Threes",
+    "tagline": "Move and Explore",
+    "img": "infants",
+    "alt": "",
+    "ageRange": "36 - 48 months",
+    "times": "All Threes classes are offered Monday - Friday, from 6:30am to 6:00pm.",
+    "shortDescription": "Questions, questions. Three-year-olds have lots of questions. At Adventure Academy, we seek to help your child explore the world around them while providing answers to the questions they ask.",
+    "description": "Questions, questions and more questions. Three year olds have lots of questions. What is that? Why? Where? How?\n\nAt Adventure Academy, we seek to help your child explore their world to find the answers to all of the questions coursing through their brains. We will encourage good choices and as well as encouraging children in academic ideas that may be new to them. By reinforcing these early academic ideas, we can help children build tools for future success.",
+    "meals": "Breakfast, lunch, morning snacks, and afternoon snacks are all provided.",
+    "infoForParents": "Please supply one or more extra changes of clothes for your child. If your child is still potty-training, please supply pull-ups and wipes. Please also supply your child with a blanket for nap time.",
+    "prices": [
+      { "days": 5, "cost": 195 },
+      { "days": 4, "cost": 180 },
+      { "days": 3, "cost": 160 },
+      { "days": 2, "cost": 135 }
+    ]
+  },
+  {
+    "id": "fours-and-fives",
+    "name": "Fours and Fives",
+    "tagline": "Grow and Develop",
+    "img": "infants",
+    "alt": "",
+    "ageRange": "48 - 60 months",
+    "times": "Our Fours and Fives classes are offered Monday - Friday, from 6:30am to 6:00pm.",
+    "shortDescription": "Four and five-year-olds are big kids, but they’re still just kids. They are learning so much so quickly and still need lots of time to simply play, but a tremendous amount can be learned through play.",
+    "description": "Four and five-year-olds are big kids, but they’re still just kids. They are learning so much so quickly and still need lots of time to simply play, but a tremendous amount can be learned through play!\n\nAt Adventure Academy, we balance the time we have with your child between time to explore and play and time to master academic skills that will help children succeed in their journey of learning in elementary school and beyond. We’ll still get messy and have lots of fun, but all while fostering a strong grasp of the skills that will help your child build a love learning for years to come.",
+    "meals": "Breakfast, lunch, morning snacks, and afternoon snacks are all provided.",
+    "infoForParents": "Please supply one or more extra changes of clothes for your child. Please also supply your child with a blanket for nap time.",
+    "prices": [
+      { "days": 5, "cost": 185 },
+      { "days": 4, "cost": 170 },
+      { "days": 3, "cost": 150 },
+      { "days": 2, "cost": 125 }
+    ]
+  },
+  {
+    "id": "am-preschool",
+    "name": "A.M. Preschool",
+    "tagline": "Create and Engage",
+    "img": "infants",
+    "alt": "",
+    "ageRange": "Ages 3 - 5",
+    "times": "All A.M. Preschool classes are offered Monday - Friday, from 9:00am to 12:30pm. A.M. Preschool is only for 3 - 5 year olds.",
+    "shortDescription": "A.M. Preschool is a great option for parents who don't need all day care, but still would like to have their children learning, playing, and interacting with others. This class is offered from 9:00am - 12:30am.",
+    "description": "A.M. Preschool is a great option for parents who don't need childcare for their child all day, but would still like to begin to acclimate their child to a daily schedule similar to elementary school or kindergarten.\n\nA.M. Preschool is also a great option for children to establish regular social behaviors, develop friendships, and learn to collaborate and create with others while having fun with new people!\n\nOffered from 9:00am to 12:30pm, A.M. Preschool is a fantastic way to begin the adventure of learning and growing.",
+    "meals": "Breakfast, lunch, morning snacks, and are all provided. Sippy cups are provided as well.",
+    "infoForParents": "Please supply one or more extra changes of clothes for your child. If your child is still potty-training, please supply pull-ups and wipes.",
+    "prices": [
+      { "days": 5, "cost": 140 },
+      { "days": 4, "cost": 125 },
+      { "days": 3, "cost": 105 }
+    ]
+  }
+]
