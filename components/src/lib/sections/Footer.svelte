@@ -83,7 +83,7 @@
               loading="lazy"
               alt="Google logo"
               class="logo"
-              src="/images/google.svg"
+              src="/images/google-icon.svg"
             />
           </Link>
           <Link href="https://www.facebook.com/adventureacademyindianapolis/">
