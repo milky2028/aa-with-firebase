@@ -1,7 +1,7 @@
 import { mount } from "svelte";
 import "./app.css";
-import Footer from "./lib/Footer.svelte";
-// import Navbar from "./lib/Navbar.svelte";
+import Footer from "./lib/sections/Footer.svelte";
+// import Navbar from "./lib/sections/Navbar.svelte";
 
 const footer = document.querySelector("#svelte-footer") as Element;
 mount(Footer, { target: footer });

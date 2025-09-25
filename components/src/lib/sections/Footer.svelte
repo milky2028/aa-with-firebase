@@ -1,10 +1,10 @@
 <script lang="ts">
-  import Heading from "./leaf/Heading.svelte";
-  import Text from "./leaf/Text.svelte";
-  import { NAME } from "./constants/name";
-  import pages from "./data/pages.json";
-  import Link from "./leaf/Link.svelte";
-  import PageContainer from "./PageContainer.svelte";
+  import Heading from "../leaf/Heading.svelte";
+  import Text from "../leaf/Text.svelte";
+  import { NAME } from "./../constants/name
+  import pages from "../data/pages.json";
+  import Link from "../leaf/Link.svelte";
+  import PageContainer from "../PageContainer.svelte";
 
   // This is how these would work in a routed app, they are current broken in the dev environment.
   // import google from '../assets/google.svg';
