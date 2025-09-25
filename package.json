@@ -10,7 +10,7 @@
     "build:functions": "cd functions && npm run build",
     "build:minify": "html-minifier --file-ext html --input-dir public -c minify.conf --output-dir dist && cp -r public/js dist/js && cp -r public/images dist/images && cp -r public/css dist/css && cp -r public/documents dist/documents && cp -r public/manifest.json dist/manifest.json",
     "build": "npm run clean && npm run install-deps && npm run build:functions && npm run build:minify && npm run build:components",
-    "deploy": "npm run build && firebase login && firebase deploy"
+    "deploy": "npm run build && firebase deploy --token $FIREBASE_TOKEN"
   },
   "engines": {
     "node": "22"

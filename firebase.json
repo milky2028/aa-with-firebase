@@ -5,7 +5,6 @@
   },
   "functions": {},
   "hosting": {
-    "site": "adventureacademyweb",
     "public": "dist",
     "cleanUrls": "true",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
