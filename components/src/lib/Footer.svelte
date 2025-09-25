@@ -79,10 +79,16 @@
         </Link>
         <div style="margin-top: 0.5rem;">
           <Link href="https://maps.app.goo.gl/uNQg6R3RdMj1RBUm8">
-            <img alt="Google logo" class="logo" src="/images/google.svg" />
+            <img
+              loading="lazy"
+              alt="Google logo"
+              class="logo"
+              src="/images/google.svg"
+            />
           </Link>
           <Link href="https://www.facebook.com/adventureacademyindianapolis/">
             <img
+              loading="lazy"
               alt="Facebook logo"
               class="logo"
               style="background-color: #0865fe;"
