@@ -5,7 +5,7 @@
     size?: "small" | "med";
   }
 
-  const { size = "med", children, ...rest }: Props = $props();
+  const { size = "med", children, class: classes, ...rest }: Props = $props();
 </script>
 
 <style>
@@ -26,9 +26,9 @@
 
 <p
   {...rest}
-  class="open-sans"
   class:med={size === "med"}
   class:small={size === "small"}
+  class="open-sans {classes}"
 >
   {@render children?.()}
 </p>
