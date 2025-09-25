@@ -1,7 +1,8 @@
 import Mailgun from 'mailgun.js'
 import FormData from 'form-data'
-import { onDocumentCreated } from 'firebase-functions/firestore';
-import { defineSecret, defineString } from 'firebase-functions/params';
+import { FirestoreEvent, onDocumentCreated } from 'firebase-functions/firestore';
+import { defineSecret } from 'firebase-functions/params';
+import { DocumentData, QueryDocumentSnapshot, Timestamp } from 'firebase-admin/firestore';
 
 const ADVENTURE_RECEPIENTS = [
   'tylergross28@gmail.com',
@@ -12,13 +13,33 @@ const DOMAIN = 'emails.adventureacademyweb.com'
 
 const MAILGUN_API_KEY = defineSecret('MAILGUN_API_KEY')
 
+interface ContactBase extends DocumentData {
+  name?: string
+  email?: string
+  submitTimestamp: Timestamp
+}
+
+interface Tour extends ContactBase {
+  childAge?: string
+  tourDate?: string
+  tourTime?: string
+}
+
 export const tourFormSubmissionV5 = onDocumentCreated(
   { document: 'tours/{tourId}', secrets: ['MAILGUN_API_KEY'] },
-  async (event) => {
+  async (event: FirestoreEvent<QueryDocumentSnapshot<DocumentData, Tour> | undefined>) => {
     try {
       const mailgun = new Mailgun(FormData)
       const client = mailgun.client({ username: 'api', key: MAILGUN_API_KEY.value() })
-      const submission = event.data.data();
+      const submission = event.data?.data();
+
+      if (!submission) {
+        throw new Error('Invalid submission');
+      }
+
+      if (!submission.email) {
+        throw new Error('Email missing');
+      }
 
       const messageToMom = client.messages.create(DOMAIN, {
         to: ADVENTURE_RECEPIENTS,
@@ -26,11 +47,12 @@ export const tourFormSubmissionV5 = onDocumentCreated(
         subject: 'Hey Mom! Someone Submitted a New Tour Form',
         html: `<div style="font-family: sans-serif">
             <h1 style="font-size: 20px; color: black">Here are the details about the tour:</h1>
-            <p style="color: black; font-size: 18px; margin: 3px 10px;">Name: ${submission.name}</p>
+            <p style="color: black; font-size: 18px; margin: 3px 10px;">Name: ${submission.name ?? ''}</p>
             <p style="color: black; font-size: 18px; margin: 3px 10px;">Email: ${submission.email}</p>
-            <p style="color: black; font-size: 18px; margin: 3px 10px;">Kid's Age: ${submission.childAge}</p>
-            <p style="color: black; font-size: 18px; margin: 3px 10px;">Tour Date: ${submission.tourDate}</p>
-            <p style="color: black; font-size: 18px; margin: 3px 10px; font-family: sans-serif">Tour Time: ${submission.tourTime}</p>
+            <p style="color: black; font-size: 18px; margin: 3px 10px;">Kid's Age: ${submission.childAge ?? ''}</p>
+            <p style="color: black; font-size: 18px; margin: 3px 10px;">Tour Date: ${submission.tourDate ?? ''}</p>
+            <p style="color: black; font-size: 18px; margin: 3px 10px; font-family: sans-serif">Tour Time: ${submission.tourTime ?? ''}</p>
+            <p style="color: black; font-size: 18px; margin: 3px 10px; font-family: sans-serif">Day Submitted: ${submission.submitTimestamp.toDate().toLocaleString()}</p>
             <p style="color: black; font-size: 18px;">I love you mom! You're the greatest.</p>
             <p style="color: black; font-size: 18px; font-weight: bold">From Tylerbot</p>
           </div>`,
@@ -69,13 +91,25 @@ export const tourFormSubmissionV5 = onDocumentCreated(
   },
 );
 
+interface Contact extends ContactBase {
+  message?: string
+}
+
 export const contactFormSubmissionV5 = onDocumentCreated(
   { document: 'contactForms/{formId}', secrets: ['MAILGUN_API_KEY'] },
-  async (event) => {
+  async (event: FirestoreEvent<QueryDocumentSnapshot<DocumentData, Contact> | undefined>) => {
     try {
       const mailgun = new Mailgun(FormData)
       const client = mailgun.client({ username: 'api', key: MAILGUN_API_KEY.value() })
-      const submission = event.data.data();
+      const submission = event.data?.data();
+
+      if (!submission) {
+        throw new Error('Invalid submission')
+      }
+
+      if (!submission.email) {
+        throw new Error('Email missing')
+      }
 
       const messageToMom = client.messages.create(DOMAIN, {
         to: ADVENTURE_RECEPIENTS,
@@ -86,7 +120,7 @@ export const contactFormSubmissionV5 = onDocumentCreated(
       <p style="color: black">Someone contacted you via the contact forms on your website. Here's who they were and what they had to say:</p>
       <p style="margin: 5px">Name: ${submission.name}</p>
       <p style="margin: 5px">Email: ${submission.email}</p>
-      <p style="margin: 5px">Day Submitted: ${submission.submitDay}</p>
+      <p style="margin: 5px">Day Submitted: ${submission.submitTimestamp.toDate().toLocaleString()}</p>
       <p style="margin: 5px">Message: ${submission.message}</p>
       <p></p>
       <p style="color: black; margin: 5px">Love you mom! I hope you're having a great day.</p>
