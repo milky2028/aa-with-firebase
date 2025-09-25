@@ -14,24 +14,32 @@
       gap: 1.5rem;
     }
 
+    :global(.heading) {
+      font-size: 2rem;
+      padding-bottom: 0;
+    }
+
     :global(.center) {
       text-align: center;
+    }
+
+    :global(.bold) {
+      font-weight: 500;
+      color: var(--orange);
     }
   }
 </style>
 
 <section>
   <PageContainer class="container">
-    <Heading level={2} pompiere style="font-size: 2rem;"
-      >Join Our Adventure</Heading
-    >
+    <Heading level={2} pompiere class="heading">Join Our Adventure</Heading>
     <Text class="center"
       >Become a part of the Adventure Academy Daycare family and join children
       and parents from across the Indianapolis and Castleton area in a grand
       adventure of learning and growth!
     </Text>
     <Link href="https://maps.app.goo.gl/1aPVQ5KTioBfw8DP8">
-      <Text class="center">
+      <Text class="center bold">
         Adventure Academy Daycare Center 8383 Craig St #210, Indianapolis, IN
         46250
         <br />
