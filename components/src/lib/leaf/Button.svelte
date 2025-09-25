@@ -1,13 +1,21 @@
 <script lang="ts">
-  const { orange = false, children, class: classes, style, ...rest } = $props();
+  const {
+    href = "",
+    orange = false,
+    children,
+    class: classes,
+    style,
+    ...rest
+  } = $props();
 </script>
 
 <style lang="postcss">
-  button {
-    display: block;
+  button,
+  a {
     cursor: pointer;
     appearance: none;
     background-color: transparent;
+    text-decoration: none;
     border: 0;
     transition:
       background-color var(--base-transition-timing),
@@ -16,9 +24,10 @@
     font-size: 1.25rem;
     border: 0.25rem solid var(--light-white);
     border-radius: 5rem;
-    padding: 0.5rem 1.75rem;
+    padding: 0.5rem 2rem;
     color: white;
     outline: 0;
+    letter-spacing: 1px;
 
     &:focus-visible,
     &:hover {
@@ -38,6 +47,12 @@
   }
 </style>
 
-<button {...rest} class="pompiere {classes}" class:orange {style}>
-  {@render children?.()}
-</button>
+{#if href}
+  <a {...rest} class="pompiere {classes}" class:orange {style} {href}>
+    {@render children?.()}
+  </a>
+{:else}
+  <button {...rest} class="pompiere {classes}" class:orange {style}>
+    {@render children?.()}
+  </button>
+{/if}

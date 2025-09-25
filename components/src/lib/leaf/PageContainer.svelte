@@ -1,5 +1,5 @@
 <script lang="ts">
-  const { children } = $props();
+  const { children, ...rest } = $props();
 </script>
 
 <style lang="postcss">
@@ -10,4 +10,4 @@
   }
 </style>
 
-<div>{@render children?.()}</div>
+<div {...rest}>{@render children?.()}</div>

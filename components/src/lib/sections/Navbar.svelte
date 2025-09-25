@@ -1,9 +1,9 @@
 <script lang="ts">
-  import whiteLogo from "../assets/white-logo.svg";
-  import Heading from "./leaf/Heading.svelte";
-  import Link from "./leaf/Link.svelte";
-  import pages from "./data/pages.json";
-  import Button from "./leaf/Button.svelte";
+  import whiteLogo from "../../assets/white-logo.svg";
+  import Heading from "../leaf/Heading.svelte";
+  import Link from "../leaf/Link.svelte";
+  import pages from "../data/pages.json";
+  import Button from "../leaf/Button.svelte";
 </script>
 
 <style>
@@ -24,6 +24,7 @@
     :global(.main-name) {
       display: inline-block;
       padding: 0;
+      letter-spacing: 1px;
     }
   }
 
