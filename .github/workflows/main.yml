@@ -16,7 +16,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20.x
-      - run: npm run deploy
+      - name: Setup environment
+      - name: deploy
+        env: 
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+        run: npm run deploy
       - name: Record build artifacts
         uses: actions/upload-artifact@v4
         with:
