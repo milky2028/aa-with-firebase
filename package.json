@@ -26,12 +26,12 @@
   },
   "homepage": "https://github.com/milky2028/aa-with-firebase#readme",
   "devDependencies": {
-    "eslint": "^9.14.0",
-    "firebase-tools": "^13.24.1",
+    "eslint": "^9.36.0",
+    "firebase-tools": "^14.17.0",
     "html-minifier": "^4.0.0"
   },
   "private": true,
   "dependencies": {
-    "@google-cloud/functions-framework": "^3.4.2"
+    "@google-cloud/functions-framework": "^4.0.0"
   }
 }
