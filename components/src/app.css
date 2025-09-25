@@ -2,6 +2,11 @@
   --blue: #49adea;
   --grey: #fafafa;
   --orange: #e88b33;
+  --light-orange: #e88b33;
+  --base-alpha: 0.57;
+  --light-orange: rgba(232, 139, 51, var(--base-alpha));
+  --light-white: rgba(255, 255, 255, var(--base-alpha));
+  --base-transition-timing: 150ms;
 }
 
 * {

@@ -2,12 +2,14 @@
   import whiteLogo from "../assets/white-logo.svg";
   import Heading from "./Heading.svelte";
   import Link from "./Link.svelte";
+  import pages from "./data/pages.json";
+  import Button from "./leaf/Button.svelte";
 </script>
 
 <style>
   nav {
     display: grid;
-    grid-template-columns: max-content 1fr min-content;
+    grid-template-columns: max-content 1fr max-content;
     gap: 1rem;
     background-color: var(--blue);
     padding: 1rem;
@@ -16,6 +18,7 @@
       display: grid;
       grid-template-columns: min-content 1fr;
       gap: 1rem;
+      align-items: center;
     }
 
     :global(.main-name) {
@@ -35,6 +38,10 @@
     <img src={whiteLogo} alt="Adventure Academy globe logo" />
     <Heading class="main-name" pompiere level={1}>Adventure Academy</Heading>
   </Link>
-  <div>center links</div>
-  <div>Menu/button</div>
+  <ul>
+    {#each pages as page}
+      {page.name}
+    {/each}
+  </ul>
+  <div><Button>Schedule a Tour</Button></div>
 </nav>
