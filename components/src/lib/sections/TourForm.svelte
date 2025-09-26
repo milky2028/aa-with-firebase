@@ -13,6 +13,9 @@
   $effect(() => {
     console.log(tourState.name);
     console.log(tourState.email);
+    console.log(tourState.ageOfChild);
+    console.log(tourState.tourDate);
+    console.log(tourState.tourTime);
   });
 
   const TOUR_TIMES = [
@@ -80,17 +83,17 @@
   >
   <TextField required label="Name" bind:value={tourState.name} />
   <TextField required label="Email" type="email" bind:value={tourState.email} />
-  <Select label="Age of Child/Class">
+  <Select required label="Age of Child/Class" bind:value={tourState.ageOfChild}>
     {#each classes as classType}
       <option>{classType.name}</option>
     {/each}
   </Select>
-  <Select label="Tour Date">
+  <Select required label="Tour Date" bind:value={tourState.tourDate}>
     {#each dates as date}
       <option>{date.toLocaleDateString()}</option>
     {/each}
   </Select>
-  <Select label="Tour Time">
+  <Select required label="Tour Time" bind:value={tourState.tourTime}>
     {#each TOUR_TIMES as time}
       <option>{time}</option>
     {/each}

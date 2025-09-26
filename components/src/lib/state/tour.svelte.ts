@@ -1,4 +1,7 @@
 export const tourState = $state({
   name: '',
-  email: ''
+  email: '',
+  ageOfChild: '',
+  tourDate: '',
+  tourTime: ''
 })

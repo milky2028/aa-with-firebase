@@ -1,6 +1,6 @@
 <script lang="ts">
-  const { label, ...rest } = $props();
+  let { label, value = $bindable(null), ...rest } = $props();
 </script>
 
 <label for={label}>{label}</label>
-<select name={label}>{@render rest.children?.()}</select>
+<select name={label} {...rest} bind:value>{@render rest.children?.()}</select>

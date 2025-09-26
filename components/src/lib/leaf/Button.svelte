@@ -59,6 +59,7 @@
   </a>
 {:else if submitter}
   <input
+    type="submit"
     value="Submit"
     {...rest}
     class="pompiere {classes}"
