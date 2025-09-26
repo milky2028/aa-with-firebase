@@ -7,8 +7,8 @@
   import { NAME } from "../constants/name";
 
   // This is how these would work in a routed app, they are current broken in the dev environment.
-  // import google from '../assets/google.svg';
-  // import facebook from '../assets/facebook.png';
+  // import google from "../../assets/google-icon.svg";
+  // import facebook from "../../assets/facebook.png";
 </script>
 
 <style>
@@ -34,7 +34,12 @@
     column-count: 2;
   }
 
+  .logos {
+    margin-top: 0.5rem;
+  }
+
   .logo {
+    margin-right: 0.25rem;
     background-color: white;
     border-radius: 50%;
     height: 2.25rem;
@@ -81,7 +86,7 @@
         >
           Contact via Email
         </Link>
-        <div style="margin-top: 0.5rem;">
+        <div class="logos">
           <Link href="https://maps.app.goo.gl/uNQg6R3RdMj1RBUm8">
             <img
               loading="lazy"
