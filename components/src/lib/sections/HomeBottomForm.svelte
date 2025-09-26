@@ -6,11 +6,16 @@
 <style>
   section {
     background-color: var(--grey);
+
+    :global(.center) {
+      display: grid;
+      place-items: center;
+    }
   }
 </style>
 
 <section>
-  <PageContainer>
+  <PageContainer class="center">
     <TourForm></TourForm>
   </PageContainer>
 </section>

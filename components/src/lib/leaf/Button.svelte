@@ -2,9 +2,8 @@
   const {
     href = "",
     orange = false,
-    children,
-    class: classes,
-    style,
+    class: classes = "",
+    style = "",
     ...rest
   } = $props();
 </script>
@@ -21,10 +20,10 @@
       background-color var(--base-transition-timing),
       border-color var(--base-transition-timing),
       color var(--base-transition-timing);
-    font-size: 1.25rem;
+    font-size: 1.33rem;
     border: 0.25rem solid var(--light-white);
     border-radius: 5rem;
-    padding: 0.5rem 2rem;
+    padding: 0.75rem 2.25rem;
     color: white;
     outline: 0;
     letter-spacing: 1px;
@@ -49,10 +48,10 @@
 
 {#if href}
   <a {...rest} class="pompiere {classes}" class:orange {style} {href}>
-    {@render children?.()}
+    {@render rest.children?.()}
   </a>
 {:else}
   <button {...rest} class="pompiere {classes}" class:orange {style}>
-    {@render children?.()}
+    {@render rest.children?.()}
   </button>
 {/if}
