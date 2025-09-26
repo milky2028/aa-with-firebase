@@ -15,7 +15,6 @@
     }
 
     :global(.heading) {
-      font-size: 2rem;
       padding-bottom: 0;
     }
 

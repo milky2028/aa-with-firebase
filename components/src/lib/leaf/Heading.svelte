@@ -10,6 +10,11 @@
   h5 {
     margin: 0;
     padding: 1.5rem 0;
+    letter-spacing: 0.5px;
+  }
+
+  h2 {
+    font-size: 2rem;
   }
 
   h3 {
