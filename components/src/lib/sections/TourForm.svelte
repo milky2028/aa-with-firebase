@@ -4,6 +4,13 @@
   import Heading from "../leaf/Heading.svelte";
   import Link from "../leaf/Link.svelte";
   import Text from "../leaf/Text.svelte";
+  import TextField from "../leaf/TextField.svelte";
+  import { tourState } from "../state/tour.svelte";
+
+  $effect(() => {
+    console.log(tourState.name);
+    console.log(tourState.email);
+  });
 </script>
 
 <style>
@@ -15,6 +22,7 @@
     border-radius: 2px;
     display: grid;
     place-items: center;
+    gap: 1rem;
 
     @media screen and (max-width: 834px) {
       max-width: unset;
@@ -23,7 +31,6 @@
 
     :global(.contact) {
       text-align: center;
-      margin-bottom: 1rem;
     }
   }
 </style>
@@ -35,10 +42,19 @@
     src={sun}
     alt="Child's smiling Sun cartoon drawing"
   />
-  <Heading level={2} pompiere>Schedule a Tour</Heading>
+  <Heading level={2} pompiere style="padding-bottom: 0;"
+    >Schedule a Tour</Heading
+  >
+  <TextField required placeholder="Name" bind:value={tourState.name} />
+  <TextField
+    required
+    placeholder="Email"
+    type="email"
+    bind:value={tourState.email}
+  />
   <Text class="contact"
     ><Link href="/contact-us" orange>Contact us</Link> to schedule a tour outside
     normal business hours.</Text
   >
-  <Button orange>Submit</Button>
+  <Button submitter orange>Submit</Button>
 </form>
