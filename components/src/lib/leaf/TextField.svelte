@@ -1,5 +1,5 @@
 <script lang="ts">
-  let { placeholder = "", value = $bindable(""), ...rest } = $props();
+  let { label, value = $bindable(""), ...rest } = $props();
 </script>
 
 <style>
@@ -20,7 +20,7 @@
 
 <input
   {...rest}
-  {placeholder}
-  name={placeholder.toLocaleLowerCase()}
+  placeholder={label}
+  name={label.toLocaleLowerCase()}
   bind:value
 />
