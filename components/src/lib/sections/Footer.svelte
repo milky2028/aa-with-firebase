@@ -21,6 +21,10 @@
     display: grid;
     column-gap: 3rem;
     grid-template-columns: 3fr 1fr 1fr;
+
+    @media screen and (max-width: 834px) {
+      grid-template-columns: unset;
+    }
   }
 
   ul {
