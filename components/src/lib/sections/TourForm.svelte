@@ -35,18 +35,24 @@
     "4:30PM",
   ];
 
-  let dates: Date[] = $state([]);
+  const dates: Date[] = $state([]);
   onMount(() => {
-    let currentDay = new Date();
     for (let i = 0; i < 20; i++) {
-      currentDay = new Date(currentDay.setDate(currentDay.getDate() + 1));
-      const day = currentDay.getDay();
+      let currentDate = new Date();
+      currentDate = new Date(currentDate.setDate(currentDate.getDate() + i));
+      const day = currentDate.getDay();
 
       if (day !== 0 && day !== 6) {
-        dates.push(currentDay);
+        dates.push(currentDate);
       }
     }
   });
+
+  function onSubmit(event: SubmitEvent & { currentTarget: HTMLFormElement }) {
+    event.preventDefault();
+    console.log(event);
+    console.log(dates);
+  }
 </script>
 
 <style>
@@ -71,7 +77,7 @@
   }
 </style>
 
-<form>
+<form onsubmit={onSubmit}>
   <img
     width={85}
     height={85}
@@ -90,7 +96,7 @@
   </Select>
   <Select required label="Tour Date" bind:value={tourState.tourDate}>
     {#each dates as date}
-      <option>{date.toLocaleDateString()}</option>
+      <option>{date.toDateString()}</option>
     {/each}
   </Select>
   <Select required label="Tour Time" bind:value={tourState.tourTime}>
