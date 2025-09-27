@@ -60,7 +60,7 @@
     background-color: white;
     width: 66vw;
     max-width: 500px;
-    padding: 3rem;
+    padding: 3.5rem 4rem;
     border-radius: 2px;
     display: grid;
     place-items: center;
