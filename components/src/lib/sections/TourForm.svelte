@@ -1,5 +1,5 @@
 <script lang="ts">
-  import sun from "../../assets/sun.svg";
+  // import sun from "../../assets/sun.svg";
   import Button from "../leaf/Button.svelte";
   import Heading from "../leaf/Heading.svelte";
   import Link from "../leaf/Link.svelte";
@@ -81,7 +81,7 @@
   <img
     width={85}
     height={85}
-    src={sun}
+    src="/images/sun.svg"
     alt="Child's smiling Sun cartoon drawing"
   />
   <Heading level={2} pompiere style="padding-bottom: 0;"
