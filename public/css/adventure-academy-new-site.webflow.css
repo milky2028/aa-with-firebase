@@ -3656,3 +3656,7 @@ html.w-mod-js *[data-ix='popup-initial'] {
     font-size: 32px;
   }
 }
+
+#important-data {
+  display: none;
+}

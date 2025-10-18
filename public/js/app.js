@@ -59,6 +59,10 @@ async function onSubmit(event) {
 
   await initializeFirebase();
   const formData = new FormData(event.target);
+  if (formData.get('important-data')) {
+    console.error('Bot likely.')
+    return
+  }
 
   if (event.target.id === 'contact-form') {
     await onContact(formData);
