@@ -93,6 +93,11 @@
   <Heading level={2} pompiere style="padding-bottom: 0;"
     >Schedule a Tour</Heading
   >
+  <TextField
+    style="display: none;"
+    label="Important"
+    bind:value={tourState.important}
+  />
   <TextField required label="Name" bind:value={tourState.name} />
   <TextField required label="Email" type="email" bind:value={tourState.email} />
   <Select required label="Age of Child/Class" bind:value={tourState.ageOfChild}>

@@ -1,4 +1,5 @@
 export const tourState = $state({
+  important: '',
   name: '',
   email: '',
   ageOfChild: 'infants',
