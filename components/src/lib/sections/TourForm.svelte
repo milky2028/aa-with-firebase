@@ -73,6 +73,10 @@
       width: 100%;
     }
 
+    @media screen and (max-width: 479px) {
+      padding: 3.5rem 1.5rem;
+    }
+
     :global(.contact) {
       text-align: center;
     }

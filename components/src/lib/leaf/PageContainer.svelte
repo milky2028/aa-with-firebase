@@ -6,7 +6,7 @@
   div {
     margin: 0 auto;
     max-width: 1105px;
-    padding: 2.5rem 2rem;
+    padding: 2.5rem 1.5rem;
   }
 </style>
 
