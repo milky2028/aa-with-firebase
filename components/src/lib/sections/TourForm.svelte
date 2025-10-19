@@ -10,14 +10,6 @@
   import classes from "../data/classes.json";
   import { onMount } from "svelte";
 
-  $effect(() => {
-    console.log(tourState.name);
-    console.log(tourState.email);
-    console.log(tourState.ageOfChild);
-    console.log(tourState.tourDate);
-    console.log(tourState.tourTime);
-  });
-
   const TOUR_TIMES = [
     "10:00am",
     "10:30am",
@@ -50,10 +42,62 @@
     tourState.tourDate = dates[0];
   });
 
-  function onSubmit(event: SubmitEvent & { currentTarget: HTMLFormElement }) {
+  /**
+   * Value system is determined based on the following hierachy of most needed, not based on actual class value.
+   */
+  function getValue(childAge: string) {
+    switch (childAge) {
+      case "twos":
+        return 7;
+      case "toddlers":
+        return 6;
+      case "fours-and-fives":
+        return 5;
+      case "threes":
+        return 3;
+      case "infants":
+        return 2;
+      default:
+        return 1;
+    }
+  }
+
+  type Submission = SubmitEvent & { currentTarget: HTMLFormElement };
+  async function onSubmit(event: Submission) {
     event.preventDefault();
-    console.log(event);
-    console.log(dates);
+    if (tourState.important) {
+      console.error("Bot likely!");
+      return;
+    }
+
+    const { serverTimestamp, addDoc, tours } = await import("../firebase/db");
+    const submission = {
+      name: tourState.name,
+      email: tourState.email,
+      childAge: tourState.ageOfChild,
+      tourDate: tourState.tourDate,
+      tourTime: tourState.tourTime,
+      submitTimestamp: serverTimestamp(),
+    };
+
+    try {
+      await addDoc(tours, submission);
+      // show success message
+
+      const value = getValue(tourState.ageOfChild);
+      window.dataLayer.push({
+        event: "generate_lead",
+        currency: "USD",
+        value,
+      });
+
+      setTimeout(() => {
+        window.location.href = "/thank-you";
+      }, 1500);
+    } catch (error) {
+      console.error("onTour error", error);
+      // show error message
+    }
   }
 </script>
 

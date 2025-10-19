@@ -20,7 +20,10 @@
     "typescript": "~5.6.2",
     "vite": "^6.0.5"
   },
-    "engines": {
+  "engines": {
     "node": "22"
+  },
+  "dependencies": {
+    "firebase": "^12.4.0"
   }
 }
