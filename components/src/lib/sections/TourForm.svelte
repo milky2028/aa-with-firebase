@@ -46,6 +46,8 @@
         dates.push(currentDate);
       }
     }
+
+    tourState.tourDate = dates[0];
   });
 
   function onSubmit(event: SubmitEvent & { currentTarget: HTMLFormElement }) {
@@ -91,12 +93,12 @@
   <TextField required label="Email" type="email" bind:value={tourState.email} />
   <Select required label="Age of Child/Class" bind:value={tourState.ageOfChild}>
     {#each classes as classType}
-      <option>{classType.name}</option>
+      <option value={classType.id}>{classType.name}</option>
     {/each}
   </Select>
   <Select required label="Tour Date" bind:value={tourState.tourDate}>
     {#each dates as date}
-      <option>{date.toDateString()}</option>
+      <option value={date}>{date.toDateString()}</option>
     {/each}
   </Select>
   <Select required label="Tour Time" bind:value={tourState.tourTime}>

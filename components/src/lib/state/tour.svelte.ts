@@ -1,7 +1,7 @@
 export const tourState = $state({
   name: '',
   email: '',
-  ageOfChild: '',
-  tourDate: '',
-  tourTime: ''
+  ageOfChild: 'infants',
+  tourDate: new Date(),
+  tourTime: '10:00am'
 })
