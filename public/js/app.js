@@ -54,6 +54,28 @@ async function initializeFirebase() {
   }
 }
 
+/**
+ * Value system is determined based on the following hierachy of most needed, not based on actual class value.
+ */
+function getValue(childAge) {
+  switch (childAge) {
+    case 'Two':
+      return 7;
+    case 'Toddlers':
+      return 6;
+    case 'Four':
+      return 5;
+    case 'Five':
+      return 4;
+    case 'Three':
+      return 3;
+    case 'Infant':
+      return 2;
+    default:
+      return 1;
+  }
+}
+
 async function onSubmit(event) {
   event.preventDefault();
 
@@ -93,6 +115,13 @@ async function onTour(formData) {
     await firestore.addDoc(tours, submission);
     tourSuccess.style.display = 'block';
 
+    const value = getValue(childAge);
+    window.dataLayer.push({
+      event: 'generate_lead',
+      currency: 'USD',
+      value,
+    });
+
     setTimeout(() => {
       window.location.href = '/thank-you';
     }, 1500);
@@ -120,6 +149,12 @@ async function onContact(formData) {
 
     await firestore.addDoc(contactForms, submission);
     contactSuccess.style.display = 'block';
+
+    window.dataLayer.push({
+      event: 'generate_lead',
+      currency: 'USD',
+      value: 1,
+    });
 
     setTimeout(() => {
       window.location.href = '/thank-you-contact';
