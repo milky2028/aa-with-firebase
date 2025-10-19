@@ -151,7 +151,7 @@ async function onContact(formData) {
     contactSuccess.style.display = 'block';
 
     window.dataLayer.push({
-      event: 'generate_lead',
+      event: 'working_lead',
       currency: 'USD',
       value: 1,
     });
