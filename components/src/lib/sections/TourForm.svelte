@@ -77,7 +77,7 @@
   }
 </style>
 
-<form onsubmit={onSubmit}>
+<form id="tour-form" onsubmit={onSubmit}>
   <img
     width={85}
     height={85}
