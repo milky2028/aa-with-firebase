@@ -56,43 +56,6 @@
           }
         ]
       }
-    ],
-    "redirects": [
-      {
-        "source": "/registration",
-        "destination": "/our-center",
-        "type": 301
-      },
-      {
-        "source": "/aboutus",
-        "destination": "/",
-        "type": 301
-      },
-      {
-        "source": "/gallery",
-        "destination": "/our-center",
-        "type": 301
-      },
-      {
-        "source": "/tuition",
-        "destination": "/prices",
-        "type": 301
-      },
-      {
-        "source": "/blog",
-        "destination": "/news/overview",
-        "type": 301
-      },
-      {
-        "source": "/staff",
-        "destination": "/careers",
-        "type": 301
-      },
-      {
-        "source": "/news/overview/category/Announcements",
-        "destination": "/news/overview",
-        "type": 301
-      }
     ]
   }
 }
