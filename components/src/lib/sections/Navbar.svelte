@@ -25,6 +25,7 @@
       display: inline-block;
       padding: 0;
       letter-spacing: 1px;
+      font-size: 2rem;
     }
   }
 
