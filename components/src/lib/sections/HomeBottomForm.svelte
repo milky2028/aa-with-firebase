@@ -7,7 +7,7 @@
   section {
     background-color: var(--grey);
 
-    :global(.center) {
+    :global(.page-center) {
       display: grid;
       place-items: center;
     }
@@ -15,7 +15,7 @@
 </style>
 
 <section>
-  <PageContainer class="center">
+  <PageContainer class="page-center">
     <TourForm></TourForm>
   </PageContainer>
 </section>
