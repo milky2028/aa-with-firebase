@@ -3,7 +3,17 @@
   { "name": "Our Center", "href": "/our-center" },
   { "name": "Prices", "href": "/prices" },
   { "name": "Enroll", "href": "/enroll" },
-  { "name": "Classes", "href": "/classes/all-classes" },
+  {
+    "name": "Classes",
+    "subpages": [
+      { "name": "All Classes", "href": "/classes/all-classes" },
+      { "name": "Infants", "href": "/classes/infants" },
+      { "name": "Toddlers", "href": "/classes/toddlers" },
+      { "name": "Twos", "href": "/classes/twos" },
+      { "name": "Threes", "href": "/classes/threes" },
+      { "name": "Fours and Fives", "href": "/classes/fours-and-fives" }
+    ]
+  },
   { "name": "News", "href": "/news/overview" },
   { "name": "Careers", "href": "/careers" },
   { "name": "Contact", "href": "/contact" }
