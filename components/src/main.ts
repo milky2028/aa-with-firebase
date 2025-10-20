@@ -3,7 +3,7 @@ import "./app.css";
 // import Navbar from "./lib/sections/Navbar.svelte";
 // import HomeBottomForm from "./lib/sections/HomeBottomForm.svelte";
 import GoogleMaps from "./lib/sections/GoogleMaps.svelte";
-// import Careers from "./lib/pages/Careers.svelte";
+import Careers from "./lib/pages/Careers.svelte";
 import Footer from "./lib/sections/Footer.svelte";
 
 // page shell
@@ -18,8 +18,8 @@ const googleMaps = document.querySelector('#svelte-google-maps')
 if (googleMaps) mount(GoogleMaps, { target: googleMaps })
 
 // careers page
-// const careers = document.querySelector('#svelte-careers')
-// if (careers) mount(Careers, { target: careers })
+const careers = document.querySelector('#svelte-careers-page')
+if (careers) mount(Careers, { target: careers })
 
 // page shell
 const footer = document.querySelector("#svelte-footer")
