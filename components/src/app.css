@@ -3,6 +3,7 @@
   --grey: #f5f6f6;
   --medium-grey: #c0c0c0;
   --orange: #e88b33;
+  --red: #df3f3f;
   --light-orange: #e88b33;
   --base-alpha: 0.57;
   --light-orange: rgba(232, 139, 51, var(--base-alpha));
@@ -20,4 +21,12 @@
 
 .open-sans {
   font-family: "Open Sans", sans-serif;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
 }

@@ -62,8 +62,14 @@
     }
   }
 
+  let showError = $state(false);
+  let showSuccess = $state(false);
+
   type Submission = SubmitEvent & { currentTarget: HTMLFormElement };
   async function onSubmit(event: Submission) {
+    showSuccess = false;
+    showError = false;
+
     event.preventDefault();
     if (tourState.important) {
       console.error("Bot likely!");
@@ -75,14 +81,13 @@
       name: tourState.name,
       email: tourState.email,
       childAge: tourState.ageOfChild,
-      tourDate: tourState.tourDate,
+      tourDate: tourState.tourDate.toDateString(),
       tourTime: tourState.tourTime,
       submitTimestamp: serverTimestamp(),
     };
 
     try {
       await addDoc(tours, submission);
-      // show success message
 
       const value = getValue(tourState.ageOfChild);
       window.dataLayer.push({
@@ -91,12 +96,13 @@
         value,
       });
 
+      showSuccess = true;
       setTimeout(() => {
         window.location.href = "/thank-you";
       }, 1500);
     } catch (error) {
       console.error("onTour error", error);
-      // show error message
+      showError = true;
     }
   }
 </script>
@@ -121,8 +127,12 @@
       padding: 3.5rem 1.5rem;
     }
 
-    :global(.contact) {
+    :global(.center) {
       text-align: center;
+    }
+
+    :global(.red) {
+      color: var(--red);
     }
   }
 </style>
@@ -159,9 +169,15 @@
       <option>{time}</option>
     {/each}
   </Select>
-  <Text class="contact"
+  <Text class="center"
     ><Link href="/contact-us" orange>Contact us</Link> to schedule a tour outside
     normal business hours.</Text
   >
   <Button submitter orange>Submit</Button>
+  <Text class="center {showSuccess ? 'show' : 'hide'}"
+    >Thank you! Your tour has been scheduled!</Text
+  >
+  <Text class="center red {showError ? 'show' : 'hide'}"
+    >Oops! Something went wrong while scheduling your tour. Please try again.</Text
+  >
 </form>
