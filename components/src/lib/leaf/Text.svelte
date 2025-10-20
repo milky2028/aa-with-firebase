@@ -10,6 +10,7 @@
 
 <style>
   p {
+    color: #000;
     margin: 0;
     padding: 0;
     letter-spacing: 0.3px;
