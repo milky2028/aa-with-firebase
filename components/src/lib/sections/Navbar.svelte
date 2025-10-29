@@ -33,6 +33,17 @@
     height: 2.5rem;
     width: 2.5rem;
   }
+
+  ul {
+    padding: 0;
+    display: grid;
+    grid-auto-flow: row;
+    list-style: none;
+  }
+
+  li {
+    display: block;
+  }
 </style>
 
 <nav>
@@ -42,7 +53,7 @@
   </Link>
   <ul>
     {#each pages as page}
-      {page.name}
+      <li>{page.name}</li>
     {/each}
   </ul>
   <div><Button>Schedule a Tour</Button></div>
