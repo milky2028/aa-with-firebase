@@ -4,17 +4,23 @@
   import Link from "../leaf/Link.svelte";
   import pages from "../data/pages.json";
   import Button from "../leaf/Button.svelte";
+
+  function hideHome(page: typeof pages[number]) {
+    return page.name !== 'Home'
+  }
 </script>
 
 <style>
   nav {
     display: grid;
-    grid-template-columns: max-content 1fr max-content;
-    gap: 1rem;
+    grid-template-areas: "logo spacer1 links spacer2 tour-button";
+    grid-template-columns: max-content 1fr 4fr 1fr max-content;
+    gap: 0.5rem;
     background-color: var(--blue);
     padding: 1rem;
 
     :global(.logo-container) {
+      grid-area: logo;
       display: grid;
       grid-template-columns: min-content 1fr;
       gap: 1rem;
@@ -35,9 +41,11 @@
   }
 
   ul {
-    padding: 0;
+    grid-area: links;
     display: grid;
-    grid-auto-flow: row;
+    padding: 0;
+    grid-auto-flow: column;
+    align-items: center;
     list-style: none;
   }
 
@@ -52,9 +60,9 @@
     <Heading class="main-name" pompiere level={1}>Adventure Academy</Heading>
   </Link>
   <ul>
-    {#each pages as page}
+    {#each pages.filter(hideHome) as page}
       <li>{page.name}</li>
     {/each}
   </ul>
-  <div><Button>Schedule a Tour</Button></div>
+  <Button style="grid-area: tour-button;">Schedule a Tour</Button>
 </nav>
